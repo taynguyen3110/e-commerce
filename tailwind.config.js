@@ -10,7 +10,8 @@ export default {
         center: true,
       },
       colors: {
-        primary: "#000000"
+        primary: "#000000",
+        background: "#F0EEED",
       },
     },
   },
