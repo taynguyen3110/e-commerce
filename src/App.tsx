@@ -34,9 +34,6 @@ function App() {
   return (
     <>
       <Header />
-      <div className="font-bold text-primary">
-        hello world
-      </div>
       <RouterProvider router={router} />
       <Footer />
     </>
