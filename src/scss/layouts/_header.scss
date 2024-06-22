@@ -1,6 +1,6 @@
 .nav-logo {
     font-family: "Fontspring-DEMO-integralcf-bold";
-    font-size: 32px;
+    @apply text-[32px];
 }
 
 // to target the search icon
