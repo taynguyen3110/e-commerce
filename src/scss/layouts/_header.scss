@@ -1,4 +1,16 @@
 .nav-logo {
     font-family: "Fontspring-DEMO-integralcf-bold";
-    font-size: 32px;
+    @apply text-[32px];
 }
+
+// to target the search icon
+.nav-search .wrapper:first-child svg {
+    width: 28px;
+    height: 28px;
+}
+
+// to target the input element
+.nav-search .wrapper:first-child input {}
+
+// to target the wrapper element
+.nav-search .wrapper:first-child {}
