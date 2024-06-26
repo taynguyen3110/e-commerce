@@ -11,12 +11,14 @@ import { Suggestion } from '../components/Suggestion';
 const Homepage = () => {
   return (
     <div>
+
+      {/* HERO SECTION */}
       <div className=' bg-[#F2F0F1]'>
         <div className='container h-[663px] flex justify-between gap-12'>
           <div className='w-1/2 flex flex-col gap-8 items-start justify-center'>
             <h1 className='text-6xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
             <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
-            <button className='px-16 py-[15px] bg-black text-white rounded-[27px]'>Shop Now</button>
+            <button className='px-16 py-[15px] bg-black text-white rounded-full'>Shop Now</button>
             <div className='flex justify-between w-full'>
               <div>
                 <p className='text-[40px] font-bold'>200+</p>
@@ -41,6 +43,8 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+
+      {/* BREAK SECTION */}
       <div className='bg-black'>
         <div className='container h-[122px] flex justify-between items-center'>
           <img src={versaceLogo} alt="Logo of Versace" />
@@ -50,7 +54,44 @@ const Homepage = () => {
           <img src={calvinKleinLogo} alt="Logo of Calvin Klein" />
         </div>
       </div>
-      <Suggestion />
+
+      {/* NEW ARRIVALS */}
+      <div>
+        <div className='container'>
+          <Suggestion title="NEW ARRIVALS" />
+          <hr />
+        </div>
+      </div>
+
+      {/* TOP SELLING */}
+      <div>
+        <div className='container'>
+          <Suggestion title="TOP SELLING" />
+        </div>
+      </div>
+      <div className=''>
+        <div className='container h-[866px] bg-background rounded-[50px]'>
+          <h1 className='text-5xl pt-20 pb-16 text-center'>BROWSE BY DRESS STYLE</h1>
+          <div className='border border-black mx-16 mb-20'>
+            <div>
+              <div>
+
+              </div>
+              <div>
+
+              </div>
+            </div>
+            <div>
+              <div>
+
+              </div>
+              <div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
