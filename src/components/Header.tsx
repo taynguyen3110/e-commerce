@@ -101,32 +101,30 @@ const Header = () => {
           </div>
         </div>
         <div className='flex gap-x-10'>
-          <div className='nav-search'>
-            <div style={{ width: 400 }}>
-              <ReactSearchAutocomplete<Item>
-                items={items}
-                fuseOptions={{ keys: ["name", "description"] }}
-                resultStringKeyName="name"
-                inputDebounce={100}
-                onSearch={handleOnSearch}
-                onHover={handleOnHover}
-                onSelect={handleOnSelect}
-                onFocus={handleOnFocus}
-                maxResults={5}
-                placeholder="Search for products..."
-                autoFocus
-                showIcon={false}
-                styling={{
-                  backgroundColor: '#F0EEED',
-                  borderRadius: '20px',
-                  boxShadow: 'none',
-                  fontFamily: 'inherit',
-                  fontSize: 'inherit',
-                  color: 'rgba(0, 0, 0, 0.4)',
-                }}
-                formatResult={formatResult}
-              />
-            </div>
+          <div className='flex-initial' style={{ width: 500 }}>
+            <ReactSearchAutocomplete<Item>
+              items={items}
+              fuseOptions={{ keys: ["name", "description"] }}
+              resultStringKeyName="name"
+              inputDebounce={100}
+              onSearch={handleOnSearch}
+              onHover={handleOnHover}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              maxResults={5}
+              placeholder="Search for products..."
+              autoFocus
+              showIcon={false}
+              styling={{
+                backgroundColor: '#F0EEED',
+                borderRadius: '20px',
+                boxShadow: 'none',
+                fontFamily: 'inherit',
+                fontSize: 'inherit',
+                color: 'rgba(0, 0, 0, 0.4)',
+              }}
+              formatResult={formatResult}
+            />
           </div>
           <div className='nav-btns flex items-center gap-3.5'>
             <img src={cartIcon} alt="Shopping Cart" />
