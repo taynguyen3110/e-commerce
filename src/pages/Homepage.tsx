@@ -6,6 +6,10 @@ import zaraLogo from '../assets/logos/zara-logo.png';
 import gucciLogo from '../assets/logos/gucci-logo.png';
 import pradaLogo from '../assets/logos/prada-logo.png';
 import calvinKleinLogo from '../assets/logos/calvin-klein-logo.png';
+import casualImg from '../assets/images/categories/casual.png';
+import formalImg from '../assets/images/categories/formal.png';
+import partyImg from '../assets/images/categories/party.png';
+import gymImg from '../assets/images/categories/gym.png';
 import { Suggestion } from '../components/Suggestion';
 
 const Homepage = () => {
@@ -72,21 +76,25 @@ const Homepage = () => {
       <div className=''>
         <div className='container h-[866px] bg-background rounded-[50px]'>
           <h1 className='text-5xl pt-20 pb-16 text-center'>BROWSE BY DRESS STYLE</h1>
-          <div className='border border-black mx-16 mb-20'>
-            <div>
-              <div>
-
+          <div className='mx-16 mb-20 flex flex-col gap-5'>
+            <div className='flex gap-5 justify-stretch'>
+              <div className='relative grow'>
+                <p className='absolute top-8 left-10 text-3xl font-bold'>Casual</p>
+                <img className='rounded-3xl object-cover h-[289px] w-full' src={casualImg} alt="" />
               </div>
-              <div>
-
+              <div className='relative grow'>
+                <p className='absolute top-8 left-10 text-3xl font-bold'>Formal</p>
+                <img className='rounded-3xl object-cover h-[289px] w-full' src={formalImg} alt="" />
               </div>
             </div>
-            <div>
-              <div>
-
+            <div className='flex gap-5 justify-stretch'>
+              <div className='relative grow'>
+                <p className='absolute top-8 left-10 text-3xl font-bold'>Party</p>
+                <img className='rounded-3xl object-cover h-[289px] w-full' src={partyImg} alt="" />
               </div>
-              <div>
-
+              <div className='relative grow'>
+                <p className='absolute top-8 left-10 text-3xl font-bold'>Gym</p>
+                <img className='rounded-3xl object-cover h-[289px] w-full' src={gymImg} alt="" />
               </div>
             </div>
           </div>
