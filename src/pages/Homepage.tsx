@@ -12,6 +12,9 @@ import partyImg from '../assets/images/categories/party.png';
 import gymImg from '../assets/images/categories/gym.png';
 import { Suggestion } from '../components/Suggestion';
 
+import { CarouselSection } from '../components/CarouselSection';
+
+
 const Homepage = () => {
   return (
     <div>
@@ -73,6 +76,8 @@ const Homepage = () => {
           <Suggestion title="TOP SELLING" />
         </div>
       </div>
+
+      {/* CATEGORIES */}
       <div className=''>
         <div className='container h-[866px] bg-background rounded-[50px]'>
           <h1 className='text-5xl pt-20 pb-16 text-center'>BROWSE BY DRESS STYLE</h1>
@@ -80,24 +85,34 @@ const Homepage = () => {
             <div className='flex gap-5 justify-stretch'>
               <div className='relative grow'>
                 <p className='absolute top-8 left-10 text-3xl font-bold'>Casual</p>
-                <img className='rounded-3xl object-cover h-[289px] w-full' src={casualImg} alt="" />
+                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={casualImg} alt="" />
               </div>
               <div className='relative grow'>
                 <p className='absolute top-8 left-10 text-3xl font-bold'>Formal</p>
-                <img className='rounded-3xl object-cover h-[289px] w-full' src={formalImg} alt="" />
+                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={formalImg} alt="" />
               </div>
             </div>
             <div className='flex gap-5 justify-stretch'>
               <div className='relative grow'>
                 <p className='absolute top-8 left-10 text-3xl font-bold'>Party</p>
-                <img className='rounded-3xl object-cover h-[289px] w-full' src={partyImg} alt="" />
+                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={partyImg} alt="" />
               </div>
               <div className='relative grow'>
                 <p className='absolute top-8 left-10 text-3xl font-bold'>Gym</p>
-                <img className='rounded-3xl object-cover h-[289px] w-full' src={gymImg} alt="" />
+                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={gymImg} alt="" />
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* CAROUSEL */}
+      <div>
+        <div className='container'>
+          <h1 className='text-5xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
+        </div>
+        <div className='container max-w-[1636px] relative flex justify-center'>
+          <CarouselSection />
         </div>
       </div>
     </div>
