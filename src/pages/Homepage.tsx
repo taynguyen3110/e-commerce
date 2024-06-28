@@ -24,22 +24,22 @@ const Homepage = () => {
         <div className='container h-[663px] flex justify-between gap-12'>
           <div className='w-1/2 flex flex-col gap-8 items-start justify-center'>
             <h1 className='text-6xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
-            <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
+            <p className='opacity-60'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
             <button className='px-16 py-[15px] bg-black text-white rounded-full'>Shop Now</button>
             <div className='flex justify-between w-full'>
               <div>
                 <p className='text-[40px] font-bold'>200+</p>
-                <p>International Brands</p>
+                <p className='opacity-60'>International Brands</p>
               </div>
               <div className='border-l-2 border-black opacity-10'></div>
               <div>
                 <p className='text-[40px] font-bold'>2,000+</p>
-                <p>High-Quality Products</p>
+                <p className='opacity-60'>High-Quality Products</p>
               </div>
               <div className='border-l-2 border-black opacity-10'></div>
               <div>
                 <p className='text-[40px] font-bold'>30,000+</p>
-                <p>Happy Customers</p>
+                <p className='opacity-60'>Happy Customers</p>
               </div>
             </div>
           </div>
@@ -107,11 +107,11 @@ const Homepage = () => {
       </div>
 
       {/* CAROUSEL */}
-      <div>
+      <div className='max-w-[1636px] flex flex-col mx-auto relative'>
         <div className='container'>
           <h1 className='text-5xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
         </div>
-        <div className='container max-w-[1636px] relative flex justify-center'>
+        <div className='container relative'>
           <CarouselSection />
         </div>
       </div>

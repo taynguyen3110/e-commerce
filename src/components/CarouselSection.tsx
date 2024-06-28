@@ -45,20 +45,17 @@ export const CarouselSection = () => {
             renderButtonGroupOutside={true}
             infinite={true}
             arrows={false}
-            // customTransition="all .5"
             transitionDuration={500}
             containerClass="container-padding-top"
-            className='w-full'
+            className='w-parent-plus-100 relative right-[50px]'
         >
-            <div><ReviewCard />1</div>
-            <div><ReviewCard />2</div>
-            <div><ReviewCard />3</div>
-            <div><ReviewCard />4</div>
-            <div><ReviewCard />5</div>
-            <div><ReviewCard />6</div>
-            <div><ReviewCard />7</div>
-            <div><ReviewCard />8</div>
-            <div><ReviewCard />9</div>
+            <div><ReviewCard name="Sarah M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} /></div>
+            <div><ReviewCard name="John M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations. I really love it!"`} /></div>
+            <div><ReviewCard name="Smith M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations. My child love it, and I love it very much"`} /></div>
+            <div><ReviewCard name="Kay M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has."`} /></div>
+            <div><ReviewCard name="Henry M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} /></div>
+            <div><ReviewCard name="Tom M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} /></div>
+            <div><ReviewCard name="Thomas M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} /></div>
         </Carousel>
 
 

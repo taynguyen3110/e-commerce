@@ -2,17 +2,22 @@ import React from 'react'
 import nineRate from '../assets/icons/4.5-star.png'
 import verifiedIcon from '../assets/icons/verified.png'
 
-export const ReviewCard = () => {
+interface Props {
+    name: string;
+    review: string;
+}
+
+export const ReviewCard: React.FC<Props> = ({name, review}) => {
     return (
-        <div className='max-w-[400px] h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6'>
+        <div className=' min-h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6 mx-[10px]'>
             <div>
                 <img src={nineRate} alt="" />
             </div>
             <div className='flex gap-1'>
-                <p className='text-xl font-bold'>Sarah M.</p>
+                <p className='text-xl font-bold'>{name}</p>
                 <img src={verifiedIcon} alt="" />
             </div>
-            <p className='opacity-60'>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."</p>
+            <p className='opacity-60 pb-5'>{review}</p>
         </div>
     )
 }
