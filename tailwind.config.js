@@ -13,6 +13,9 @@ export default {
         primary: "#000000",
         background: "#F0EEED",
       },
+      width: {
+        'parent-plus-100': 'calc(100% + 100px)',
+      },
     },
   },
   plugins: [],
