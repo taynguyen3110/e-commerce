@@ -26,13 +26,13 @@ const Header = () => {
   return (
     <div className='mx-auto'>
       <PromotionBar />
-      <div className='container mx-auto nav-bar flex gap-10 justify-between text-center my-6'>
-        <div className='flex gap-x-10 items-center'>
-          <div className='md:hidden'>
-            <img src={menuIcon} alt="" />
+      <div className='container mx-auto nav-bar flex md:gap-10 justify-between text-center my-2'>
+        <div className='flex md:gap-x-10 items-center'>
+          <div className='md:hidden h-12 w-12 flex items-center justify-center ml-1'>
+            <img className='' src={menuIcon} alt="" />
           </div>
           <div className='nav-logo relative'>
-            <p className='relative lg:-top-1 lg:text-[32px] md:-top-[2px] md:text-2xl'>Shop.co</p>
+            <p className='relative lg:-top-1 lg:text-[32px] -top-[2px] text-2xl ml-1'>Shop.co</p>
           </div>
           <div className='nav-menu gap-6 h-12 items-center md:flex hidden'>
             <div>
@@ -62,7 +62,10 @@ const Header = () => {
             <div>Brands</div>
           </div>
         </div>
-        <div className='flex gap-x-10 w-1/2 justify-end md:w-2/3'>
+        <div className='flex md:gap-x-10 md:w-2/3 w-1/2 justify-end items-center gap-3.5'>
+          <div className='md:hidden'>
+            <img src={searchIcon} alt="" />
+          </div>
           <Downshift
             onChange={selection =>
               alert(selection ? `You selected ${selection.value}` : 'Selection Cleared')
@@ -80,14 +83,14 @@ const Header = () => {
               selectedItem,
               getRootProps,
             }) => (
-              <div className='lg:flex items-center justify-stretch relative'>
+              <div className='md:flex items-center justify-stretch relative hidden'>
                 <label {...getLabelProps()}></label>
                 <div className='w-full justify-end'
                   style={{ display: 'flex' }}
                   {...getRootProps({}, { suppressRefError: true })}
                 >
                   <div className='w-full flex justify-end relative'>
-                    <img className='absolute top-1/2 translate-y-[-50%] left-4' src={searchIcon} alt="" />
+                    <img className='absolute top-1/2 translate-y-[-50%] left-4 opacity-40' src={searchIcon} alt="" />
                     <input className='bg-background py-2 pl-[52px] w-full rounded-full' placeholder='Search for products' {...getInputProps()} />
                   </div>
                 </div>
