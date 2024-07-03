@@ -1,3 +1,11 @@
-.react-multi-carousel-item:not(.react-multi-carousel-item--active) {
+@media (min-width: 640px) {
+  .react-multi-carousel-item:not(.react-multi-carousel-item--active) {
     filter: blur(2px);
   }
+}
+
+@media (max-width: 640px) {
+  .react-multi-carousel-item {
+    width: 100vw !important;
+  }
+}

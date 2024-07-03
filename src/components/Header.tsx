@@ -26,13 +26,11 @@ const Header = () => {
   return (
     <div className='mx-auto'>
       <PromotionBar />
-      <div className='container mx-auto nav-bar flex md:gap-10 justify-between text-center my-2'>
+      <div className='container md:mx-auto px-4 nav-bar flex md:gap-10 justify-between text-center my-4'>
         <div className='flex md:gap-x-10 items-center'>
-          <div className='md:hidden h-12 w-12 flex items-center justify-center ml-1'>
-            <img className='' src={menuIcon} alt="" />
-          </div>
+          <img className='' src={menuIcon} alt="" />
           <div className='nav-logo relative'>
-            <p className='relative lg:-top-1 lg:text-[32px] -top-[2px] text-2xl ml-1'>Shop.co</p>
+            <p className='relative lg:-top-1 lg:text-[32px] -top-[2px] text-2xl ml-4'>Shop.co</p>
           </div>
           <div className='nav-menu gap-6 h-12 items-center md:flex hidden'>
             <div>

@@ -21,44 +21,44 @@ const Homepage = () => {
 
       {/* HERO SECTION */}
       <div className=' bg-[#F2F0F1]'>
-        <div className='container md:h-[663px] flex justify-between gap-12'>
-          <div className='w-1/2 flex flex-col gap-8 items-start justify-center'>
-            <h1 className='text-6xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
-            <p className='opacity-60'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
-            <button className='px-16 py-[15px] bg-black text-white rounded-full'>Shop Now</button>
-            <div className='flex justify-between w-full'>
+        <div className='container md:h-[663px] md:flex-row px-4 flex flex-col justify-between md:gap-12 gap-5 overflow-hidden'>
+          <div className='md:w-1/2 flex flex-col gap-4 items-start justify-center mt-8'>
+            <h1 className='md:text-6xl text-4xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
+            <p className='opacity-60 md:text-base text-sm'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
+            <button className='px-[calc(50%-37px)] py-[15px] bg-black text-white rounded-full'>Shop Now</button>
+            <div className='flex flex-wrap md:justify-between md:flex-nowrap justify-center w-full md:mt-0 mt-1'>
               <div>
-                <p className='text-[40px] font-bold'>200+</p>
-                <p className='opacity-60'>International Brands</p>
+                <p className='md:text-[40px] text-2xl font-bold'>200+</p>
+                <p className='md:text-base text-mobile opacity-60'>International Brands</p>
               </div>
-              <div className='border-l-2 border-black opacity-10'></div>
+              <div className='border-l-2 border-black opacity-10 md:mx-0 mx-7'></div>
               <div>
-                <p className='text-[40px] font-bold'>2,000+</p>
-                <p className='opacity-60'>High-Quality Products</p>
+                <p className='md:text-[40px] text-2xl font-bold'>2,000+</p>
+                <p className='md:text-base text-mobile opacity-60'>High-Quality Products</p>
               </div>
-              <div className='border-l-2 border-black opacity-10'></div>
-              <div>
-                <p className='text-[40px] font-bold'>30,000+</p>
-                <p className='opacity-60'>Happy Customers</p>
+              <div className='border-l-2 border-black opacity-10 md:block hidden'></div>
+              <div className='md:mt-0 mt-3'>
+                <p className='md:text-[40px] text-2xl font-bold'>30,000+</p>
+                <p className='md:text-base text-mobile opacity-60'>Happy Customers</p>
               </div>
             </div>
           </div>
-          <div className='w-1/2 overflow-hidden relative'>
-            <img src={starIcon} className="absolute scale-50 top-[50%] translate-y-[-50%] z-10" alt="" />
-            <img src={starIcon} className="absolute right-0 top-20 z-10" alt="" />
-            <img className='object-fit scale-[0.89] translate-x-11 translate-y-[-6.7rem] z-0' src={heroImg} alt="" />
+          <div className='md:w-1/2 md:overflow-hidden overflow-y-clip h-[400px] relative'>
+            <img src={starIcon} className="absolute md:scale-50 md:top-[50%] md:translate-y-[-50%] md:left-0 -left-5 scale-[40%] top-20 z-10" alt="" />
+            <img src={starIcon} className="absolute md:right-0 md:top-20 md:scale-100 -right-3 scale-[65%] z-10" alt="" />
+            <img className='md:object-fit md:scale-[0.89] md:translate-x-11 md:translate-y-[-6.7rem] md:block relative top-3 scale-125 z-0' src={heroImg} alt="" />
           </div>
         </div>
       </div>
 
       {/* BREAK SECTION */}
-      <div className='bg-black'>
-        <div className='container h-[122px] flex justify-between items-center'>
-          <img src={versaceLogo} alt="Logo of Versace" />
-          <img src={zaraLogo} alt="Logo of Zara" />
-          <img src={gucciLogo} alt="Logo of Gucci" />
-          <img src={pradaLogo} alt="Logo of Prada" />
-          <img src={calvinKleinLogo} alt="Logo of Calvin Klein" />
+      <div className='bg-black py-11'>
+        <div className='container flex md:flex-nowrap flex-wrap md:justify-between gap-4 justify-evenly items-center'>
+          <img className='h-6' src={versaceLogo} alt="Logo of Versace" />
+          <img className='h-6' src={zaraLogo} alt="Logo of Zara" />
+          <img className='h-6' src={gucciLogo} alt="Logo of Gucci" />
+          <img className='h-6' src={pradaLogo} alt="Logo of Prada" />
+          <img className='h-6' src={calvinKleinLogo} alt="Logo of Calvin Klein" />
         </div>
       </div>
 
@@ -107,13 +107,11 @@ const Homepage = () => {
       </div>
 
       {/* CAROUSEL */}
-      <div className='max-w-[1636px] flex flex-col mx-auto relative'>
-        <div className='container'>
-          <h1 className='text-5xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
+      <div className='md:max-w-[1636px] flex flex-col mx-auto relative'>
+        <div className='container px-4'>
+          <h1 className='md:text-5xl text-3xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
         </div>
         <div className='container relative'>
-          {/* <div className='absolute h-full w-[50px] backdrop-blur-[2px] z-10 top-0 -translate-x-full'></div> */}
-          {/* <div className='absolute h-full w-[50px] backdrop-blur-[2px] z-10 top-0 right-0 translate-x-full'></div> */}
           <CarouselSection />
         </div>
       </div>

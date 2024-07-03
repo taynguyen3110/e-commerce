@@ -8,8 +8,8 @@ interface Props {
 export const Suggestion: React.FC<Props> = (props) => {
     return (
         <div className='flex flex-col items-stretch'>
-            <h1 className='text-5xl pt-20 pb-16 text-center'>{props.title}</h1>
-            <div className='flex justify-between'>
+            <h1 className='md:text-5xl text-3xl md:pt-20 pt-12 md:pb-16 pb-8 text-center'>{props.title}</h1>
+            <div className='flex md:flex-nowrap flex-wrap justify-evenly'>
                 <ItemCard />
                 <ItemCard />
                 <ItemCard />
