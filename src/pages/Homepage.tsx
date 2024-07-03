@@ -21,7 +21,7 @@ const Homepage = () => {
 
       {/* HERO SECTION */}
       <div className=' bg-[#F2F0F1]'>
-        <div className='container h-[663px] flex justify-between gap-12'>
+        <div className='container md:h-[663px] flex justify-between gap-12'>
           <div className='w-1/2 flex flex-col gap-8 items-start justify-center'>
             <h1 className='text-6xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
             <p className='opacity-60'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
@@ -44,8 +44,8 @@ const Homepage = () => {
             </div>
           </div>
           <div className='w-1/2 overflow-hidden relative'>
-            <img src={starIcon} className="absolute scale-50 translate-y-[290px] z-10" alt="" />
-            <img src={starIcon} className="absolute overflow-visible translate-x-[635px] translate-y-[85px] z-10" alt="" />
+            <img src={starIcon} className="absolute scale-50 top-[50%] translate-y-[-50%] z-10" alt="" />
+            <img src={starIcon} className="absolute right-0 top-20 z-10" alt="" />
             <img className='object-fit scale-[0.89] translate-x-11 translate-y-[-6.7rem] z-0' src={heroImg} alt="" />
           </div>
         </div>
@@ -112,6 +112,8 @@ const Homepage = () => {
           <h1 className='text-5xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
         </div>
         <div className='container relative'>
+          {/* <div className='absolute h-full w-[50px] backdrop-blur-[2px] z-10 top-0 -translate-x-full'></div> */}
+          {/* <div className='absolute h-full w-[50px] backdrop-blur-[2px] z-10 top-0 right-0 translate-x-full'></div> */}
           <CarouselSection />
         </div>
       </div>

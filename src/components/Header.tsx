@@ -1,78 +1,40 @@
 import React from 'react'
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+// import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import cartIcon from '../assets/icons/cart.png'
 import profileIcon from '../assets/icons/profile.png'
+import searchIcon from '../assets/icons/search.png'
+import menuIcon from '../assets/icons/menu.png'
 import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { PromotionBar } from './PromotionBar'
-
-type Item = {
-  id: number;
-  name: string;
-}
+import Downshift from 'downshift'
 
 const items = [
-  {
-    id: 0,
-    name: 'Cobol'
-  },
-  {
-    id: 1,
-    name: 'JavaScript'
-  },
-  {
-    id: 2,
-    name: 'Basic'
-  },
-  {
-    id: 3,
-    name: 'PHP'
-  },
-  {
-    id: 4,
-    name: 'Java'
-  }
+  { value: 'apple' },
+  { value: 'pear' },
+  { value: 'orange' },
+  { value: 'orange2' },
+  { value: 'orange3' },
+  { value: 'grape' },
+  { value: 'banana' },
+  { value: 'banana2' },
+  { value: 'banana3' },
+  { value: 'banana4' },
 ]
-
-const handleOnSearch = (string: String, results: Item[]) => {
-  // onSearch will have as the first callback parameter
-  // the string searched and for the second the results.
-  console.log(string, results)
-}
-
-const handleOnHover = (result: Item) => {
-  // the item hovered
-  console.log(result)
-}
-
-const handleOnSelect = (item: Item) => {
-  // the item selected
-  console.log(item)
-}
-
-const handleOnFocus = () => {
-  console.log('Focused')
-}
-
-const formatResult = (item: Item) => {
-  return (
-    <>
-      {/* <span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span> */}
-      <span style={{ display: 'block', textAlign: 'left' }}>{item.name}</span>
-    </>
-  )
-}
 
 const Header = () => {
   return (
     <div className='mx-auto'>
       <PromotionBar />
       <div className='container mx-auto nav-bar flex gap-10 justify-between text-center my-6'>
-        <div className='flex gap-x-10'>
-          <div className='nav-logo relative'>
-            <p className='relative -top-1'>Shop.co</p>
+        <div className='flex gap-x-10 items-center'>
+          <div className='md:hidden'>
+            <img src={menuIcon} alt="" />
           </div>
-          <div className='nav-menu flex gap-6 h-12 items-center'>
+          <div className='nav-logo relative'>
+            <p className='relative lg:-top-1 lg:text-[32px] md:-top-[2px] md:text-2xl'>Shop.co</p>
+          </div>
+          <div className='nav-menu gap-6 h-12 items-center md:flex hidden'>
             <div>
               <Popover className="group">
                 <PopoverButton className="flex items-center gap-2">
@@ -100,35 +62,66 @@ const Header = () => {
             <div>Brands</div>
           </div>
         </div>
-        <div className='flex gap-x-10'>
-          <div className='flex-initial' style={{ width: 500 }}>
-            <ReactSearchAutocomplete<Item>
-              items={items}
-              fuseOptions={{ keys: ["name", "description"] }}
-              resultStringKeyName="name"
-              inputDebounce={100}
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
-              maxResults={5}
-              placeholder="Search for products..."
-              autoFocus
-              showIcon={false}
-              styling={{
-                backgroundColor: '#F0EEED',
-                borderRadius: '20px',
-                boxShadow: 'none',
-                fontFamily: 'inherit',
-                fontSize: 'inherit',
-                color: 'rgba(0, 0, 0, 0.4)',
-              }}
-              formatResult={formatResult}
-            />
-          </div>
-          <div className='nav-btns flex items-center gap-3.5'>
-            <img src={cartIcon} alt="Shopping Cart" />
-            <img src={profileIcon} alt="Profile" />
+        <div className='flex gap-x-10 w-1/2 justify-end md:w-2/3'>
+          <Downshift
+            onChange={selection =>
+              alert(selection ? `You selected ${selection.value}` : 'Selection Cleared')
+            }
+            itemToString={item => (item ? item.value : '')}
+          >
+            {({
+              getInputProps,
+              getItemProps,
+              getLabelProps,
+              getMenuProps,
+              isOpen,
+              inputValue,
+              highlightedIndex,
+              selectedItem,
+              getRootProps,
+            }) => (
+              <div className='lg:flex items-center justify-stretch relative'>
+                <label {...getLabelProps()}></label>
+                <div className='w-full justify-end'
+                  style={{ display: 'flex' }}
+                  {...getRootProps({}, { suppressRefError: true })}
+                >
+                  <div className='w-full flex justify-end relative'>
+                    <img className='absolute top-1/2 translate-y-[-50%] left-4' src={searchIcon} alt="" />
+                    <input className='bg-background py-2 pl-[52px] w-full rounded-full' placeholder='Search for products' {...getInputProps()} />
+                  </div>
+                </div>
+                {isOpen
+                  ? (
+                    <ul className='absolute block top-12 w-full bg-slate-700 border rounded-b-2xl z-10' {...getMenuProps()}>
+                      {isOpen
+                        ? items
+                          .filter(item => !inputValue || item.value.includes(inputValue))
+                          .map((item, index) => (
+                            <li
+                              {...getItemProps({
+                                key: item.value,
+                                index,
+                                item,
+                                style: {
+                                  backgroundColor:
+                                    highlightedIndex === index ? 'green' : 'yellow',
+                                  fontWeight: selectedItem === item ? 'bold' : 'normal',
+                                },
+                              })}
+                            >
+                              {item.value}
+                            </li>
+                          ))
+                        : null}
+                    </ul>
+                  ) : null}
+              </div>
+            )}
+          </Downshift>
+          <div className='nav-btns flex items-center justify-end gap-3.5'>
+            <img className='' src={cartIcon} alt="Shopping Cart" />
+            <img className='' src={profileIcon} alt="Profile" />
           </div>
         </div>
       </div>
