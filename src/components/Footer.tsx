@@ -14,9 +14,9 @@ const Footer = () => {
   return (
     <div className='relative'>
       <div className='container relative bg-black rounded-3xl top-[102px]'>
-        <div className='flex py-10 px-20'>
+        <div className='flex py-10 px-20 md:flex-row flex-col'>
           <div className='flex items-center'>
-            <h1 className='text-5xl text-white w-3/4'>STAY UP TO DATE ABOUT OUR LATEST OFFER</h1>
+            <h1 className='md:text-5xl text-3xl text-white md:w-3/4'>STAY UP TO DATE ABOUT OUR LATEST OFFER</h1>
           </div>
           <div className='flex items-center w-1/3'>
             <form className='w-full'>
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
       <div className='bg-background pt-[140px]'>
         <div className='container'>
-          <div className='flex justify-between items-center mb-9'>
+          <div className='flex md:justify-between md:flex-nowrap items-center flex-wrap mb-9'>
             <div className='max-w-[250px] flex flex-col gap-3'>
               <div className='nav-logo relative'>
                 <p className='relative -top-1'>Shop.co</p>
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className=''/>
-          <div className='flex mt-4 justify-between items-center relative'>
+          <div className='flex mt-4 md:justify-between md:flex-row flex-col items-center relative'>
             <div>
               <p className='opacity-60'>Shop.co &#169; 2000-2023, All Rights Reserved</p>
             </div>

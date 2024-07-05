@@ -11,8 +11,8 @@ import formalImg from '../assets/images/categories/formal.png';
 import partyImg from '../assets/images/categories/party.png';
 import gymImg from '../assets/images/categories/gym.png';
 import { Suggestion } from '../components/Suggestion';
-
 import { CarouselSection } from '../components/CarouselSection';
+import { CarouselMobile } from '../components/CarouselMobile';
 
 
 const Homepage = () => {
@@ -78,28 +78,28 @@ const Homepage = () => {
       </div>
 
       {/* CATEGORIES */}
-      <div className=''>
-        <div className='container h-[866px] bg-background rounded-[50px]'>
-          <h1 className='text-5xl pt-20 pb-16 text-center'>BROWSE BY DRESS STYLE</h1>
-          <div className='mx-16 mb-20 flex flex-col gap-5'>
-            <div className='flex gap-5 justify-stretch'>
+      <div className='px-4'>
+        <div className='container bg-background md:rounded-[50px] rounded-3xl'>
+          <h1 className='md:text-5xl text-3xl md:pt-20 md:pb-16 pt-9 pb-5 md:px-0 px-5 text-center'>BROWSE BY DRESS STYLE</h1>
+          <div className='md:mx-16 mx-6 mb-20 pb-7 flex flex-col md:gap-5 gap-4'>
+            <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 text-3xl font-bold'>Casual</p>
-                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={casualImg} alt="" />
+                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Casual</p>
+                <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={casualImg} alt="" />
               </div>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 text-3xl font-bold'>Formal</p>
-                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={formalImg} alt="" />
+                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Formal</p>
+                <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={formalImg} alt="" />
               </div>
             </div>
-            <div className='flex gap-5 justify-stretch'>
+            <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 text-3xl font-bold'>Party</p>
-                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={partyImg} alt="" />
+                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Party</p>
+                <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={partyImg} alt="" />
               </div>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 text-3xl font-bold'>Gym</p>
-                <img className='rounded-3xl object-cover object-top h-[289px] w-full' src={gymImg} alt="" />
+                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Gym</p>
+                <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={gymImg} alt="" />
               </div>
             </div>
           </div>
@@ -111,8 +111,11 @@ const Homepage = () => {
         <div className='container px-4'>
           <h1 className='md:text-5xl text-3xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
         </div>
-        <div className='container relative'>
+        <div className='container relative md:block hidden'>
           <CarouselSection />
+        </div>
+        <div className='container relative md:hidden'>
+          <CarouselMobile />
         </div>
       </div>
     </div>
