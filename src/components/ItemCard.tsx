@@ -4,7 +4,7 @@ import nineRate from '../assets/icons/4.5-star.png';
 
 export const ItemCard = () => {
     return (
-        <div className='flex flex-col gap-[6px] md:w-[295px] w-5/12 mx-2'>
+        <div className='flex flex-col gap-[6px] md:w-[295px] w-5/12 mx-2 md:mb-0 mb-5'>
             <div className='mb-2'>
                 <img className='rounded-2xl md:h-[298px] max-h-52' src={tShirtImg} alt="" />
             </div>

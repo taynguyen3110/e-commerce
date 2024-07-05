@@ -16,7 +16,7 @@ export const Suggestion: React.FC<Props> = (props) => {
                 <ItemCard />
             </div>
             <div className='flex justify-center'>
-                <button className='mt-10 mb-16 py-[14px] px-20 border-black border border-opacity-10 rounded-full'>View All</button>
+                <button className='md:mt-10 md:mb-16 mt-2 mb-10 md:py-[14px] md:px-20 py-3 px-[39%] md:text-base text-sm border-black border border-opacity-10 rounded-full'>View All</button>
             </div>
         </div>
     )

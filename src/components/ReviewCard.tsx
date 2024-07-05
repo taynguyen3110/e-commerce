@@ -9,7 +9,7 @@ interface Props {
 
 export const ReviewCard: React.FC<Props> = ({name, review}) => {
     return (
-        <div className='min-h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6 mx-[10px]'>
+        <div className='md:min-h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6 mx-[10px]'>
             <div>
                 <img src={nineRate} alt="" />
             </div>

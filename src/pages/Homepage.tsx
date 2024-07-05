@@ -81,7 +81,7 @@ const Homepage = () => {
       <div className='md:px-0 px-4'>
         <div className='container bg-background md:rounded-[50px] rounded-3xl'>
           <h1 className='md:text-5xl text-3xl md:pt-20 md:pb-16 pt-10 pb-7 md:px-0 px-5 text-center'>BROWSE BY DRESS STYLE</h1>
-          <div className='md:mx-16 mx-6 mb-20 pb-7 flex flex-col md:gap-5 gap-4'>
+          <div className='md:mx-16 mx-6 md:mb-20 pb-7 flex flex-col md:gap-5 gap-4'>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
               <div className='relative grow'>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Casual</p>
@@ -109,14 +109,14 @@ const Homepage = () => {
       {/* CAROUSEL */}
       <div className='md:max-w-[1636px] flex flex-col mx-auto relative'>
         <div className='container px-4'>
-          <h1 className='md:text-5xl text-3xl pt-24 pb-16'>OUR HAPPY CUSTOMERS</h1>
+          <h1 className='md:text-5xl text-3xl md:mt-24 mt-12 md:mb-16 mb-5 '>OUR HAPPY CUSTOMERS</h1>
         </div>
-        <div className='container relative md:block hidden'>
+        <div className='container relative'>
           <CarouselSection />
         </div>
-        <div className='container relative md:hidden'>
+        {/* <div className='container relative md:hidden'>
           <CarouselMobile />
-        </div>
+        </div> */}
       </div>
     </div>
   )
