@@ -52,7 +52,7 @@ const Homepage = () => {
       </div>
 
       {/* BREAK SECTION */}
-      <div className='bg-black py-11'>
+      <div className='bg-black py-11 md:px-0 px-4'>
         <div className='container flex md:flex-nowrap flex-wrap md:justify-between gap-4 justify-evenly items-center'>
           <img className='h-6' src={versaceLogo} alt="Logo of Versace" />
           <img className='h-6' src={zaraLogo} alt="Logo of Zara" />
@@ -78,27 +78,27 @@ const Homepage = () => {
       </div>
 
       {/* CATEGORIES */}
-      <div className='px-4'>
+      <div className='md:px-0 px-4'>
         <div className='container bg-background md:rounded-[50px] rounded-3xl'>
-          <h1 className='md:text-5xl text-3xl md:pt-20 md:pb-16 pt-9 pb-5 md:px-0 px-5 text-center'>BROWSE BY DRESS STYLE</h1>
+          <h1 className='md:text-5xl text-3xl md:pt-20 md:pb-16 pt-10 pb-7 md:px-0 px-5 text-center'>BROWSE BY DRESS STYLE</h1>
           <div className='md:mx-16 mx-6 mb-20 pb-7 flex flex-col md:gap-5 gap-4'>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Casual</p>
+                <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Casual</p>
                 <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={casualImg} alt="" />
               </div>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Formal</p>
+                <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Formal</p>
                 <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={formalImg} alt="" />
               </div>
             </div>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Party</p>
+                <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Party</p>
                 <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={partyImg} alt="" />
               </div>
               <div className='relative grow'>
-                <p className='absolute top-8 left-10 md:text-3xl text-2xl font-bold'>Gym</p>
+                <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Gym</p>
                 <img className='rounded-3xl object-cover object-top h-[190px] w-full' src={gymImg} alt="" />
               </div>
             </div>
