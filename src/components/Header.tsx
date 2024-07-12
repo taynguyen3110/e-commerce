@@ -27,15 +27,15 @@ const Header = () => {
     <div className='mx-auto'>
       <PromotionBar />
       <div className='container md:mx-auto px-4 nav-bar flex md:gap-10 justify-between text-center my-4'>
-        <div className='flex md:gap-x-10 items-center'>
-          <img className='' src={menuIcon} alt="" />
+        <div className='flex lg:gap-10 md:gap-6 items-center md:w-2/3'>
+          <img className='md:hidden' src={menuIcon} alt="" />
           <div className='nav-logo relative'>
-            <p className='relative lg:-top-1 lg:text-[32px] -top-[2px] text-2xl ml-4'>Shop.co</p>
+            <p className='relative md:-top-1 md:text-[32px] -top-[2px] text-2xl md:ml-0 ml-4'>Shop.co</p>
           </div>
-          <div className='nav-menu gap-6 h-12 items-center md:flex hidden'>
+          <div className='nav-menu lg:gap-6 gap-4 h-12 justify-stretch items-center md:flex hidden'>
             <div>
               <Popover className="group">
-                <PopoverButton className="flex items-center gap-2">
+                <PopoverButton className="flex items-center lg:gap-2 gap-1">
                   Shop
                   <ChevronDownIcon className="size-5 group-data-[open]:rotate-180" />
                 </PopoverButton>
@@ -55,13 +55,13 @@ const Header = () => {
                 </Transition>
               </Popover>
             </div>
-            <div>On Sale</div>
-            <div>New Arrivals</div>
+            <div className='text-nowrap'>On Sale</div>
+            <div className='text-nowrap'>New Arrivals</div>
             <div>Brands</div>
           </div>
         </div>
         <div className='flex md:gap-x-10 md:w-2/3 w-1/2 justify-end items-center gap-3.5'>
-          <div className='md:hidden'>
+          <div className='min-[480px]:hidden'>
             <img src={searchIcon} alt="" />
           </div>
           <Downshift
@@ -81,7 +81,7 @@ const Header = () => {
               selectedItem,
               getRootProps,
             }) => (
-              <div className='md:flex items-center justify-stretch relative hidden'>
+              <div className='min-[480px]:flex items-center justify-stretch relative hidden'>
                 <label {...getLabelProps()}></label>
                 <div className='w-full justify-end'
                   style={{ display: 'flex' }}
@@ -89,7 +89,7 @@ const Header = () => {
                 >
                   <div className='w-full flex justify-end relative'>
                     <img className='absolute top-1/2 translate-y-[-50%] left-4 opacity-40' src={searchIcon} alt="" />
-                    <input className='bg-background py-2 pl-[52px] w-full rounded-full' placeholder='Search for products' {...getInputProps()} />
+                    <input className='bg-background py-2 pl-[52px] w-full rounded-full md:placeholder:text-base placeholder:text-sm' placeholder='Search for products' {...getInputProps()} />
                   </div>
                 </div>
                 {isOpen
