@@ -8,7 +8,7 @@ import 'react-multi-carousel/lib/styles.css';
 const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
     const { carouselState: { currentSlide } } = rest;
     return (
-        <div className='carousel-button-group flex flex-row-reverse absolute md:right-12 right-4 md:top-[-85px] -top-11 gap-5'>
+        <div className='carousel-button-group flex flex-row-reverse absolute right-12 top-[-85px] gap-5'>
             <a onClick={() => next()}><img src={rightArrowIcon} /></a>
             <a onClick={() => previous()}><img src={leftArrowIcon} /></a>
         </div>
@@ -16,21 +16,22 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
     );
 };
 
-export const CarouselSection = () => {
+export const CarouselMobile = () => {
 
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3,
-            partialVisibilityGutter: 40
+            items: 1,
+            // partialVisibilityGutter: 40
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2,
+            items: 1,
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 1,
+            partialVisibilityGutter: 0
         }
     };
 
@@ -40,7 +41,7 @@ export const CarouselSection = () => {
             swipeable={true}
             draggable={true}
             // centerMode={true}
-            // partialVisible={true}
+            partialVisible={false}
             responsive={responsive}
             renderButtonGroupOutside={true}
             infinite={true}
@@ -48,7 +49,7 @@ export const CarouselSection = () => {
             transitionDuration={500}
             containerClass="container-padding-top"
             itemClass='w-full'
-            className='md:w-parent-plus-100 relative md:right-[50px] md:mb-0 mb-3'
+            className='md:w-parent-plus-100 md:relative md:right-[50px]'
         >
             <ReviewCard name="Sarah M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} />
             <ReviewCard name="John M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations. I really love it!"`} />
@@ -57,6 +58,8 @@ export const CarouselSection = () => {
             <ReviewCard name="Henry M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} />
             <ReviewCard name="Tom M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} />
             <ReviewCard name="Thomas M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} />
+
+
         </Carousel>
 
 

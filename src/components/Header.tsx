@@ -1,81 +1,41 @@
 import React from 'react'
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+// import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import cartIcon from '../assets/icons/cart.png'
 import profileIcon from '../assets/icons/profile.png'
+import searchIcon from '../assets/icons/search.png'
+import menuIcon from '../assets/icons/menu.png'
 import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { PromotionBar } from './PromotionBar'
-
-type Item = {
-  id: number;
-  name: string;
-}
+import Downshift from 'downshift'
 
 const items = [
-  {
-    id: 0,
-    name: 'Cobol'
-  },
-  {
-    id: 1,
-    name: 'JavaScript'
-  },
-  {
-    id: 2,
-    name: 'Basic'
-  },
-  {
-    id: 3,
-    name: 'PHP'
-  },
-  {
-    id: 4,
-    name: 'Java'
-  }
+  { value: 'apple' },
+  { value: 'pear' },
+  { value: 'orange' },
+  { value: 'orange2' },
+  { value: 'orange3' },
+  { value: 'grape' },
+  { value: 'banana' },
+  { value: 'banana2' },
+  { value: 'banana3' },
+  { value: 'banana4' },
 ]
-
-const handleOnSearch = (string: String, results: Item[]) => {
-  // onSearch will have as the first callback parameter
-  // the string searched and for the second the results.
-  console.log(string, results)
-}
-
-const handleOnHover = (result: Item) => {
-  // the item hovered
-  console.log(result)
-}
-
-const handleOnSelect = (item: Item) => {
-  // the item selected
-  console.log(item)
-}
-
-const handleOnFocus = () => {
-  console.log('Focused')
-}
-
-const formatResult = (item: Item) => {
-  return (
-    <>
-      {/* <span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span> */}
-      <span style={{ display: 'block', textAlign: 'left' }}>{item.name}</span>
-    </>
-  )
-}
 
 const Header = () => {
   return (
     <div className='mx-auto'>
       <PromotionBar />
-      <div className='container mx-auto nav-bar flex gap-10 justify-between text-center my-6'>
-        <div className='flex gap-x-10'>
+      <div className='container md:mx-auto px-4 nav-bar flex md:gap-10 justify-between text-center my-4'>
+        <div className='flex lg:gap-10 md:gap-6 items-center md:w-2/3'>
+          <img className='md:hidden' src={menuIcon} alt="" />
           <div className='nav-logo relative'>
-            <p className='relative -top-1'>Shop.co</p>
+            <p className='relative md:-top-1 md:text-[32px] -top-[2px] text-2xl md:ml-0 ml-4'>Shop.co</p>
           </div>
-          <div className='nav-menu flex gap-6 h-12 items-center'>
+          <div className='nav-menu lg:gap-6 gap-4 h-12 justify-stretch items-center md:flex hidden'>
             <div>
               <Popover className="group">
-                <PopoverButton className="flex items-center gap-2">
+                <PopoverButton className="flex items-center lg:gap-2 gap-1">
                   Shop
                   <ChevronDownIcon className="size-5 group-data-[open]:rotate-180" />
                 </PopoverButton>
@@ -95,40 +55,74 @@ const Header = () => {
                 </Transition>
               </Popover>
             </div>
-            <div>On Sale</div>
-            <div>New Arrivals</div>
+            <div className='text-nowrap'>On Sale</div>
+            <div className='text-nowrap'>New Arrivals</div>
             <div>Brands</div>
           </div>
         </div>
-        <div className='flex gap-x-10'>
-          <div className='flex-initial' style={{ width: 500 }}>
-            <ReactSearchAutocomplete<Item>
-              items={items}
-              fuseOptions={{ keys: ["name", "description"] }}
-              resultStringKeyName="name"
-              inputDebounce={100}
-              onSearch={handleOnSearch}
-              onHover={handleOnHover}
-              onSelect={handleOnSelect}
-              onFocus={handleOnFocus}
-              maxResults={5}
-              placeholder="Search for products..."
-              autoFocus
-              showIcon={false}
-              styling={{
-                backgroundColor: '#F0EEED',
-                borderRadius: '20px',
-                boxShadow: 'none',
-                fontFamily: 'inherit',
-                fontSize: 'inherit',
-                color: 'rgba(0, 0, 0, 0.4)',
-              }}
-              formatResult={formatResult}
-            />
+        <div className='flex md:gap-x-10 md:w-2/3 w-1/2 justify-end items-center gap-3.5'>
+          <div className='min-[480px]:hidden'>
+            <img src={searchIcon} alt="" />
           </div>
-          <div className='nav-btns flex items-center gap-3.5'>
-            <img src={cartIcon} alt="Shopping Cart" />
-            <img src={profileIcon} alt="Profile" />
+          <Downshift
+            onChange={selection =>
+              alert(selection ? `You selected ${selection.value}` : 'Selection Cleared')
+            }
+            itemToString={item => (item ? item.value : '')}
+          >
+            {({
+              getInputProps,
+              getItemProps,
+              getLabelProps,
+              getMenuProps,
+              isOpen,
+              inputValue,
+              highlightedIndex,
+              selectedItem,
+              getRootProps,
+            }) => (
+              <div className='min-[480px]:flex items-center justify-stretch relative hidden'>
+                <label {...getLabelProps()}></label>
+                <div className='w-full justify-end'
+                  style={{ display: 'flex' }}
+                  {...getRootProps({}, { suppressRefError: true })}
+                >
+                  <div className='w-full flex justify-end relative'>
+                    <img className='absolute top-1/2 translate-y-[-50%] left-4 opacity-40' src={searchIcon} alt="" />
+                    <input className='bg-background py-2 pl-[52px] w-full rounded-full md:placeholder:text-base placeholder:text-sm' placeholder='Search for products' {...getInputProps()} />
+                  </div>
+                </div>
+                {isOpen
+                  ? (
+                    <ul className='absolute block top-12 w-full bg-slate-700 border rounded-b-2xl z-10' {...getMenuProps()}>
+                      {isOpen
+                        ? items
+                          .filter(item => !inputValue || item.value.includes(inputValue))
+                          .map((item, index) => (
+                            <li
+                              {...getItemProps({
+                                key: item.value,
+                                index,
+                                item,
+                                style: {
+                                  backgroundColor:
+                                    highlightedIndex === index ? 'green' : 'yellow',
+                                  fontWeight: selectedItem === item ? 'bold' : 'normal',
+                                },
+                              })}
+                            >
+                              {item.value}
+                            </li>
+                          ))
+                        : null}
+                    </ul>
+                  ) : null}
+              </div>
+            )}
+          </Downshift>
+          <div className='nav-btns flex items-center justify-end gap-3.5'>
+            <img className='' src={cartIcon} alt="Shopping Cart" />
+            <img className='' src={profileIcon} alt="Profile" />
           </div>
         </div>
       </div>

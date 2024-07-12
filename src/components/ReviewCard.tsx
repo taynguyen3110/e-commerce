@@ -9,15 +9,15 @@ interface Props {
 
 export const ReviewCard: React.FC<Props> = ({name, review}) => {
     return (
-        <div className=' min-h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6 mx-[10px]'>
+        <div className='md:min-h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6 mx-[10px]'>
             <div>
                 <img src={nineRate} alt="" />
             </div>
             <div className='flex gap-1'>
-                <p className='text-xl font-bold'>{name}</p>
+                <p className='md:text-xl text-base font-bold'>{name}</p>
                 <img src={verifiedIcon} alt="" />
             </div>
-            <p className='opacity-60 pb-5'>{review}</p>
+            <p className='md:text-base text-sm opacity-60 pb-5'>{review}</p>
         </div>
     )
 }

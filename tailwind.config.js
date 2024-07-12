@@ -16,6 +16,9 @@ export default {
       width: {
         'parent-plus-100': 'calc(100% + 100px)',
       },
+      fontSize: {
+        mobile: '12px',
+      }
     },
   },
   plugins: [],
