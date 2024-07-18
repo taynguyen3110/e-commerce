@@ -48,7 +48,7 @@ export const CarouselSection = () => {
             transitionDuration={500}
             containerClass="container-padding-top"
             itemClass='w-full'
-            className='md:w-parent-plus-100 relative md:right-[50px] md:mb-0 mb-3'
+            className='2xl:w-parent-plus-100 relative md:right-[50px] md:mb-0 mb-3'
         >
             <ReviewCard name="Sarah M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`} />
             <ReviewCard name="John M." review={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations. I really love it!"`} />

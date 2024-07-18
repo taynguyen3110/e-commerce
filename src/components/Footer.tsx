@@ -76,7 +76,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className='' />
-          <div className='flex mt-4 md:justify-between md:flex-row flex-col items-center relative'>
+          <div className='flex mt-4 md:justify-between md:flex-row flex-col items-center relative overflow-hidden'>
             <div className='md:pb-0 pb-3 md:text-base text-sm'>
               <p className='opacity-60'>Shop.co &#169; 2000-2023, All Rights Reserved</p>
             </div>
