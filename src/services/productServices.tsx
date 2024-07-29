@@ -1,4 +1,4 @@
-import products from '../mock/products.json'
+import data from '../mock/products.json'
 
 interface Product {
     id: string,
@@ -18,7 +18,7 @@ interface Product {
     sale: number
 }
 
-interface ProductDetails {
+export interface ProductDetails {
     id: string,
     name: string,
     imageSrc: string,
@@ -30,16 +30,48 @@ interface ProductDetails {
     colors: string,
 }
 
+export interface Colors {
+    [key: string]: string
+}
+
+const colorCodeBase: Colors = {
+    'black': '#000000',
+    'gray': '#808080',
+    'navy': '#000080',
+    'bison': '#7B3F00',
+    'sky+blue': '#87CEEB',
+    'white': '#FFFFFF',
+    'forest': '#228B22',
+    'terracotta': '#E2725B',
+    'washed+indigo': '#4B0082',
+    'indigo': '#4B0082',
+    'canvas': '#F0E68C',
+    'charcoal': '#36454F',
+    'khaki': '#F0E68C',
+    'midnight': '#191970',
+    'beach': '#FFE4C4'
+};
+
 export function getProductsRange(start: number, end: number) {
-    const productRange = products.products.slice(start, end);
+    const productRange = data.products.slice(start, end);
     return getProductDetails(productRange);
+}
+
+export function getRandomProducts(count: number) {
+    const products: Array<Product> = [];
+    while (products.length < count) {
+        const randomProduct = data.products[(Math.floor(Math.random() * getProductsCount()))]
+        if (!products.includes(randomProduct)) {
+            products.push(randomProduct)
+        }
+    }
+    return getProductDetails(products)
 }
 
 const IMG_PATH = 'src/assets/images/products/';
 
 export function getProductDetails(products: Array<Product>) {
-    const productsDetails: Array<ProductDetails> = [];
-    products.map((p) => {
+    return products.map((p) => {
         const productDetails: ProductDetails = {
             id: '',
             name: '',
@@ -62,11 +94,26 @@ export function getProductDetails(products: Array<Product>) {
         productDetails.sale = p.sale;
         productDetails.salePrice = Math.round(p.price * (100 - p.sale) / 100);
 
-        productsDetails.push(productDetails);
+        return productDetails
     })
-    return productsDetails;
 }
 
 export function getProductsCount() {
-    return products.products.length;
+    return data.products.length;
+}
+
+export function getProductColors(): Colors {
+    let colorsArrays = data.products.map(product =>
+        product.sizesColors[0].colors.flatMap(color =>
+            color.color
+        )
+    );
+
+    let colors = [...new Set(colorsArrays.flatMap(i => i))]
+    let colorCodes: Colors = {};
+    colors.forEach(c => {
+        Object.defineProperty(colorCodes, c, { value: colorCodeBase[c], enumerable: true })
+    })
+    return colorCodes
+
 }

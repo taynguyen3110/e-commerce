@@ -10,13 +10,6 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import One from "./pages/One";
-import Oneone from "./pages/Oneone";
-import Onetwo from "./pages/Onetwo";
-import Two from "./pages/Two";
-import Twoone from "./pages/Twoone";
-import Twotwo from "./pages/Twotwo";
-
 function App() {
 
   const router = createBrowserRouter([

@@ -35,17 +35,17 @@ export const Pagination = ({ onPageChange, totalCount, siblingCount = 1, current
 
     let lastPage = paginationRange[paginationRange.length - 1];
     return (
-      <div className='flex justify-center'>
-        <ul className='pagination-container'>
+      <div className='w-full mt-4'>
+        <ul className='pagination-container flex justify-between'>
           {/* Left navigation arrow */}
-          <li
-            className={classnames('pagination-item', {
+          <button
+            className={classnames('pagination-item border font-bold', {
               disabled: currentPage === 1
             })}
             onClick={onPrevious}
-          >
-            <div className="arrow left" />
-          </li>
+          ><i className='bx bx-left-arrow-alt mr-1 text-xl'></i>Previous
+          </button>
+          <div className='flex'>
           {paginationRange.map(pageNumber => {
 
             // If the pageItem is a DOT, render the DOTS unicode character
@@ -65,15 +65,15 @@ export const Pagination = ({ onPageChange, totalCount, siblingCount = 1, current
               </li>
             );
           })}
+          </div>
           {/*  Right Navigation arrow */}
-          <li
-            className={classnames('pagination-item', {
+          <button
+            className={classnames('pagination-item border font-bold', {
               disabled: currentPage === lastPage
             })}
             onClick={onNext}
-          >
-            <div className="arrow right" />
-          </li>
+          >Next<i className='bx bx-right-arrow-alt ml-1 text-xl' ></i>
+          </button>
         </ul>
       </div>
     );

@@ -10,7 +10,7 @@ interface DropdownProps {
 
 export const Dropdown = ({ trigger, children, fullWidth, align = 'left', offset = 0}: DropdownProps) => {
     const [show, setShow] = useState(false)
-    const className = classNames('absolute bg-gray-600 border p-5 bottom-0', { 'w-[400px]': fullWidth, 'left-0': align === "left", 'right-0': align === 'right' })
+    const className = classNames('absolute bg-background border p-5 bottom-0', { 'w-[400px]': fullWidth, 'left-0': align === "left", 'right-0': align === 'right' })
     return (
         <div className='relative' onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
             <div>{trigger}</div>

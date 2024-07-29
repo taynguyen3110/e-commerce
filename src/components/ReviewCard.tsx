@@ -1,5 +1,5 @@
 import React from 'react'
-import nineRate from '../assets/icons/4.5-star.png'
+// import nineRate from '../assets/icons/4.5-star.png'
 import verifiedIcon from '../assets/icons/verified.png'
 
 interface Props {
@@ -11,7 +11,7 @@ export const ReviewCard: React.FC<Props> = ({name, review}) => {
     return (
         <div className='md:min-h-60 flex flex-col gap-3 border rounded-2xl px-7 pt-6 mx-[10px]'>
             <div>
-                <img src={nineRate} alt="" />
+                <img src="" alt="" />
             </div>
             <div className='flex gap-1'>
                 <p className='md:text-xl text-base font-bold'>{name}</p>

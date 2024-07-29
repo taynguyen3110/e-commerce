@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
+import classNames from 'classnames'
 
 interface AccordionItemProps {
-    heading: string,
-    children: React.ReactNode
+    title: string,
+    heading?: boolean,
+    children: React.ReactNode,
+    expand?: boolean
 }
 
-export const AccordionItem = ({ heading, children }: AccordionItemProps) => {
-    const [showData, setShowData] = useState(false);
+export const AccordionItem = ({ title, heading = false, children, expand = false }: AccordionItemProps) => {
+    const [showData, setShowData] = useState(expand);
 
     const toggleShowData = () => {
         setShowData(prevShowdata => !prevShowdata);
@@ -15,8 +18,8 @@ export const AccordionItem = ({ heading, children }: AccordionItemProps) => {
     return (
         <div className=''>
             <div className='flex relative justify-between items-center'>
-                <p>{heading}</p>
-                <i className={`bx bx-chevron-right relative opacity-50 text-2xl -right-1 transition-all ${showData && 'rotate-90'}`} onClick={() => { toggleShowData() }}></i>
+                <p className={classNames('', { 'font-bold text-xl opacity-100': heading })}>{title}</p>
+                <i className={classNames('bx bx-chevron-right relative text-2xl -right-1 transition-all', { 'rotate-90': showData, 'opacity-100' : heading, 'opacity-50' : !heading })} onClick={() => { toggleShowData() }}></i>
             </div>
             {showData && <div>{children}</div>}
         </div>

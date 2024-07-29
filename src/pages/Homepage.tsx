@@ -67,15 +67,15 @@ const Homepage = () => {
 
       {/* NEW ARRIVALS */}
       <div>
-        <div className='container'>
+        <div className='container px-4 sm:px-0'>
           <Suggestion title="NEW ARRIVALS" />
-          <hr />
+          <hr/>
         </div>
       </div>
 
       {/* TOP SELLING */}
       <div>
-        <div className='container'>
+        <div className='container px-4 sm:px-0'>
           <Suggestion title="TOP SELLING" />
         </div>
       </div>

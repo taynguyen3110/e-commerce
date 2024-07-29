@@ -31,14 +31,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='bg-background md:pt-[140px] md:mt-0 mt-40 pt-[200px] md:px-0 px-4 pb-16'>
+      <div className='bg-background md:pt-[140px] md:mt-0 mt-48 pt-[200px] md:px-0 px-4 pb-16'>
         <div className='container'>
           <div className='flex md:justify-between md:flex-nowrap md:text-base text-sm items-center flex-wrap md:mb-9 mb-2'>
             <div className='md:max-w-[250px] flex flex-col md:gap-3 gap-2 md:mb-0 mb-6'>
               <div className='nav-logo relative'>
                 <p className='relative md:text-4xl text-3xl -top-1'>Shop.co</p>
               </div>
-              <p className='opacity-60'>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+              <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
               <div className='flex gap-3 md:mt-6 mt-3'>
                 <img src={twitterIcon} alt="" />
                 <img src={facebookIcon} alt="" />
@@ -48,37 +48,37 @@ const Footer = () => {
             </div>
             <div className='flex flex-col gap-3 md:w-auto md:mb-0 mb-6 w-1/2'>
               <h4 className='pb-1 font-medium tracking-[3px]'>COMPANY</h4>
-              <p className='opacity-60'>About</p>
-              <p className='opacity-60'>Features</p>
-              <p className='opacity-60'>Works</p>
-              <p className='opacity-60'>Career</p>
+              <p>About</p>
+              <p>Features</p>
+              <p>Works</p>
+              <p>Career</p>
             </div>
             <div className='flex flex-col gap-3 md:w-auto md:mb-0 mb-6 w-1/2'>
               <h4 className='pb-1 font-medium tracking-[3px]'>HELP</h4>
-              <p className='opacity-60'>Customer Support</p>
-              <p className='opacity-60'>Delivery Details</p>
-              <p className='opacity-60'>Terms & Conditions</p>
-              <p className='opacity-60'>Privacy Policy</p>
+              <p>Customer Support</p>
+              <p>Delivery Details</p>
+              <p>Terms & Conditions</p>
+              <p>Privacy Policy</p>
             </div>
             <div className='flex flex-col gap-3 md:w-auto md:mb-0 mb-6 w-1/2'>
               <h4 className='pb-1 font-medium tracking-[3px]'>FAQ</h4>
-              <p className='opacity-60'>Account</p>
-              <p className='opacity-60'>Manage Deliveries</p>
-              <p className='opacity-60'>Orders</p>
-              <p className='opacity-60'>Payments</p>
+              <p>Account</p>
+              <p>Manage Deliveries</p>
+              <p>Orders</p>
+              <p>Payments</p>
             </div>
             <div className='flex flex-col gap-3 md:w-auto md:mb-0 mb-6 w-1/2'>
               <h4 className='pb-1 font-medium tracking-[3px]'>RESOURCES</h4>
-              <p className='opacity-60'>Free eBooks</p>
-              <p className='opacity-60'>Development Tutorial</p>
-              <p className='opacity-60'>How to - Blog</p>
-              <p className='opacity-60'>Youtube Playlist</p>
+              <p>Free eBooks</p>
+              <p>Development Tutorial</p>
+              <p>How to - Blog</p>
+              <p>Youtube Playlist</p>
             </div>
           </div>
           <hr className='' />
           <div className='flex mt-4 md:justify-between md:flex-row flex-col items-center relative overflow-hidden'>
             <div className='md:pb-0 pb-3 md:text-base text-sm'>
-              <p className='opacity-60'>Shop.co &#169; 2000-2023, All Rights Reserved</p>
+              <p>Shop.co &#169; 2000-2023, All Rights Reserved</p>
             </div>
             <div className='flex relative md:right-[-10px]'>
               <img className='md:h-auto h-10' src={visaIcon} alt="" />

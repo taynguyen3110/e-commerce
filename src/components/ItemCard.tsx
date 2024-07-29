@@ -1,11 +1,12 @@
 import React from 'react'
 import classNames from 'classnames';
-import tShirtImg from '../assets/images/new-arrival/t-shirt-tape.png';
 import ProductDetails from '../pages/ProductDetails';
+import { Rating } from './Rating';
 // import  from '../assets/icons/4.5-star.png';
 
 interface ItemCardProps {
-    product: Product
+    product: Product,
+    itemEachRows: number
 }
 
 interface Product {
@@ -20,23 +21,12 @@ interface Product {
     colors: string,
 }
 
-export const ItemCard = ({ product }: ItemCardProps) => {
+export const ItemCard = ({ product, itemEachRows }: ItemCardProps) => {
 
-    const ratingStar = (rating: number) => {
-        let star = [];
-        let processedRating = Math.round(rating * 2) / 2;
-
-        for (let index = 0; index < Math.floor(processedRating); index++) {
-            star.push(<i className='bx bxs-star text-yellow-400' ></i>);
-        }
-        if (processedRating % 1 != 0) {
-            star.push(<span className='relative top-0 inline-block h-4 w-2 overflow-hidden'><i className='bx bxs-star relative -top-[2px] text-yellow-400' ></i></span>);
-        }
-        return <span className='relative mr-3'>{star}</span>;
-    };
+    const widthClass = `calc((100% - ${12 * (itemEachRows - 1)}px) / ${itemEachRows})`;
 
     return (
-        <div className='flex flex-col gap-[6px] w-[48%] md:mb-0 mb-5'>
+        <div className='flex flex-col gap-[6px] md:mb-0 mb-5' style={{ width: `${widthClass}` }}>
             <div className='mb-2'>
                 <a href='/product'><img className='md:rounded-2xl rounded-xl max-h-96' src={product.productImg} alt="" /></a>
             </div>
@@ -44,7 +34,7 @@ export const ItemCard = ({ product }: ItemCardProps) => {
                 <a href='/product'><p className='lg:text-xl text-base font-bold truncate'>{product.name}</p></a>
             </div>
             <div className='flex items-center'>
-                {ratingStar(product.rating)}
+                <Rating rating={product.rating} />
                 <span className='lg:text-sm text-xs'>{product.rating}<span className='opacity-60'>/5</span></span>
             </div>
             <div>

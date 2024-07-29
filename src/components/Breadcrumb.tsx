@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 export const Breadcrumb = () => {
     return (
-        <div className="bg-white ">
-            <ul className=" flex gap-2 text-sm items-center pt-5 pb-3">
+        <div className="bg-white">
+            <ul className=" flex gap-2 text-sm items-center pt-5 pb-5">
                 <Link to="/" className=" cursor-pointer">
                     Home
                 </Link>
