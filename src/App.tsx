@@ -1,5 +1,5 @@
 import Homepage from "./pages/Homepage";
-import ProductDetails from "./pages/ProductDetails";
+import ProductInfo from "./pages/ProductInfo";
 import CategoryPage from "./pages/CategoryPage";
 import Cart from "./pages/Cart";
 import {
@@ -19,8 +19,8 @@ function App() {
       // errorElement: <ErrorPage />,
     },
     {
-      path: "/product",
-      element: <ProductDetails />,
+      path: "/product/:id",
+      element: <ProductInfo />,
     },
     {
       path: "/category",

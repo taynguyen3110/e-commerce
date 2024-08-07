@@ -21,13 +21,19 @@ interface Product {
 export interface ProductDetails {
     id: string,
     name: string,
-    imageSrc: string,
-    productImg: string,
+    description: string,
+    imageSrc: string[],
     price: number,
     rating: number,
     sale: number,
     salePrice: number,
-    colors: string,
+    colors: Array<{
+        size: string,
+        colors: Array<{
+            color: string,
+            stock: number
+        }>
+    }>,
 }
 
 export interface Colors {
@@ -43,14 +49,16 @@ const colorCodeBase: Colors = {
     'white': '#FFFFFF',
     'forest': '#228B22',
     'terracotta': '#E2725B',
-    'washed+indigo': '#4B0082',
-    'indigo': '#4B0082',
+    'washed+indigo': '#446d92',
+    'indigo': '#071f35',
     'canvas': '#F0E68C',
     'charcoal': '#36454F',
     'khaki': '#F0E68C',
     'midnight': '#191970',
     'beach': '#FFE4C4'
 };
+
+const IMG_PATH = 'src/assets/images/products/';
 
 export function getProductsRange(start: number, end: number) {
     const productRange = data.products.slice(start, end);
@@ -68,28 +76,61 @@ export function getRandomProducts(count: number) {
     return getProductDetails(products)
 }
 
-const IMG_PATH = 'src/assets/images/products/';
+export function getProductbyId(id: string) {
+    let product: Product;
+    for (let index = 0; index < data.products.length; index++) {
+        const element = data.products[index];
+        if (element.id === id) {
+            product = element;
+            const productDetail = getProductDetails([product])
+            return productDetail[0]
+        }
+    }
+}
+
+export function getProductColor(product: ProductDetails) {
+    const colorsArray = product?.colors[0].colors.map(c => c.color)
+
+    let colorCodes: Colors = {};
+    colorsArray?.forEach(c => {
+        Object.defineProperty(colorCodes, c, { value: colorCodeBase[c], enumerable: true })
+    })
+    return colorCodes
+}
+
+export function getSizeByColor(id: string, color: string) {
+
+}
+export function getColorBySize(id: string, size: string) {
+
+}
 
 export function getProductDetails(products: Array<Product>) {
     return products.map((p) => {
         const productDetails: ProductDetails = {
             id: '',
             name: '',
-            imageSrc: '',
-            productImg: '',
+            description: '',
+            imageSrc: [],
             price: 0,
             rating: 0,
             sale: 0,
             salePrice: 0,
-            colors: ''
+            colors: []
         };
 
         productDetails.id = p.id;
         productDetails.name = p.name;
-        productDetails.imageSrc = `${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[0].color}`;
-        productDetails.productImg = `${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[0].color}-1.jpg`;
+        productDetails.description = p.description;
+
+        const urls = [];
+        for (let index = 0; index < 3; index++) {
+            urls.push(`${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[0].color}-${index + 1}.jpg`)
+        }
+
+        productDetails.imageSrc = urls;
         productDetails.rating = p.rating;
-        productDetails.colors = p.sizesColors[0].colors[0].color;
+        productDetails.colors = p.sizesColors;
         productDetails.price = p.price;
         productDetails.sale = p.sale;
         productDetails.salePrice = Math.round(p.price * (100 - p.sale) / 100);
@@ -115,5 +156,4 @@ export function getProductColors(): Colors {
         Object.defineProperty(colorCodes, c, { value: colorCodeBase[c], enumerable: true })
     })
     return colorCodes
-
 }

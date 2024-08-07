@@ -22,12 +22,22 @@ body {
 
 p {
     opacity: 60%;
+    cursor: default;
+}
+
+span {
+    cursor: default;
 }
 
 h1,
 h2,
 h3 {
     font-family: $font-family-secondary;
+    cursor: default;
+}
+
+h4 {
+    cursor: default;
 }
 
 // Add more font styles as needed

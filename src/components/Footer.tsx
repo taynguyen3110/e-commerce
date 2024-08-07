@@ -13,11 +13,11 @@ import googlepayIcon from '../assets/icons/googlepay.png'
 const Footer = () => {
   return (
     <div className='relative'>
-      <div className='container md:relative absolute md:top-[102px] -top-36 md:px-0 px-4'>
+      <div className='container md:relative absolute md:top-[102px] -translate-x-1/2 left-1/2 md:left-0 md:translate-x-0 -top-36 md:px-0 px-4'>
         <div className='bg-black rounded-3xl'>
           <div className='flex md:py-10 md:px-20 px-6 py-8 md:flex-row md:gap-0 gap-7 flex-col'>
             <div className='flex items-center'>
-              <h1 className='md:text-5xl text-3xl text-white md:w-3/4'>STAY UP TO DATE ABOUT OUR LATEST OFFER</h1>
+              <h1 className='lg:text-5xl text-3xl text-white md:w-3/4'>STAY UP TO DATE ABOUT OUR LATEST OFFER</h1>
             </div>
             <div className='flex items-center md:w-1/3'>
               <form className='w-full'>
@@ -81,11 +81,21 @@ const Footer = () => {
               <p>Shop.co &#169; 2000-2023, All Rights Reserved</p>
             </div>
             <div className='flex relative md:right-[-10px]'>
-              <img className='md:h-auto h-10' src={visaIcon} alt="" />
-              <img className='md:h-auto h-10' src={mastercardIcon} alt="" />
-              <img className='md:h-auto h-10' src={paypalIcon} alt="" />
-              <img className='md:h-auto h-10' src={applepayIcon} alt="" />
-              <img className='md:h-auto h-10' src={googlepayIcon} alt="" />
+              <a href="/cart">
+                <img className='md:h-auto h-10' src={visaIcon} alt="" />
+              </a>
+              <a href="/cart">
+                <img className='md:h-auto h-10' src={mastercardIcon} alt="" />
+              </a>
+              <a href="/cart">
+                <img className='md:h-auto h-10' src={paypalIcon} alt="" />
+              </a>
+              <a href="/cart">
+                <img className='md:h-auto h-10' src={applepayIcon} alt="" />
+              </a>
+              <a href="/cart">
+                <img className='md:h-auto h-10' src={googlepayIcon} alt="" />
+              </a>
             </div>
           </div>
         </div>

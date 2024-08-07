@@ -12,7 +12,6 @@ import partyImg from '../assets/images/categories/party.png';
 import gymImg from '../assets/images/categories/gym.png';
 import { Suggestion } from '../components/Suggestion';
 import { CarouselSection } from '../components/CarouselSection';
-import { CarouselMobile } from '../components/CarouselMobile';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -27,22 +26,22 @@ const Homepage = () => {
         <div className='container md:h-[663px] md:flex-row md:px-0 px-4 flex flex-col justify-between min-[414px]:gap-12 gap-5 overflow-hidden'>
           <div className='md:w-1/2 flex flex-col md:gap-5 md:mt-0 gap-4 items-start justify-center mt-8'>
             <h1 className='lg:text-6xl md:text-5xl text-4xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
-            <p className='opacity-60 md:text-base text-sm'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
+            <p className=' md:text-base text-sm'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
             <button className='md:mt-2 md:px-20 px-[calc(50%-37px)] py-[15px] bg-black text-white rounded-full' onClick={() => navigate('/category')}>Shop Now</button>
             <div className='flex flex-wrap min-[414px]:justify-between min-[414px]:flex-nowrap justify-center w-full md:mt-10 mt-1'>
               <div>
-                <p className='lg:text-[40px] text-2xl font-bold'>200+</p>
-                <p className='lg:text-base text-mobile opacity-60'>International Brands</p>
+                <p className='lg:text-[40px] text-2xl opacity-100 font-bold'>200+</p>
+                <p className='lg:text-base text-mobile'>International Brands</p>
               </div>
               <div className='border-l-2 border-black opacity-10 min-[414px]:mx-0 mx-7'></div>
               <div>
-                <p className='lg:text-[40px] text-2xl font-bold'>2,000+</p>
-                <p className='lg:text-base text-mobile opacity-60'>High-Quality Products</p>
+                <p className='lg:text-[40px] text-2xl opacity-100 font-bold'>2,000+</p>
+                <p className='lg:text-base text-mobile'>High-Quality Products</p>
               </div>
               <div className='border-l-2 border-black opacity-10 min-[414px]:block hidden'></div>
               <div className='min-[414px]:mt-0 mt-3'>
-                <p className='lg:text-[40px] text-2xl font-bold'>30,000+</p>
-                <p className='lg:text-base text-mobile opacity-60'>Happy Customers</p>
+                <p className='lg:text-[40px] text-2xl opacity-100 font-bold'>30,000+</p>
+                <p className='lg:text-base text-mobile'>Happy Customers</p>
               </div>
             </div>
           </div>
@@ -84,23 +83,23 @@ const Homepage = () => {
       <div className='md:px-0 px-4'>
         <div className='container bg-background md:rounded-[50px] rounded-3xl'>
           <h1 className='md:text-5xl text-3xl md:pt-20 md:pb-16 pt-10 pb-7 md:px-0 px-5 text-center'>BROWSE BY DRESS STYLE</h1>
-          <div className='lg:mx-16 mx-6 md:mb-20 pb-7 flex flex-col md:gap-5 gap-4'>
+          <div className='lg:mx-16 mx-6 md:mb-16 pb-7 flex flex-col md:gap-5 gap-4'>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
-              <div className='relative grow'>
+              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category')}}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Casual</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={casualImg} alt="" />
               </div>
-              <div className='relative grow'>
+              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category')}}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Formal</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={formalImg} alt="" />
               </div>
             </div>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
-              <div className='relative grow'>
+              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category')}}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Party</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={partyImg} alt="" />
               </div>
-              <div className='relative grow'>
+              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category')}}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Gym</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={gymImg} alt="" />
               </div>
@@ -112,14 +111,11 @@ const Homepage = () => {
       {/* CAROUSEL */}
       <div className='md:max-w-[1636px] flex flex-col mx-auto relative'>
         <div className='container px-4'>
-          <h1 className='md:text-5xl text-3xl md:mt-24 mt-12 md:mb-16 mb-5 w-4/5'>OUR HAPPY CUSTOMERS</h1>
+          <h1 className='md:text-5xl text-3xl md:mt-2 mt-12 md:mb-12 mb-5 w-4/5'>OUR HAPPY CUSTOMERS</h1>
         </div>
-        <div className='container relative'>
+        <div className='relative'>
           <CarouselSection />
         </div>
-        {/* <div className='container relative md:hidden'>
-          <CarouselMobile />
-        </div> */}
       </div>
     </div>
   )

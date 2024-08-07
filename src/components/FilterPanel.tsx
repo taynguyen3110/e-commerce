@@ -4,6 +4,7 @@ import { ItemCard } from './ItemCard'
 import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
 import { getProductColors, Colors } from '../services/productServices';
 import filerIcon from '../assets/icons/filter.png'
+import { formatTitle } from '../utils/formatTitle';
 
 
 interface FilterPanelProps {
@@ -16,23 +17,17 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
     const [maxValue, setMaxValue] = useState(200);
     const [colors, setColors] = useState<Colors>({})
     const [colorInput, setColorInput] = useState('')
+    const [sizeInput, setSizeInput] = useState('')
 
     useEffect(() => {
         setColors(getProductColors());
     }, [])
 
-    function formatTitle(str: string) {
-        let formatedTitle = str.replace('+', ' ');
-        return formatedTitle.charAt(0).toUpperCase() + formatedTitle.slice(1);
-    }
-
-    console.log(colors)
-
     return (
         <>
             <div className='fixed lg:hidden top-0 left-0 bg-black opacity-20 h-full w-screen z-20'></div>
             <div className='sm:sticky lg:static lg:h-auto top-0 left-0 h-0 lg:w-[25%] sm:w-0 w-full z-30'>
-                <div className='relative lg:w-full sm:w-96 sm:h-auto bg-white border border-opacity-20 z-40 rounded-2xl w-[calc(100%+32px)] lg:left-0 -left-4'>
+                <div className='relative lg:w-full sm:w-96 sm:h-auto bg-white border border-opacity-20 z-40 rounded-2xl w-[calc(100%+32px)] sm:left-0 -left-4'>
                     <div className='filter-container container px-4 py-3 lg:h-auto sm:h-screen h-auto sm:overflow-y-scroll sm:overflow-x-hidden'>
                         <div className='flex justify-between relative items-center'>
                             <h4 className='font-bold text-xl'>Filters</h4>
@@ -98,13 +93,14 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                         <hr className='my-2' />
                         <div>
                             <AccordionItem title='Colors' heading={true} expand={true}>
-                                <div className='flex flex-wrap gap-4 mt-4'>
+                                <div className='flex flex-wrap gap-3 mt-4'>
                                     {
                                         Object.entries(colors).map(([key, value]) => (
                                             <button
                                                 className='p-5 rounded-full border'
                                                 title={formatTitle(key)}
-                                                style={{ backgroundColor: value }}
+                                                style={{ backgroundColor: value, outline: key === colorInput ? '2px solid black' : '2px solid white' }}
+                                                onClick={() => { setColorInput(key) }}
                                             ></button>
                                         ))
                                     }
@@ -115,9 +111,21 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                         <div>
                             <AccordionItem title='Size' heading={true} expand={true}>
                                 <div className='mt-3 flex flex-wrap gap-3'>
-                                    <button className='px-6 py-3 bg-background rounded-full'><p>Small</p></button>
-                                    <button className='px-6 py-3 bg-background rounded-full'>Medium</button>
-                                    <button className='px-6 py-3 bg-background rounded-full'>Large</button>
+                                    <button
+                                        className='px-5 py-2 bg-background rounded-full'
+                                        onClick={() => { setSizeInput('S') }}
+                                        style={ sizeInput === 'S' ? {backgroundColor: 'black', color: 'white'} : {}}
+                                    >Small</button>
+                                    <button
+                                        className='px-5 py-2 bg-background rounded-full'
+                                        onClick={() => { setSizeInput('M') }}
+                                        style={ sizeInput === 'M' ? {backgroundColor: 'black', color: 'white'} : {}}
+                                    >Medium</button>
+                                    <button
+                                        className='px-5 py-2 bg-background rounded-full'
+                                        onClick={() => { setSizeInput('L') }}
+                                        style={ sizeInput === 'L' ? {backgroundColor: 'black', color: 'white'} : {}}
+                                    >Large</button>
                                 </div>
                             </AccordionItem>
                         </div>
