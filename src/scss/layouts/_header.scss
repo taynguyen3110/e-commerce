@@ -18,3 +18,12 @@
 
 // to target the wrapper element
 .nav-search .wrapper:first-child {}
+
+.menu-item {
+    padding: 15px 24px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    @apply bg-background;
+}

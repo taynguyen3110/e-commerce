@@ -34,12 +34,9 @@ const CategoryPage = () => {
     <div>
       <div className='container px-4 sm:px-0'>
         <hr />
-        <Breadcrumb />
+        <Breadcrumb category={true}/>
         <div className='lg:flex lg:gap-3'>
           {(useMediaQuery('(min-width: 1028px)') || showFilterMenu) && <FilterPanel closeFilter={closeFilterMenu} />}
-          {/* <div className='hidden '>
-            <FilterPanel closeFilter={closeFilterMenu} />
-          </div> */}
           <div className='lg:w-[75%]'>
             <div className='flex items-baseline justify-between gap-2'>
               <h4 className='font-bold text-2xl'>Casual</h4>

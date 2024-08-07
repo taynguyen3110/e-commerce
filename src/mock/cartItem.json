@@ -1,0 +1,48 @@
+[
+    {
+      "id": "1",
+      "name": "Basic Crew T-shirt",
+      "imgSrc": "src/assets/images/products/1-black-3.jpg",
+      "size": "S",
+      "color": "black",
+      "quantity": 3,
+      "price": 39
+    },
+    {
+      "id": "2",
+      "name": "Stretch Bedford Cord Pants",
+      "imgSrc": "src/assets/images/products/2-bison-2.jpg",
+      "size": "M",
+      "color": "bison",
+      "quantity": 2,
+      "price": 109
+    },
+    {
+      "id": "3",
+      "name": "Tailored Non-Iron Dobby Long Sleeve Shirt",
+      "imgSrc": "src/assets/images/products/3-white-2.jpg",
+      "size": "L",
+      "color": "white",
+      "quantity": 1,
+      "price": 119
+    },
+    {
+      "id": "4",
+      "name": "Waffle Half Zip Knit",
+      "imgSrc": "src/assets/images/products/4-terracotta-2.jpg",
+      "size": "M",
+      "color": "terracotta",
+      "quantity": 5,
+      "price": 89
+    },
+    {
+      "id": "5",
+      "name": "Classic Pique Polo",
+      "imgSrc": "src/assets/images/products/5-terracotta-2.jpg",
+      "size": "L",
+      "color": "terracotta",
+      "quantity": 1,
+      "price": 69
+    }
+  ]
+  
