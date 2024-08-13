@@ -34,10 +34,12 @@ h2,
 h3 {
     font-family: $font-family-secondary;
     cursor: default;
+    user-select: none;
 }
 
 h4 {
     cursor: default;
+    user-select: none;
 }
 
 // Add more font styles as needed

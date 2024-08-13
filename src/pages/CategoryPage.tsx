@@ -6,12 +6,17 @@ import { ItemCard } from '../components/ItemCard';
 import { getProductsRange, getProductsCount, getProductColors } from '../services/productServices';
 import { FilterPanel } from '../components/FilterPanel';
 import { Dropdown } from '../components/Dropdown';
-import useMediaQuery from '../hooks/useMediaQuery';
+import useMediaQuery from '../shared/hooks/useMediaQuery';
+import { useParams } from 'react-router-dom';
+import useDocumentTitle from '../shared/hooks/useDocumentTitle';
 
 const CategoryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [sortBy, setSortBy] = useState('')
+  const { category } = useParams()
+
+  category ? useDocumentTitle(category) : null
 
   const isMobile = useMediaQuery('(max-width: 768px)')
 
@@ -39,7 +44,7 @@ const CategoryPage = () => {
           {(useMediaQuery('(min-width: 1028px)') || showFilterMenu) && <FilterPanel closeFilter={closeFilterMenu} />}
           <div className='lg:w-[75%]'>
             <div className='flex items-baseline justify-between gap-2'>
-              <h4 className='font-bold text-2xl'>Casual</h4>
+              <h4 className='font-bold text-2xl'>{category}</h4>
               <div className='flex-grow'>
                 <p className='text-sm lg:text-right sm:mr-2'>Showing {firstProductIndex + 1}-{lastProductIndex} of {getProductsCount()} products
                   <span className='hidden sm:inline-block ml-3'>
