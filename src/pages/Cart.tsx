@@ -3,23 +3,37 @@ import React, { useEffect, useState } from 'react'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { formatTitle } from '../utils/formatTitle'
 import { QuantityButton } from '../components/QuantityButton'
+import useDocumentTitle from '../shared/hooks/useDocumentTitle'
+import { useNavigate } from 'react-router-dom'
+import { addToCart, CartItem, getCart, removeByOne } from '../services/cartServices'
+import { getProductbyId } from '../services/productServices'
+import classNames from 'classnames'
 
-interface CartItem {
-  id: string,
-  name: string,
-  imgSrc: string,
-  size: string,
-  color: string,
-  quantity: number,
-  price: number
-}
+// interface CartItem {
+//   id: string,
+//   name: string,
+//   imgSrc: string,
+//   size: string,
+//   color: string,
+//   quantity: number,
+//   price: number
+// }
 
 const Cart = () => {
-  const [cart, setCart] = useState<CartItem[]>()
+  const [cart, setCart] = useState<CartItem[]>([])
+  const [rerender, setRerender] = useState<boolean>(false)
 
   useEffect(() => {
-    fetchCart()
-  }, [])
+    // fetchCart()
+    setCart(getCart())
+  }, [cart.length])
+
+  useDocumentTitle('Cart');
+  const navigate = useNavigate()
+
+  console.log(cart)
+  console.log(cart.length)
+  console.log(rerender)
 
   async function fetchCart() {
     try {
@@ -34,39 +48,48 @@ const Cart = () => {
     }
   }
 
+  function logCart(): void {
+    let cart = getCart()
+    console.log(cart)
+  }
+
 
   return (
     <div>
       <div className='container px-4 md:px-0'>
-        <Breadcrumb cart={true}/>
+        <Breadcrumb cart={true} />
         <h3 className='text-3xl mb-5'>Your Cart</h3>
         <div className='lg:flex lg:items-start lg:gap-4'>
           <div className='lg:w-7/12 border rounded-2xl p-3 pb-0 flex flex-col gap-3'>
-            {cart && cart.map(i =>
-            (
-              <div className='cart-item flex gap-4 border-b pb-3'>
-                <img className='h-24 rounded-lg' src={i.imgSrc} alt="Cart Item Image" />
-                <div className='w-full h-24'>
-                  <div className='flex justify-between items-center'>
-                    <h4 className='font-bold w-4/5 truncate'>{i.name}</h4>
-                    <i className='bx bxs-trash text-red-600 text-xl'></i>
+            {cart && cart.map(i => {
+              const product = getProductbyId(i.id)
+              if (product) {
+                return (
+                  <div className='cart-item flex gap-4 border-b pb-3'>
+                    <img className='h-24 rounded-lg cursor-pointer' src={product.imageSrc[0]} onClick={() => { navigate(`/product/${i.id}`) }} alt="Cart Item Image" />
+                    <div className='w-full h-24'>
+                      <div className='flex justify-between items-center'>
+                        <h4 className='font-bold w-4/5 truncate cursor-pointer' onClick={() => { navigate(`/product/${i.id}`) }}>{product.name}</h4>
+                        <i className='bx bxs-trash text-red-600 text-xl'></i>
+                      </div>
+                      <p className='opacity-100 text-xs'>Size: <span className='opacity-60'>{i.size}</span></p>
+                      <p className='opacity-100 text-xs'>Color: <span className='opacity-60'>{formatTitle(i.color)}</span></p>
+                      <div className='flex items-center justify-between'>
+                        <p className='opacity-100 text-xl font-bold'>${product.salePrice}</p>
+                        <QuantityButton key={i.id} height={3} quantity={i.quantity} handleAdd={()=>addToCart(i.id, i.color, i.size, 1)} handleDecrease={()=>removeByOne(i.id, i.color, i.size)} rerender={setRerender}/>
+                      </div>
+                    </div>
                   </div>
-                  <p className='opacity-100 text-xs'>Size: <span className='opacity-60'>{i.size}</span></p>
-                  <p className='opacity-100 text-xs'>Color: <span className='opacity-60'>{formatTitle(i.color)}</span></p>
-                  <div className='flex items-center justify-between'>
-                    <p className='opacity-100 text-xl font-bold'>${i.price}</p>
-                    <QuantityButton height={3} quantity={i.quantity} />
-                  </div>
-                </div>
-              </div>
-            )
+                )
+              }
+            }
             )}
           </div>
           <div className='lg:w-5/12 mt-3 lg:mt-0 p-4 border rounded-2xl'>
             <div className='flex flex-col gap-3'>
               <h4 className='text-xl font-bold'>Order Summary</h4>
               <div className='flex justify-between'>
-                <p className=''>Subtotal</p>
+                <p className={classNames('', {'opacity-[99]' : rerender})}>Subtotal</p>
                 <span className='font-bold'>$565</span>
               </div>
               <div className='flex justify-between'>
@@ -91,6 +114,13 @@ const Cart = () => {
                 </div>
                 <button className='bg-black text-white rounded-full w-1/3 text-sm'>Apply</button>
               </div>
+
+
+
+              <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={logCart}>Log Cart</button>
+
+
+
               <button className='bg-black text-white rounded-full w-full text-sm py-4'>Go to Checkout</button>
             </div>
           </div>

@@ -23,7 +23,7 @@ function App() {
       element: <ProductInfo />,
     },
     {
-      path: "/category",
+      path: "/category/:category",
       element: <CategoryPage />,
     },
     {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ItemCard } from './ItemCard'
 import { getRandomProducts, ProductDetails } from '../services/productServices';
-import useMediaQuery from '../hooks/useMediaQuery';
+import useMediaQuery from '../shared/hooks/useMediaQuery';
 
 interface Props {
     title: string,

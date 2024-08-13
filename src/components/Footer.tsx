@@ -36,14 +36,14 @@ const Footer = () => {
           <div className='flex md:justify-between md:flex-nowrap md:text-base text-sm items-center flex-wrap md:mb-9 mb-2'>
             <div className='md:max-w-[250px] flex flex-col md:gap-3 gap-2 md:mb-0 mb-6'>
               <div className='nav-logo relative'>
-                <p className='relative md:text-4xl text-3xl -top-1'>Shop.co</p>
+                <p className='relative md:text-4xl text-3xl -top-1'><a href='/'>Shop.co</a></p>
               </div>
               <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
               <div className='flex gap-3 md:mt-6 mt-3'>
-                <img src={twitterIcon} alt="" />
-                <img src={facebookIcon} alt="" />
-                <img src={instagramIcon} alt="" />
-                <img src={githubIcon} alt="" />
+                <a href="/"><img src={twitterIcon} alt="" /></a>
+                <a href="/"><img src={facebookIcon} alt="" /></a>
+                <a href="/"><img src={instagramIcon} alt="" /></a>
+                <a href="/"><img src={githubIcon} alt="" /></a>
               </div>
             </div>
             <div className='flex flex-col gap-3 md:w-auto md:mb-0 mb-6 w-1/2'>

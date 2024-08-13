@@ -4,27 +4,26 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Colors, getProductbyId, getProductColor, ProductDetails } from '../services/productServices'
 import { Rating } from '../components/Rating'
 import filerIcon from '../assets/icons/filter.png'
-
 import classNames from 'classnames'
 import { getRandomReview, Review } from '../services/reviewService'
 import { ReviewCard } from '../components/ReviewCard'
 import { Suggestion } from '../components/Suggestion'
-import useMediaQuery from '../hooks/useMediaQuery'
+import useMediaQuery from '../shared/hooks/useMediaQuery'
 import { formatTitle } from '../utils/formatTitle'
 import { QuantityButton } from '../components/QuantityButton'
 import { AccordionItem } from '../components/AccordionItem'
+import useDocumentTitle from '../shared/hooks/useDocumentTitle'
+import { addToCart, clearCart, getCart, removeByOne, removeFromCart } from '../services/cartServices'
 
 const ProductInfo = () => {
   const [product, setProduct] = useState<ProductDetails | undefined>()
-  const [colors, setColors] = useState<Colors>({})
-  const [currentImage, setCurrentImage] = useState<string>('')
-  const [imageSrcs, setImageSrcs] = useState<string[]>([])
-  const [selectedTab, setSelectedTab] = useState('review')
+  const [currentImg, setCurrentImg] = useState<string>('')
+  const [selectedTab, setSelectedTab] = useState<string>('review')
   const [reviews, setReviews] = useState<Review[]>([])
-  const [faq, setFaq] = useState(1)
-  const [colorInput, setColorInput] = useState('')
-  const [sizeInput, setSizeInput] = useState('')
-  const [quantity, setQuantity] = useState(1)
+  const [faq, setFaq] = useState<number>(1)
+  const [colorInput, setColorInput] = useState<string>('')
+  const [sizeInput, setSizeInput] = useState<string>('S')
+  const [quantity, setQuantity] = useState<number>(1)
 
   const { id } = useParams()
   const navigate = useNavigate()
@@ -39,12 +38,15 @@ const ProductInfo = () => {
 
   useEffect(() => {
     if (product) {
-      setImageSrcs(product.imageSrc)
-      setCurrentImage(product.imageSrc[0])
-      setColors(getProductColor(product))
+      setCurrentImg(product.imageSrc[0])
       setReviews(getRandomReview(reviewCount))
+      setColorInput(Object.keys(getProductColor(product))[0])
     }
   }, [product, reviewCount])
+
+  useDocumentTitle(`${product?.name}`);
+
+  const colors = product ? getProductColor(product) : null
 
   function increaseQuantity() {
     setQuantity(prevQuantity => ++prevQuantity)
@@ -52,6 +54,17 @@ const ProductInfo = () => {
 
   function decreaseQuantity() {
     setQuantity(prevQuantity => prevQuantity > 0 ? --prevQuantity : 0)
+  }
+
+  function handleAddToCart() {
+    if (id) {
+      addToCart(id, colorInput, sizeInput, quantity)
+    }
+  }
+
+  function logCart(): void {
+    let cart = getCart()
+    console.log(cart)
   }
 
   return (
@@ -63,19 +76,19 @@ const ProductInfo = () => {
           <div className='lg:flex lg:gap-8 lg:h-auto mb-10 lg:mb-14'>
             <div className='flex flex-col lg:flex-row lg:w-1/2 gap-3 mb-5 lg:mb-0'>
               <div className='lg:hidden'>
-                {imageSrcs && <img className='rounded-3xl md:w-full' src={`/${currentImage}`} alt="" />}
+                {product.imageSrc && <img className='rounded-3xl md:w-full' src={`/${currentImg}`} alt="" />}
               </div>
               <div className='flex gap-3 lg:w-[calc(24.6%-6px)] lg:flex-col'>
                 {
-                  imageSrcs ? imageSrcs.map((src, index) => (
-                    <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImage === src })}>
-                      <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImage(src)} onMouseEnter={() => setCurrentImage(src)} src={`/${src}`} alt="" />
+                  product.imageSrc ? product.imageSrc.map((src, index) => (
+                    <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImg === src })}>
+                      <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImg(src)} onMouseEnter={() => setCurrentImg(src)} src={`/${src}`} alt="" />
                     </div>
                   )) : null
                 }
               </div>
               <div className='lg:block lg:w-[calc(75.4%-6px)] hidden'>
-                {imageSrcs && <img className='rounded-3xl lg:rounded-2xl md:w-full' src={`/${currentImage}`} alt="" />}
+                {product.imageSrc && <img className='rounded-3xl lg:rounded-2xl md:w-full' src={`/${currentImg}`} alt="" />}
               </div>
             </div>
             <div className='lg:w-1/2 lg:flex lg:flex-col lg:justify-between lg:'>
@@ -140,9 +153,19 @@ const ProductInfo = () => {
               </div>
               <hr className='my-5 lg:my-0' />
               <div className='flex items-center justify-around gap-3'>
-                <QuantityButton increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} setQuantity={setQuantity} quantity={quantity}/>
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={() => { navigate('/cart') }}>Add to Cart</button>
+                <QuantityButton handleAdd={increaseQuantity} handleDecrease={decreaseQuantity} setQuantity={setQuantity} quantity={quantity} />
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' disabled={quantity === 0} onClick={handleAddToCart} style={{opacity: quantity === 0 ? "30%" : "100%"}}>Add to Cart</button>
+
+
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={clearCart}>Clear</button>
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={logCart}>Log Cart</button>
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={logCart}>Increment Cart</button>
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={()=>removeByOne(id, colorInput, sizeInput)}>Decrement Cart</button>
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={()=>removeFromCart(id, colorInput, sizeInput)}>Remove Item</button>
+
+
               </div>
+              
             </div>
           </div>
         }
@@ -159,11 +182,11 @@ const ProductInfo = () => {
               <p><span className='font-bold'>Product Name: </span>{product.name}</p>
               <p className='hidden sm:block'><span className='font-bold'>Description: </span>{product.description}</p>
               <p><span className='font-bold'>Sizes Available: </span>Small (S), Medium (M), Large (L)</p>
-              <p><span className='font-bold'>Colors Available: </span>{
+              <p><span className='font-bold'>Colors Available: </span>{colors ?
                 Object.entries(colors).map(([key, value]) => (
                   <span>{formatTitle(key)} </span>
                 ))
-              }</p>
+                : null}</p>
               <p><span className='font-bold'>Price: </span>${product.price}</p>
               <p><span className='font-bold'>Brand: </span>Shop.Co</p>
               <p><span className='font-bold'>Material: </span>100% Organic Cotton</p>

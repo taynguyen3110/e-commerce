@@ -34,7 +34,7 @@ export const SearchInput = () => {
                 selectedItem,
                 getRootProps,
             }) => (
-                <div className='flex lg:flex-1 items-center justify-stretch relative'>
+                <div className='flex items-center justify-stretch relative'>
                     <label {...getLabelProps()}></label>
                     <div className='w-full justify-end'
                         style={{ display: 'flex' }}
@@ -47,20 +47,21 @@ export const SearchInput = () => {
                     </div>
                     {isOpen
                         ? (
-                            <ul className='absolute block top-12 w-full bg-slate-700 border rounded-b-2xl z-10' {...getMenuProps()}>
+                            <ul className='absolute block top-12 w-full bg-white py-2 border rounded z-10' {...getMenuProps()}>
                                 {isOpen
                                     ? items
                                         .filter(item => !inputValue || item.value.includes(inputValue))
                                         .map((item, index) => (
-                                            <li
+                                            <li className='cursor-pointer py-1 rounded'
                                                 {...getItemProps({
                                                     key: item.value,
                                                     index,
                                                     item,
                                                     style: {
                                                         backgroundColor:
-                                                            highlightedIndex === index ? 'green' : 'yellow',
+                                                            highlightedIndex === index ? '#C8C6BE' : 'white',
                                                         fontWeight: selectedItem === item ? 'bold' : 'normal',
+                                                        color: highlightedIndex === index ? '#F4F2EA' : 'black'
                                                     },
                                                 })}
                                             >

@@ -5,6 +5,7 @@ import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
 import { getProductColors, Colors } from '../services/productServices';
 import filerIcon from '../assets/icons/filter.png'
 import { formatTitle } from '../utils/formatTitle';
+import { ListItem } from './ListItem';
 
 
 interface FilterPanelProps {
@@ -38,34 +39,34 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                         <div>
                             <AccordionItem title='T-shirts'>
                                 <ul>
-                                    <li>Basic Tees</li>
-                                    <li>Long Sleeve Tees</li>
-                                    <li>Short Sleeve Tees</li>
+                                    <ListItem>Basic Tees</ListItem>
+                                    <ListItem>Long Sleeve Tees</ListItem>
+                                    <ListItem>Short Sleeve Tees</ListItem>
                                 </ul>
                             </AccordionItem>
                             <AccordionItem title='Shorts'>
                                 <ul>
-                                    <li>Athletic Shorts</li>
-                                    <li>Running Shorts</li>
+                                    <ListItem>Athletic Shorts</ListItem>
+                                    <ListItem>Running Shorts</ListItem>
                                 </ul>
                             </AccordionItem>
                             <AccordionItem title='Shirts'>
                                 <ul>
-                                    <li>Casual Shirts</li>
-                                    <li>Button-Down Shirts</li>
-                                    <li>Oxford Shirts</li>
+                                    <ListItem>Casual Shirts</ListItem>
+                                    <ListItem>Button-Down Shirts</ListItem>
+                                    <ListItem>Oxford Shirts</ListItem>
                                 </ul>
                             </AccordionItem>
                             <AccordionItem title='Hoodie'>
                                 <ul>
-                                    <li>Pullover Hoodies</li>
-                                    <li>Crop Hoodies</li>
+                                    <ListItem>Pullover Hoodies</ListItem>
+                                    <ListItem>Crop Hoodies</ListItem>
                                 </ul>
                             </AccordionItem>
                             <AccordionItem title='Jeans'>
                                 <ul>
-                                    <li>Straight-Leg Jeans</li>
-                                    <li>Skinny Jeans</li>
+                                    <ListItem>Straight-Leg Jeans</ListItem>
+                                    <ListItem>Skinny Jeans</ListItem>
                                 </ul>
                             </AccordionItem>
                         </div>
@@ -134,30 +135,30 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                             <AccordionItem title='Dress Style' heading={true} expand={true}>
                                 <AccordionItem title='Casual'>
                                     <ul>
-                                        <li>Everyday wear</li>
-                                        <li>Casual outings</li>
+                                        <ListItem>Everyday wear</ListItem>
+                                        <ListItem>Casual outings</ListItem>
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem title='Formal'>
                                     <ul>
-                                        <li>Business attire</li>
-                                        <li>Formal events</li>
-                                        <li>Dress shirts</li>
-                                        <li>Suits</li>
+                                        <ListItem>Business attire</ListItem>
+                                        <ListItem>Formal events</ListItem>
+                                        <ListItem>Dress shirts</ListItem>
+                                        <ListItem>Suits</ListItem>
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem title='Party'>
                                     <ul>
-                                        <li>Evening wear</li>
-                                        <li>Cocktail dresses</li>
-                                        <li>Party outfits</li>
+                                        <ListItem>Evening wear</ListItem>
+                                        <ListItem>Cocktail dresses</ListItem>
+                                        <ListItem>Party outfits</ListItem>
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem title='Gym'>
                                     <ul>
-                                        <li>Activewear</li>
-                                        <li>Sportswear</li>
-                                        <li>Gym gear</li>
+                                        <ListItem>Activewear</ListItem>
+                                        <ListItem>Sportswear</ListItem>
+                                        <ListItem>Gym gear</ListItem>
                                     </ul>
                                 </AccordionItem>
                             </AccordionItem>
