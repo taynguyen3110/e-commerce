@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { ShoppingCartProvider } from "./shared/context/ShoppingCartContext";
 
 function App() {
 
@@ -34,9 +35,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <RouterProvider router={router} />
-      <Footer />
+      <ShoppingCartProvider>
+        <Header />
+        <RouterProvider router={router} />
+        <Footer />
+      </ShoppingCartProvider>
     </>
   )
 }

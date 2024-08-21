@@ -7,11 +7,10 @@ interface QuantityButtonProps {
     handleAdd: () => void
     handleDecrease: () => void
     setQuantity?: (num: number) => void
-    rerender?: React.Dispatch<React.SetStateAction<boolean>>
+    isCart?: boolean
 }
 
-export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecrease, setQuantity, rerender }: QuantityButtonProps) => {
-    const [quantityCart, setQuantityCart] = useState<number>(quantity)
+export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecrease, setQuantity, isCart = false }: QuantityButtonProps) => {
 
     let intervalId = useRef<number>()
     let timeOutId = useRef<number>()
@@ -23,41 +22,13 @@ export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecr
         }
     }
 
-    function handleAddCart() {
-        handleAdd();
-        setQuantityCart(prevq => prevq + 1)
-    }
-
-    function handleDecreaseCart() {
-        handleDecrease();
-        setQuantityCart((prevq) => {
-            if (prevq > 0) {
-                return prevq - 1
-            } else {
-                // if (rerender) {
-                //     rerender(prev => !prev)
-                // }
-                return 0
-            }
-        })
-    }
-
     function fastChange(action: string) {
         if (!intervalId.current) {
-            if (setQuantity) {
-                if (action === "increase") {
-                    intervalId.current = setInterval(handleAdd, 100)
-                }
-                if (action === "decrease") {
-                    intervalId.current = setInterval(handleDecrease, 100)
-                }
-            } else {
-                if (action === "increase") {
-                    intervalId.current = setInterval(handleAddCart, 100)
-                }
-                if (action === "decrease") {
-                    intervalId.current = setInterval(handleDecreaseCart, 100)
-                }
+            if (action === "increase") {
+                intervalId.current = setInterval(handleAdd, 100)
+            }
+            if (action === "decrease") {
+                intervalId.current = setInterval(handleDecrease, 100)
             }
         }
     }
@@ -80,15 +51,15 @@ export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecr
         <div className='bg-background flex w-[calc(30%)] rounded-full' style={{ padding: `${height}px 0px` }}>
             <i
                 className='bx bx-minus w-1/3 flex items-center justify-center ml-3 text-2xl cursor-pointer'
-                onClick={setQuantity ? handleDecrease : handleDecreaseCart}
+                onClick={handleDecrease}
                 onMouseDown={() => holdFast("decrease")}
                 onMouseUp={clear}
                 onMouseLeave={clear}
             ></i>
-            <input className={classNames('bg-background focus:outline-none w-1/3 text-center', { 'select-none': !setQuantity })} type="test" name="quantity" id="quantity" value={setQuantity ? quantity : quantityCart} readOnly={!setQuantity} onChange={handleOnChange} />
+            <input className={classNames('bg-background focus:outline-none w-1/3 text-center', { 'select-none': isCart })} type="test" name="quantity" id="quantity" value={quantity} readOnly={isCart} onChange={handleOnChange} />
             <i
                 className='bx bx-plus w-1/3 flex items-center justify-center mr-3 text-2xl cursor-pointer'
-                onClick={setQuantity ? handleAdd : handleAddCart}
+                onClick={handleAdd}
                 onMouseDown={() => holdFast("increase")}
                 onMouseUp={clear}
                 onMouseLeave={clear}

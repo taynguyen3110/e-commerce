@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { addToCart, CartItem, getCart, removeByOne } from '../services/cartServices'
 import { getProductbyId } from '../services/productServices'
 import classNames from 'classnames'
+import { CartItemComp } from '../components/CartItemComp'
 
 // interface CartItem {
 //   id: string,
@@ -21,36 +22,35 @@ import classNames from 'classnames'
 
 const Cart = () => {
   const [cart, setCart] = useState<CartItem[]>([])
-  const [rerender, setRerender] = useState<boolean>(false)
 
   useEffect(() => {
     // fetchCart()
     setCart(getCart())
-  }, [cart.length])
+  }, [])
 
   useDocumentTitle('Cart');
   const navigate = useNavigate()
 
-  console.log(cart)
-  console.log(cart.length)
-  console.log(rerender)
+  // console.log(cart)
+  // console.log(cart.length)
 
-  async function fetchCart() {
-    try {
-      const response = await fetch('https://run.mocky.io/v3/f6c22a01-1580-449a-a67e-12646462e5bb');
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`)
-      }
-      const responseData = await response.json()
-      setCart(responseData)
-    } catch (error) {
-      console.error(error)
-    }
-  }
+  // async function fetchCart() {
+  //   try {
+  //     const response = await fetch('https://run.mocky.io/v3/f6c22a01-1580-449a-a67e-12646462e5bb');
+  //     if (!response.ok) {
+  //       throw new Error(`Response status: ${response.status}`)
+  //     }
+  //     const responseData = await response.json()
+  //     setCart(responseData)
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
   function logCart(): void {
-    let cart = getCart()
-    console.log(cart)
+    let sCart = getCart()
+    console.log("Cart State: ", cart)
+    console.log("LocalStorage Cart", sCart)
   }
 
 
@@ -61,35 +61,21 @@ const Cart = () => {
         <h3 className='text-3xl mb-5'>Your Cart</h3>
         <div className='lg:flex lg:items-start lg:gap-4'>
           <div className='lg:w-7/12 border rounded-2xl p-3 pb-0 flex flex-col gap-3'>
-            {cart && cart.map(i => {
+            {cart && cart.length > 0 ? cart.map(i => {
               const product = getProductbyId(i.id)
               if (product) {
                 return (
-                  <div className='cart-item flex gap-4 border-b pb-3'>
-                    <img className='h-24 rounded-lg cursor-pointer' src={product.imageSrc[0]} onClick={() => { navigate(`/product/${i.id}`) }} alt="Cart Item Image" />
-                    <div className='w-full h-24'>
-                      <div className='flex justify-between items-center'>
-                        <h4 className='font-bold w-4/5 truncate cursor-pointer' onClick={() => { navigate(`/product/${i.id}`) }}>{product.name}</h4>
-                        <i className='bx bxs-trash text-red-600 text-xl'></i>
-                      </div>
-                      <p className='opacity-100 text-xs'>Size: <span className='opacity-60'>{i.size}</span></p>
-                      <p className='opacity-100 text-xs'>Color: <span className='opacity-60'>{formatTitle(i.color)}</span></p>
-                      <div className='flex items-center justify-between'>
-                        <p className='opacity-100 text-xl font-bold'>${product.salePrice}</p>
-                        <QuantityButton key={i.id} height={3} quantity={i.quantity} handleAdd={()=>addToCart(i.id, i.color, i.size, 1)} handleDecrease={()=>removeByOne(i.id, i.color, i.size)} rerender={setRerender}/>
-                      </div>
-                    </div>
-                  </div>
+                  <CartItemComp product={product} cartItem={i} cart={cart} setCart={setCart} />
                 )
               }
             }
-            )}
+            ) : <p>There are no item in your Shopping Cart!</p>}
           </div>
           <div className='lg:w-5/12 mt-3 lg:mt-0 p-4 border rounded-2xl'>
             <div className='flex flex-col gap-3'>
               <h4 className='text-xl font-bold'>Order Summary</h4>
               <div className='flex justify-between'>
-                <p className={classNames('', {'opacity-[99]' : rerender})}>Subtotal</p>
+                <p className={classNames('opacity-[99]')}>Subtotal</p>
                 <span className='font-bold'>$565</span>
               </div>
               <div className='flex justify-between'>

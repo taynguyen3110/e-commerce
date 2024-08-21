@@ -72,7 +72,7 @@ const CategoryPage = () => {
               totalCount={getProductsCount()}
               siblingCount={isMobile ? 0 : 1}
               pageSize={PageSize}
-              onPageChange={(page: number | string) => setCurrentPage(page)}
+              onPageChange={(page: number | string) =>  typeof page === 'number' ? setCurrentPage(page) : null}
             />
           </div>
         </div>
