@@ -15,7 +15,7 @@
                         },
                         {
                             "color": "gray",
-                            "stock": 8
+                            "stock": 0
                         }
                     ]
                 },
@@ -37,7 +37,7 @@
                     "colors": [
                         {
                             "color": "black",
-                            "stock": 12
+                            "stock": 0
                         },
                         {
                             "color": "gray",

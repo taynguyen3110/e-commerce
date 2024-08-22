@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { ChangeEvent, useRef, useState } from 'react'
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react'
 
 interface QuantityButtonProps {
     height?: number
@@ -11,6 +11,13 @@ interface QuantityButtonProps {
 }
 
 export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecrease, setQuantity, isCart = false }: QuantityButtonProps) => {
+
+    useEffect(() => {
+        return () => {
+            clear()
+        }
+    }, [])
+
 
     let intervalId = useRef<number>()
     let timeOutId = useRef<number>()
@@ -25,11 +32,22 @@ export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecr
     function fastChange(action: string) {
         if (!intervalId.current) {
             if (action === "increase") {
-                intervalId.current = setInterval(handleAdd, 100)
+                intervalId.current = setInterval(handleAdd, 150)
             }
             if (action === "decrease") {
-                intervalId.current = setInterval(handleDecrease, 100)
+                intervalId.current = setInterval(decreaseTillOne, 150)
             }
+        }
+    }
+
+    function decreaseTillOne() { //not working!!!
+        console.log('check');
+        if (quantity <= 2) {
+            console.log('stop');
+            clear()
+        } else {
+            console.log('decrease');
+            handleDecrease()
         }
     }
 

@@ -20,8 +20,21 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
 export const CarouselSection = () => {
     const [reviews, setReviews] = useState<Review[]>([])
 
+    async function fetchReview() {
+        try {
+          const response = await fetch('https://run.mocky.io/v3/4b2a40e2-6ab6-41e3-999f-0fd70ea1f319');
+          if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`)
+          }
+          const responseData = await response.json()
+          setReviews(responseData)
+        } catch (error) {
+          console.error(error)
+        }
+      }
+
     useEffect(() => {
-        setReviews(getRandomReview(10))
+        fetchReview()
     }, [])
 
     const responsive = {

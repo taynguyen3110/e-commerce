@@ -9,27 +9,13 @@ import { addToCart, CartItem, getCart, removeByOne } from '../services/cartServi
 import { getProductbyId } from '../services/productServices'
 import classNames from 'classnames'
 import { CartItemComp } from '../components/CartItemComp'
-
-// interface CartItem {
-//   id: string,
-//   name: string,
-//   imgSrc: string,
-//   size: string,
-//   color: string,
-//   quantity: number,
-//   price: number
-// }
+import { useShoppingCart } from '../shared/context/ShoppingCartContext'
 
 const Cart = () => {
-  const [cart, setCart] = useState<CartItem[]>([])
-
-  useEffect(() => {
-    // fetchCart()
-    setCart(getCart())
-  }, [])
 
   useDocumentTitle('Cart');
   const navigate = useNavigate()
+  const { logCart, cartItems, fillCart } = useShoppingCart()
 
   // console.log(cart)
   // console.log(cart.length)
@@ -47,12 +33,12 @@ const Cart = () => {
   //   }
   // }
 
-  function logCart(): void {
-    let sCart = getCart()
-    console.log("Cart State: ", cart)
-    console.log("LocalStorage Cart", sCart)
-  }
+  const totalPrice = cartItems.reduce((price, item) => {
+    const product = getProductbyId(item.id);
+    return product != undefined ? product.salePrice * item.quantity + price : price;
+  }, 0);
 
+  const DISCOUNT = 20
 
   return (
     <div>
@@ -61,11 +47,11 @@ const Cart = () => {
         <h3 className='text-3xl mb-5'>Your Cart</h3>
         <div className='lg:flex lg:items-start lg:gap-4'>
           <div className='lg:w-7/12 border rounded-2xl p-3 pb-0 flex flex-col gap-3'>
-            {cart && cart.length > 0 ? cart.map(i => {
+            {cartItems && cartItems.length > 0 ? cartItems.map(i => {
               const product = getProductbyId(i.id)
               if (product) {
                 return (
-                  <CartItemComp product={product} cartItem={i} cart={cart} setCart={setCart} />
+                  <CartItemComp product={product} cartItem={i} />
                 )
               }
             }
@@ -76,11 +62,11 @@ const Cart = () => {
               <h4 className='text-xl font-bold'>Order Summary</h4>
               <div className='flex justify-between'>
                 <p className={classNames('opacity-[99]')}>Subtotal</p>
-                <span className='font-bold'>$565</span>
+                <span className='font-bold'>${totalPrice}</span>
               </div>
               <div className='flex justify-between'>
-                <p className=''>Discount (-20%)</p>
-                <span className='font-bold text-red-500'>-$113</span>
+                <p className=''>Discount (-{DISCOUNT}%)</p>
+                <span className='font-bold text-red-500'>-${Math.round(totalPrice * DISCOUNT / 100)}</span>
               </div>
               <div className='flex justify-between'>
                 <p className=''>Delivery Fee</p>
@@ -91,7 +77,7 @@ const Cart = () => {
             <div className='flex flex-col gap-5'>
               <div className='flex justify-between'>
                 <p className='opacity-100'>Total</p>
-                <span className='font-bold text-xl'>$467</span>
+                <span className='font-bold text-xl'>${Math.round(totalPrice * (100 - DISCOUNT) / 100)}</span>
               </div>
               <div className='flex w-full gap-4'>
                 <div className='relative w-8/12'>
@@ -103,7 +89,8 @@ const Cart = () => {
 
 
 
-              <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={logCart}>Log Cart</button>
+              {/* <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={logCart}>Log Cart</button>
+              <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={fillCart}>Fill Cart</button> */}
 
 
 

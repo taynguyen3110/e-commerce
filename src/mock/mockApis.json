@@ -2,6 +2,9 @@
     "api": [
         {
             "fetchCart": "https://run.mocky.io/v3/f6c22a01-1580-449a-a67e-12646462e5bb"
+        },
+        {
+            "fetchReview": "https://run.mocky.io/v3/4b2a40e2-6ab6-41e3-999f-0fd70ea1f319"
         }
     ]
 }
