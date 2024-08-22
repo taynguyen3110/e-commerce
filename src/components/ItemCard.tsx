@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames';
 import { Rating } from './Rating';
 import { ProductDetails } from '../services/productServices';
-// import  from '../assets/icons/4.5-star.png';
 
 interface ItemCardProps {
     product: ProductDetails,
@@ -16,7 +15,7 @@ export const ItemCard = ({ product, itemEachRows }: ItemCardProps) => {
     return (
         <div className='flex flex-col gap-[6px] md:mb-0 mb-5' style={{ width: `${widthClass}` }}>
             <div className='mb-2'>
-                <a href={`/product/${product.id}`}><img className='md:rounded-2xl rounded-xl max-h-96 2xl:max-h-none' src={`/${product.imageSrc[0]}`} alt="" /></a>
+                <a href={`/product/${product.id}`}><img className='md:rounded-2xl rounded-xl max-h-96 2xl:max-h-none' src={`/${product.thumbnailImg}`} alt="" /></a>
             </div>
             <div>
                 <a href={`/product/${product.id}`}><p className='lg:text-xl text-base font-bold cursor-pointer truncate'>{product.name}</p></a>

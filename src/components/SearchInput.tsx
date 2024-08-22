@@ -34,7 +34,7 @@ export const SearchInput = () => {
                 selectedItem,
                 getRootProps,
             }) => (
-                <div className='flex items-center justify-stretch relative'>
+                <div className='flex items-center justify-stretch w-full relative'>
                     <label {...getLabelProps()}></label>
                     <div className='w-full justify-end'
                         style={{ display: 'flex' }}
@@ -42,7 +42,7 @@ export const SearchInput = () => {
                     >
                         <div className='w-full flex justify-end relative'>
                             <img className='absolute top-1/2 translate-y-[-50%] left-4 opacity-40' src={searchIcon} alt="" />
-                            <input className='bg-background py-2 pl-[52px] w-full rounded-full md:placeholder:text-base placeholder:text-sm' placeholder='Search for products' {...getInputProps()} />
+                            <input className='bg-background py-2 pl-[52px] w-full rounded-full md:placeholder:text-base truncate placeholder:text-sm' placeholder='Search for products' {...getInputProps()} />
                         </div>
                     </div>
                     {isOpen

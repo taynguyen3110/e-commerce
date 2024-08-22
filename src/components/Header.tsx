@@ -41,7 +41,7 @@ const Header = () => {
               <SearchInput />
             </Dropdown>
           </div>
-          <div className='min-[480px]:flex lg:grow max-w-96 hidden'>
+          <div className='min-[480px]:flex lg:grow lg:max-w-none max-w-96 hidden'>
             <SearchInput />
           </div>
           <div className='nav-btns flex items-center justify-between gap-3'>

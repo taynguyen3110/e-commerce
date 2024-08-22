@@ -18,11 +18,16 @@ interface Product {
     sale: number
 }
 
+interface imgSrc {
+    [key: string]: Array<string>
+}
+
 export interface ProductDetails {
     id: string,
     name: string,
     description: string,
-    imageSrc: string[],
+    imageSrc: imgSrc,
+    thumbnailImg: string,
     price: number,
     rating: number,
     sale: number,
@@ -83,57 +88,50 @@ export function getProductbyId(id: string) {
         if (element.id === id) {
             product = element;
             const productDetail = getProductDetails([product])
-            return productDetail[0]
+            return productDetail[0];
         }
     }
 }
 
 export function getProductColor(product: ProductDetails) {
-    const colorsArray = product?.colors[0].colors.map(c => c.color)
+    const colorsArray = product?.colors[0].colors.map(c => c.color);
 
     let colorCodes: Colors = {};
     colorsArray?.forEach(c => {
         Object.defineProperty(colorCodes, c, { value: colorCodeBase[c], enumerable: true })
     })
-    return colorCodes
+    return colorCodes;
 }
 
-export function getSizeByColor(id: string, color: string) {
-
-}
-export function getColorBySize(id: string, size: string) {
-
+export function getProductSizesColors(id: string) {
+    return data.products.find(p => p.id === id)!.sizesColors;
 }
 
 export function getProductDetails(products: Array<Product>) {
     return products.map((p) => {
-        const productDetails: ProductDetails = {
-            id: '',
-            name: '',
-            description: '',
-            imageSrc: [],
-            price: 0,
-            rating: 0,
-            sale: 0,
-            salePrice: 0,
-            colors: []
-        };
-
-        productDetails.id = p.id;
-        productDetails.name = p.name;
-        productDetails.description = p.description;
-
-        const urls = [];
-        for (let index = 0; index < 3; index++) {
-            urls.push(`${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[0].color}-${index + 1}.jpg`)
+        const urls: imgSrc = {};
+        for (let j = 0; j < p.sizesColors[0].colors.length; j++) {
+            let colorArray = [];
+            for (let index = 0; index < 3; index++) {
+                if (p.sizesColors[0].colors[j]) {
+                    colorArray[index] = `${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[j].color}-${index + 1}.jpg`
+                }
+            }
+            urls[p.sizesColors[0].colors[j].color] = colorArray
         }
 
-        productDetails.imageSrc = urls;
-        productDetails.rating = p.rating;
-        productDetails.colors = p.sizesColors;
-        productDetails.price = p.price;
-        productDetails.sale = p.sale;
-        productDetails.salePrice = Math.round(p.price * (100 - p.sale) / 100);
+        const productDetails: ProductDetails = {
+            id: p.id,
+            name: p.name,
+            description: p.description,
+            imageSrc: urls,
+            thumbnailImg: `${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[0].color}-1.jpg`,
+            rating: p.rating,
+            colors: p.sizesColors,
+            price: p.price,
+            sale: p.sale,
+            salePrice: Math.round(p.price * (100 - p.sale) / 100)
+        };
 
         return productDetails
     })

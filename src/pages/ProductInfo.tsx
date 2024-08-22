@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
-import { Colors, getProductbyId, getProductColor, ProductDetails } from '../services/productServices'
+import { Colors, getProductbyId, getProductColor, getProductSizesColors, ProductDetails } from '../services/productServices'
 import { Rating } from '../components/Rating'
 import filerIcon from '../assets/icons/filter.png'
 import classNames from 'classnames'
@@ -13,7 +13,7 @@ import { formatTitle } from '../utils/formatTitle'
 import { QuantityButton } from '../components/QuantityButton'
 import { AccordionItem } from '../components/AccordionItem'
 import useDocumentTitle from '../shared/hooks/useDocumentTitle'
-import { addToCart, clearCart, getCart, removeByOne, removeFromCart } from '../services/cartServices'
+import { useShoppingCart } from '../shared/context/ShoppingCartContext'
 
 const ProductInfo = () => {
   const [product, setProduct] = useState<ProductDetails | undefined>()
@@ -21,7 +21,9 @@ const ProductInfo = () => {
   const [selectedTab, setSelectedTab] = useState<string>('review')
   const [reviews, setReviews] = useState<Review[]>([])
   const [faq, setFaq] = useState<number>(1)
-  const [colorInput, setColorInput] = useState<string>('')
+  const [colorInput, setColorInput] = useState<string>(() =>
+    product ? Object.keys(getProductColor(product))[0] : ''
+  )
   const [sizeInput, setSizeInput] = useState<string>('S')
   const [quantity, setQuantity] = useState<number>(1)
 
@@ -29,6 +31,8 @@ const ProductInfo = () => {
   const navigate = useNavigate()
   const lgScreen = useMediaQuery('(min-width: 1028px)')
   const reviewCount = lgScreen ? 6 : 3
+
+  const { increaseCartQuantity, decreaseCartQuantity, removeFromCart, logCart } = useShoppingCart()
 
   useEffect(() => {
     if (id) {
@@ -38,33 +42,84 @@ const ProductInfo = () => {
 
   useEffect(() => {
     if (product) {
-      setCurrentImg(product.imageSrc[0])
       setReviews(getRandomReview(reviewCount))
       setColorInput(Object.keys(getProductColor(product))[0])
     }
   }, [product, reviewCount])
 
+  useEffect(() => {
+    if (product) {
+      setCurrentImg(product.imageSrc[colorInput][0])
+    }
+
+    setSizeInput(prevS => {
+      if (stockOutBySize(prevS)) {
+        let sizes = ['S', 'M', 'L'];
+        for (let i = 0; i < sizes.length; i++) {
+          if (!stockOutBySize(sizes[i])) {
+            return sizes[i]
+          }
+        } return ''
+      } else return prevS
+    })
+  }, [colorInput])
+
+  useEffect(() => {
+    setQuantity(1)
+  }, [colorInput, sizeInput])
+
+
   useDocumentTitle(`${product?.name}`);
 
   const colors = product ? getProductColor(product) : null
 
+  var sizesColors = {} as { size: string; colors: { color: string; stock: number; }[]; }[];
+
+  if (id) {
+    sizesColors = getProductSizesColors(id)
+  }
+
+  function getQuantity(color: string, size: string): number {
+    let corArr = sizesColors.find(sc => sc.size === size)?.colors;
+    return corArr?.find(c => c.color === color)?.stock || 0;
+  }
+
+  function getStockByColor(color: string) {
+    return sizesColors?.reduce((stock, sc) => {
+      const colorData = sc.colors.find(c => c.color === color);
+      return colorData ? colorData.stock + stock : stock;
+    }, 0);
+  }
+
+  function getStockBySize(size: string) {
+    let corArr = sizesColors?.find(sc => sc.size === size)?.colors;
+    return corArr?.reduce((stock, c) => c.stock + stock, 0);
+  }
+
+  function stockOutByColor(color: string): boolean {
+    return getStockByColor(color) === 0
+  }
+
+  function stockOutBySize(size: string): boolean {
+    return getStockBySize(size) === 0 || getQuantity(colorInput, size) === 0
+  }
+
   function increaseQuantity() {
-    setQuantity(prevQuantity => ++prevQuantity)
+    if (getQuantity(colorInput, sizeInput) != undefined) {
+      setQuantity(prevQuantity => {
+        if (prevQuantity < getQuantity(colorInput, sizeInput)) {
+          return ++prevQuantity
+        } else return prevQuantity
+      })
+    }
   }
 
   function decreaseQuantity() {
     setQuantity(prevQuantity => prevQuantity > 0 ? --prevQuantity : 0)
   }
 
-  function handleAddToCart() {
-    if (id) {
-      addToCart(id, colorInput, sizeInput, quantity)
-    }
-  }
-
-  function logCart(): void {
-    let cart = getCart()
-    console.log(cart)
+  function handleAddToCart(): void {
+    if (id) increaseCartQuantity(id, sizeInput, colorInput, quantity)
   }
 
   return (
@@ -80,7 +135,7 @@ const ProductInfo = () => {
               </div>
               <div className='flex gap-3 lg:w-[calc(24.6%-6px)] lg:flex-col'>
                 {
-                  product.imageSrc ? product.imageSrc.map((src, index) => (
+                  product.imageSrc && colorInput ? product.imageSrc[colorInput].map((src) => (
                     <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImg === src })}>
                       <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImg(src)} onMouseEnter={() => setCurrentImg(src)} src={`/${src}`} alt="" />
                     </div>
@@ -117,17 +172,20 @@ const ProductInfo = () => {
               <hr className='my-5 lg:my-0' />
               <div>
                 <p>Select Color</p>
-                <div className='flex flex-wrap gap-4 mt-2'>
-                  {colors && Object.entries(colors).map(([key, value]) => (
-                    <button
-                      className='p-5 rounded-full border'
-                      title={formatTitle(key)}
-                      style={{ backgroundColor: value, outline: key === colorInput ? '2px solid black' : '2px solid white' }}
-                      key={key}
-                      onClick={() => { setColorInput(key) }}
-                    ></button>
-                  ))
-                  }
+                <div className='flex'>
+                  <div className='flex flex-wrap gap-4 mt-2'>
+                    {colors && Object.entries(colors).map(([key, value]) => (
+                      <button
+                        className={classNames('p-5 rounded-full border hover:border-black', { 'opacity-20 hover:border-white': stockOutByColor(key) })}
+                        title={formatTitle(key)}
+                        style={{ backgroundColor: value, outline: key === colorInput ? '2px solid black' : '2px solid white' }}
+                        key={key}
+                        onClick={() => { setColorInput(key) }}
+                        disabled={stockOutByColor(key)}
+                      ></button>
+                    ))
+                    }
+                  </div>
                 </div>
               </div>
               <hr className='my-5 lg:my-0' />
@@ -135,37 +193,34 @@ const ProductInfo = () => {
                 <p>Choose Size</p>
                 <div className='mt-3 flex flex-wrap gap-2'>
                   <button
-                    className='px-5 py-2 bg-background rounded-full'
+                    className={classNames('px-5 py-2 bg-background rounded-full', { 'opacity-30': stockOutBySize('S') })}
                     onClick={() => { setSizeInput('S') }}
+                    disabled={stockOutBySize('S')}
                     style={sizeInput === 'S' ? { backgroundColor: 'black', color: 'white' } : {}}
                   >Small</button>
                   <button
-                    className='px-5 py-2 bg-background rounded-full'
+                    className={classNames('px-5 py-2 bg-background rounded-full', { 'opacity-30': stockOutBySize('M') })}
                     onClick={() => { setSizeInput('M') }}
+                    disabled={stockOutBySize('M')}
                     style={sizeInput === 'M' ? { backgroundColor: 'black', color: 'white' } : {}}
                   >Medium</button>
                   <button
-                    className='px-5 py-2 bg-background rounded-full'
+                    className={classNames('px-5 py-2 bg-background rounded-full', { 'opacity-30': stockOutBySize('L') })}
                     onClick={() => { setSizeInput('L') }}
+                    disabled={stockOutBySize('L')}
                     style={sizeInput === 'L' ? { backgroundColor: 'black', color: 'white' } : {}}
                   >Large</button>
                 </div>
               </div>
               <hr className='my-5 lg:my-0' />
+              <div className='flex items-center'>
+                <p>Quantity: <span className=''>{getQuantity(colorInput, sizeInput)}</span></p>
+              </div>
+              <hr className='my-5 lg:my-0' />
               <div className='flex items-center justify-around gap-3'>
                 <QuantityButton handleAdd={increaseQuantity} handleDecrease={decreaseQuantity} setQuantity={setQuantity} quantity={quantity} />
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' disabled={quantity === 0} onClick={handleAddToCart} style={{opacity: quantity === 0 ? "30%" : "100%"}}>Add to Cart</button>
-
-
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={clearCart}>Clear</button>
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={logCart}>Log Cart</button>
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={logCart}>Increment Cart</button>
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={()=>removeByOne(id, colorInput, sizeInput)}>Decrement Cart</button>
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' onClick={()=>removeFromCart(id, colorInput, sizeInput)}>Remove Item</button>
-
-
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' disabled={quantity === 0} onClick={handleAddToCart} style={{ opacity: quantity === 0 ? "30%" : "100%" }}>Add to Cart</button>
               </div>
-              
             </div>
           </div>
         }
