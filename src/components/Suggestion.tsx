@@ -22,6 +22,13 @@ export const Suggestion: React.FC<Props> = ({ viewButton = true, title }: Props)
         setProductsData(getRandomProducts(itemCount))
     }, [itemCount])
 
+    function toTitleCase(str : string) {
+        return str
+            .toLowerCase()                        
+            .split(' ')                           
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');                          
+    }
 
     return (
         <div className='flex flex-col items-stretch'>
@@ -36,7 +43,7 @@ export const Suggestion: React.FC<Props> = ({ viewButton = true, title }: Props)
                 }
             </div>
             {viewButton && <div className='flex justify-center'>
-                <button className='md:mt-10 lg:mb-16 mt-2 mb-10 md:py-[14px] md:px-20 py-3 px-[39%] md:text-base text-sm border-black border border-opacity-10 rounded-full' onClick={() => { navigate('/category') }}>View All</button>
+                <button className='md:mt-10 lg:mb-16 mt-2 mb-10 md:py-[14px] md:px-20 py-3 px-[39%] md:text-base text-sm border-black border border-opacity-10 rounded-full' onClick={() => { navigate(`/category/${toTitleCase(title)}`) }}>View All</button>
             </div>}
         </div>
     )

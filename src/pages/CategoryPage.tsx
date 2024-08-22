@@ -11,7 +11,7 @@ import { useParams } from 'react-router-dom';
 import useDocumentTitle from '../shared/hooks/useDocumentTitle';
 
 const CategoryPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [sortBy, setSortBy] = useState('')
   const { category } = useParams()
@@ -39,7 +39,7 @@ const CategoryPage = () => {
     <div>
       <div className='container px-4 sm:px-0'>
         <hr />
-        <Breadcrumb category={true}/>
+        <Breadcrumb category={true} />
         <div className='lg:flex lg:gap-3'>
           {(useMediaQuery('(min-width: 1028px)') || showFilterMenu) && <FilterPanel closeFilter={closeFilterMenu} />}
           <div className='lg:w-[75%]'>
@@ -72,7 +72,7 @@ const CategoryPage = () => {
               totalCount={getProductsCount()}
               siblingCount={isMobile ? 0 : 1}
               pageSize={PageSize}
-              onPageChange={(page: number | string) =>  typeof page === 'number' ? setCurrentPage(Number(page)) : null}
+              onPageChange={(page) => setCurrentPage(page)}
             />
           </div>
         </div>

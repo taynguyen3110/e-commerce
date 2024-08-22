@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { usePagination, DOTS } from '../shared/hooks/usePagination';
 
 interface PaginationProps {
-  onPageChange: (page: number | string) => void,
+  onPageChange: (page: number) => void,
   totalCount: number,
   siblingCount: number,
   currentPage: number,
@@ -46,25 +46,26 @@ export const Pagination = ({ onPageChange, totalCount, siblingCount = 1, current
           ><i className='bx bx-left-arrow-alt mr-1 text-xl'></i>Previous
           </button>
           <div className='flex'>
-          {paginationRange.map(pageNumber => {
+            {paginationRange.map(pageNumber => {
 
-            // If the pageItem is a DOT, render the DOTS unicode character
-            if (pageNumber === DOTS) {
-              return <li className="pagination-item dots">&#8230;</li>;
-            }
+              // If the pageItem is a DOT, render the DOTS unicode character
+              if (pageNumber === DOTS) {
+                return <li className="pagination-item dots">&#8230;</li>;
+              } else if (typeof pageNumber === 'number') {
 
-            // Render our Page Pills
-            return (
-              <li
-                className={classnames('pagination-item', {
-                  selected: pageNumber === currentPage
-                })}
-                onClick={() => onPageChange(pageNumber)}
-              >
-                {pageNumber}
-              </li>
-            );
-          })}
+                // Render our Page Pills
+                return (
+                  <li
+                    className={classnames('pagination-item', {
+                      selected: pageNumber === currentPage
+                    })}
+                    onClick={() => onPageChange(pageNumber)}
+                  >
+                    {pageNumber}
+                  </li>
+                );
+              }
+            })}
           </div>
           {/*  Right Navigation arrow */}
           <button
