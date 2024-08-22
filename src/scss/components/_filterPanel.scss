@@ -1,0 +1,8 @@
+.filter-container::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

@@ -1,0 +1,29 @@
+.nav-logo {
+    font-family: "Fontspring-DEMO-integralcf-bold";
+    @apply text-[32px];
+
+    p {
+        @apply opacity-100;
+    }
+}
+
+// to target the search icon
+.nav-search .wrapper:first-child svg {
+    width: 28px;
+    height: 28px;
+}
+
+// to target the input element
+.nav-search .wrapper:first-child input {}
+
+// to target the wrapper element
+.nav-search .wrapper:first-child {}
+
+.menu-item {
+    padding: 15px 24px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    @apply bg-background;
+}

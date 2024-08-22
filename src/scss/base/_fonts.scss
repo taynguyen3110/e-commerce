@@ -1,0 +1,45 @@
+// _fonts.scss
+
+// Import Satoshi font
+@import url('../assets/fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css');
+
+// Integral CF Bold
+@font-face {
+    font-family: "Fontspring-DEMO-integralcf-bold";
+    src: local("Fontspring-DEMO-integralcf-bold"),
+        url('../assets/fonts/Integral-CF/Fontspring-DEMO-integralcf-bold.otf')
+}
+
+// Define font variables
+$font-family-primary: 'Satoshi', sans-serif;
+$font-family-secondary: 'Fontspring-DEMO-integralcf-bold', sans-serif;
+
+// Define font styles
+body {
+    font-family: $font-family-primary;
+    font-size: 16px;
+}
+
+p {
+    opacity: 60%;
+    cursor: default;
+}
+
+span {
+    cursor: default;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-family-secondary;
+    cursor: default;
+    user-select: none;
+}
+
+h4 {
+    cursor: default;
+    user-select: none;
+}
+
+// Add more font styles as needed

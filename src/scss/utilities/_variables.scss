@@ -1,0 +1,8 @@
+// variables.scss
+$primary-color: #000000;
+$background-color: #F0EEED;
+
+:export {
+  primaryColor: $primary-color;
+  backgroundColor: $background-color;
+}

@@ -1,0 +1,3214 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Basic Crew T-shirt",
+            "description": "The GAZMAN basic crew T-shirt is a wardrobe must have. We have refined the wash to perfection, creating one of the most comfortable and long lasting men's T-shirts available. All you have to do is enjoy wearing it. A classic, versatile tee - a great layering piece in winter or on its own paired with shorts in summer.",
+            "price": 39,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 15
+                        },
+                        {
+                            "color": "gray",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 0
+                        },
+                        {
+                            "color": "gray",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 0
+                        },
+                        {
+                            "color": "gray",
+                            "stock": 4
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "1",
+            "category": "shirt",
+            "rating": 4.4,
+            "sale": 15
+        },
+        {
+            "id": "2",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 0
+        },
+        {
+            "id": "3",
+            "name": "Tailored Non-Iron Dobby Long Sleeve Shirt",
+            "description": "Perfect for the modern professional, the men's Tailored Non-Iron Dobby Long Sleeve Shirt is made from high-quality dobby fabric with a unique geometric pattern. Thanks to our advanced non-iron technology, it stays crisp and wrinkle-free all day. Ideal for both work and special occasions, it combines style and practicality effortlessly.",
+            "price": 119.00,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "sky+blue",
+                            "stock": 25
+                        },
+                        {
+                            "color": "white",
+                            "stock": 18
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "sky+blue",
+                            "stock": 20
+                        },
+                        {
+                            "color": "white",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "sky+blue",
+                            "stock": 22
+                        },
+                        {
+                            "color": "white",
+                            "stock": 17
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "3",
+            "category": "shirt",
+            "rating": 4.6,
+            "sale": 25
+        },
+        {
+            "id": "4",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        },
+        {
+            "id": "5",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "6",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "7",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "8",
+            "name": "GAZFLEX Reversible Vest",
+            "description": "Introducing the GAZFLEX Reversible Vest, engineered for performance in every element. Designed with a wind shield and center front zip closure, it provides exceptional protection against chilly gusts on the golf course. Its reversible feature offers versatility for seamless style transitions. The full internal lining with wadding ensures maximum warmth in any condition. Plus, the showerproof exterior keeps you dry during unexpected showers. Elevate your outdoor adventures with the GAZFLEX Reversible Vest, the ultimate mix of style and functionality.",
+            "price": 149,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "8",
+            "category": "shirt",
+            "rating": 3.4,
+            "sale": 15
+        },
+        {
+            "id": "9",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "10",
+            "name": "Feather Weight Shorts",
+            "description": "Our new Feather Weight Short will quickly become your Summer favourite. Lightweight cotton with a touch of elastane for flexibility mean these shorts are extremely comfortable for all day long. Available in 3 easy to style colours.",
+            "price": 99,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 15
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 12
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 18
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "10",
+            "category": "pant",
+            "rating": 4.6,
+            "sale": 20
+        },
+        {
+            "id": "11",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        },
+        {
+            "id": "12",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "13",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "14",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "15",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "16",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        },
+        {
+            "id": "17",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "18",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "19",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "20",
+            "name": "GAZFLEX Reversible Vest",
+            "description": "Introducing the GAZFLEX Reversible Vest, engineered for performance in every element. Designed with a wind shield and center front zip closure, it provides exceptional protection against chilly gusts on the golf course. Its reversible feature offers versatility for seamless style transitions. The full internal lining with wadding ensures maximum warmth in any condition. Plus, the showerproof exterior keeps you dry during unexpected showers. Elevate your outdoor adventures with the GAZFLEX Reversible Vest, the ultimate mix of style and functionality.",
+            "price": 149,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "8",
+            "category": "shirt",
+            "rating": 3.4,
+            "sale": 15
+        },
+        {
+            "id": "21",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "22",
+            "name": "Feather Weight Shorts",
+            "description": "Our new Feather Weight Short will quickly become your Summer favourite. Lightweight cotton with a touch of elastane for flexibility mean these shorts are extremely comfortable for all day long. Available in 3 easy to style colours.",
+            "price": 99,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 15
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 12
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 18
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "10",
+            "category": "pant",
+            "rating": 4.6,
+            "sale": 20
+        },
+        {
+            "id": "23",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        },
+        {
+            "id": "24",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "25",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "26",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "27",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "28",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        },
+        {
+            "id": "29",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "30",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "31",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        },
+        {
+            "id": "32",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "33",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "34",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "35",
+            "name": "GAZFLEX Reversible Vest",
+            "description": "Introducing the GAZFLEX Reversible Vest, engineered for performance in every element. Designed with a wind shield and center front zip closure, it provides exceptional protection against chilly gusts on the golf course. Its reversible feature offers versatility for seamless style transitions. The full internal lining with wadding ensures maximum warmth in any condition. Plus, the showerproof exterior keeps you dry during unexpected showers. Elevate your outdoor adventures with the GAZFLEX Reversible Vest, the ultimate mix of style and functionality.",
+            "price": 149,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "8",
+            "category": "shirt",
+            "rating": 3.4,
+            "sale": 15
+        },
+        {
+            "id": "36",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "37",
+            "name": "Feather Weight Shorts",
+            "description": "Our new Feather Weight Short will quickly become your Summer favourite. Lightweight cotton with a touch of elastane for flexibility mean these shorts are extremely comfortable for all day long. Available in 3 easy to style colours.",
+            "price": 99,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 15
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 12
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 18
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "10",
+            "category": "pant",
+            "rating": 4.6,
+            "sale": 20
+        },
+        {
+            "id": "38",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        },
+        {
+            "id": "39",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "40",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "41",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "42",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "43",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        },
+        {
+            "id": "44",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "45",
+            "name": "Feather Weight Shorts",
+            "description": "Our new Feather Weight Short will quickly become your Summer favourite. Lightweight cotton with a touch of elastane for flexibility mean these shorts are extremely comfortable for all day long. Available in 3 easy to style colours.",
+            "price": 99,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 15
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 12
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 18
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "10",
+            "category": "pant",
+            "rating": 4.6,
+            "sale": 20
+        },
+        {
+            "id": "46",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        },
+        {
+            "id": "47",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "48",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "49",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "50",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "51",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        },
+        {
+            "id": "52",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "53",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "54",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        },
+        {
+            "id": "55",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "56",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "57",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "58",
+            "name": "GAZFLEX Reversible Vest",
+            "description": "Introducing the GAZFLEX Reversible Vest, engineered for performance in every element. Designed with a wind shield and center front zip closure, it provides exceptional protection against chilly gusts on the golf course. Its reversible feature offers versatility for seamless style transitions. The full internal lining with wadding ensures maximum warmth in any condition. Plus, the showerproof exterior keeps you dry during unexpected showers. Elevate your outdoor adventures with the GAZFLEX Reversible Vest, the ultimate mix of style and functionality.",
+            "price": 149,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "8",
+            "category": "shirt",
+            "rating": 3.4,
+            "sale": 15
+        },
+        {
+            "id": "59",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "60",
+            "name": "Feather Weight Shorts",
+            "description": "Our new Feather Weight Short will quickly become your Summer favourite. Lightweight cotton with a touch of elastane for flexibility mean these shorts are extremely comfortable for all day long. Available in 3 easy to style colours.",
+            "price": 99,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 15
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 12
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "midnight",
+                            "stock": 18
+                        },
+                        {
+                            "color": "beach",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "10",
+            "category": "pant",
+            "rating": 4.6,
+            "sale": 20
+        },
+        {
+            "id": "61",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        },
+        {
+            "id": "62",
+            "name": "Classic Pique Polo",
+            "description": "A classic in any man's wardrobe, our GAZMAN Classic Pique Polo shirt is an easy choice for all year round. This polo is soft and breathable and features a performance care finish for enhanced colour and shape retention making it the ideal outfit for the golf course or relaxing by the beach.  Available in a vast array of colours to suit every style and occasion, make sure you have a few colours in your wardrobe on rotation for spring.",
+            "price": 69,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "terracotta",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "5",
+            "category": "shirt",
+            "rating": 3.9,
+            "sale": 50
+        },
+        {
+            "id": "63",
+            "name": "Merricks Knit Modern Fit Jeans",
+            "description": "One of GAZMANS most popular styles, our Merricks Modern Knit Jean has the look of a denim but with the comfort of a track pant. Uniquely made from a knit fabric this jean offers pure comfort and durability, making this the perfect jean for home and out and about.",
+            "price": 34,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 15
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 12
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "washed+indigo",
+                            "stock": 0
+                        },
+                        {
+                            "color": "indigo",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "6",
+            "category": "pant",
+            "rating": 4.4,
+            "sale": 10
+        },
+        {
+            "id": "64",
+            "name": "Modern Chino Pants",
+            "description": "Designed for the man of today, our modern  fit chino adds a smart finish to every outfit, with less fabric gathering around the ankle. The perfect balance between form-fitting and comfort, these slim chinos are made from a mid-weight soft twill fabric for added stretch and wearability. Available in a variety of colours for easy matching. A staple for effortless style, this slim fit gives a modern look, taking you from the office to casual weekends.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 15
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 12
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "canvas",
+                            "stock": 18
+                        },
+                        {
+                            "color": "navy",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "7",
+            "category": "pant",
+            "rating": 4.2,
+            "sale": 20
+        },
+        {
+            "id": "65",
+            "name": "GAZFLEX Zip Through Sweat",
+            "description": "A men's performance jacket perfect for the outdoors, walking and days on the course. Featuring lightweight and stretch properties to provide you with ultimate comfort and movement without compromising on style. Wear your GAZFLEX Zip Through Sweat over the weekend to combat the colder weather and winds.",
+            "price": 79,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 20
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 18
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 12
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "charcoal",
+                            "stock": 15
+                        },
+                        {
+                            "color": "khaki",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "9",
+            "category": "shirt",
+            "rating": 4.8,
+            "sale": 30
+        },
+        {
+            "id": "66",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 10
+        }
+    ]
+}

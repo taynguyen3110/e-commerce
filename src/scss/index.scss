@@ -1,0 +1,26 @@
+// Import Tailwind CSS
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// // Import variables and mixins
+@import 'utilities/variables';
+// @import 'utilities/mixins';
+
+// Import base styles
+@import 'base/reset';
+@import 'base/fonts';
+
+// Import component styles
+@import 'components/button';
+@import 'components/card';
+@import 'components/slider';
+@import 'components/pagination';
+@import 'components/multiRangeSlider';
+@import 'components/filterPanel';
+@import 'components/cart';
+
+// Import layout styles
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/carousel';
