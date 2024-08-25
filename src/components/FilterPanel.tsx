@@ -98,7 +98,7 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                                     {
                                         Object.entries(colors).map(([key, value]) => (
                                             <button
-                                                className='p-5 rounded-full border'
+                                                className='p-5 rounded-full border hover:border-black'
                                                 title={formatTitle(key)}
                                                 style={{ backgroundColor: value, outline: key === colorInput ? '2px solid black' : '2px solid white' }}
                                                 onClick={() => { setColorInput(key) }}

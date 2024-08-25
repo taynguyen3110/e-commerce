@@ -1,4 +1,6 @@
 import data from '../mock/products.json'
+import { storage } from '../firebase'
+import { ref } from 'firebase/storage'
 
 interface Product {
     id: string,
@@ -63,6 +65,7 @@ const colorCodeBase: Colors = {
     'beach': '#FFE4C4'
 };
 
+const storageRef = ref(storage)
 const IMG_PATH = 'src/assets/images/products/';
 
 export function getProductsRange(start: number, end: number) {
@@ -79,6 +82,12 @@ export function getRandomProducts(count: number) {
         }
     }
     return getProductDetails(products)
+}
+
+export function getProductImgRef(id: string) {
+    const category = data.products.find(p=>p.id === id)?.category
+    // return storageRef
+    return `${storageRef}assets/product-images/${category}/${id}/`
 }
 
 export function getProductbyId(id: string) {
@@ -114,7 +123,7 @@ export function getProductDetails(products: Array<Product>) {
             let colorArray = [];
             for (let index = 0; index < 3; index++) {
                 if (p.sizesColors[0].colors[j]) {
-                    colorArray[index] = `${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[j].color}-${index + 1}.jpg`
+                    colorArray[index] = `${getProductImgRef(p.id)}${p.imagePrefix}-${p.sizesColors[0].colors[j].color}-${index + 1}.jpg`
                 }
             }
             urls[p.sizesColors[0].colors[j].color] = colorArray

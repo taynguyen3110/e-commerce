@@ -14,6 +14,8 @@ import { QuantityButton } from '../components/QuantityButton'
 import { AccordionItem } from '../components/AccordionItem'
 import useDocumentTitle from '../shared/hooks/useDocumentTitle'
 import { useShoppingCart } from '../shared/context/ShoppingCartContext'
+import { getDownloadURL, ref } from 'firebase/storage'
+import { storage } from '../firebase'
 
 const ProductInfo = () => {
   const [product, setProduct] = useState<ProductDetails | undefined>()
@@ -26,6 +28,7 @@ const ProductInfo = () => {
   )
   const [sizeInput, setSizeInput] = useState<string>('S')
   const [quantity, setQuantity] = useState<number>(1)
+  const [imgTest, setImgTest] = useState('')
 
   const { id } = useParams()
   const navigate = useNavigate()
@@ -131,19 +134,29 @@ const ProductInfo = () => {
           <div className='lg:flex lg:gap-8 lg:h-auto mb-10 lg:mb-14'>
             <div className='flex flex-col lg:flex-row lg:w-1/2 gap-3 mb-5 lg:mb-0'>
               <div className='lg:hidden'>
-                {product.imageSrc && <img className='rounded-3xl md:w-full' src={`/${currentImg}`} alt="" />}
+                {product.imageSrc && <img className='rounded-3xl md:w-full' src={currentImg} alt="" />}
               </div>
               <div className='flex gap-3 lg:w-[calc(24.6%-6px)] lg:flex-col'>
                 {
-                  product.imageSrc && colorInput ? product.imageSrc[colorInput].map((src) => (
-                    <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImg === src })}>
-                      <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImg(src)} onMouseEnter={() => setCurrentImg(src)} src={`/${src}`} alt="" />
-                    </div>
-                  )) : null
+                  product.imageSrc && colorInput ? product.imageSrc[colorInput].map((src) => {
+                    const imageRef = ref(storage, 'assets/product-images/pant/10/10-beach-1.jpg');
+                    getDownloadURL(imageRef)
+                      .then(url =>
+                        setImgTest(url)
+                      )
+                      .catch((error) => {
+                        console.error('Error fetching image URL:', error);
+                      });
+                    return (
+                      <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImg === src })}>
+                        <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImg(src)} onMouseEnter={() => setCurrentImg(src)} src={imgTest} alt="" />
+                      </div>
+                    )
+                  }) : null
                 }
               </div>
               <div className='lg:block lg:w-[calc(75.4%-6px)] hidden'>
-                {product.imageSrc && <img className='rounded-3xl lg:rounded-2xl md:w-full' src={`/${currentImg}`} alt="" />}
+                {product.imageSrc && <img className='rounded-3xl lg:rounded-2xl md:w-full' src={currentImg} alt="" />}
               </div>
             </div>
             <div className='lg:w-1/2 lg:flex lg:flex-col lg:justify-between lg:'>
