@@ -47,6 +47,18 @@
                 }
             ],
             "imagePrefix": "1",
+            "imgSource": {
+                "black": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-black-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-black-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-black-3.jpg?alt=media"
+                ],
+                "gray": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-gray-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-gray-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-gray-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.4,
             "sale": 15
@@ -98,6 +110,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 0
@@ -149,6 +173,18 @@
                 }
             ],
             "imagePrefix": "3",
+            "imgSource": {
+                "sky+blue": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-sky%2Bblue-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-sky%2Bblue-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-sky%2Bblue-3.jpg?alt=media"
+                ],
+                "white": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-white-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-white-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-white-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.6,
             "sale": 25
@@ -200,6 +236,18 @@
                 }
             ],
             "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.9,
             "sale": 0
@@ -239,6 +287,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -290,6 +345,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -341,6 +408,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -380,6 +459,13 @@
                 }
             ],
             "imagePrefix": "8",
+            "imgSource": {
+                "black": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.4,
             "sale": 15
@@ -431,6 +517,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -482,6 +580,18 @@
                 }
             ],
             "imagePrefix": "10",
+            "imgSource": {
+                "midnight": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-3.jpg?alt=media"
+                ],
+                "beach": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.6,
             "sale": 20
@@ -533,6 +643,18 @@
                 }
             ],
             "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.9,
             "sale": 0
@@ -572,6 +694,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -623,6 +752,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -674,6 +815,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -725,6 +878,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -776,6 +941,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10
@@ -815,6 +992,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -866,6 +1050,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -917,6 +1113,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -956,6 +1164,13 @@
                 }
             ],
             "imagePrefix": "8",
+            "imgSource": {
+                "black": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.4,
             "sale": 15
@@ -1007,6 +1222,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -1058,6 +1285,18 @@
                 }
             ],
             "imagePrefix": "10",
+            "imgSource": {
+                "midnight": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-3.jpg?alt=media"
+                ],
+                "beach": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.6,
             "sale": 20
@@ -1109,6 +1348,18 @@
                 }
             ],
             "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.9,
             "sale": 0
@@ -1148,6 +1399,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -1199,6 +1457,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -1250,6 +1520,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -1301,6 +1583,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -1352,6 +1646,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10
@@ -1403,6 +1709,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -1454,6 +1772,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -1505,6 +1835,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10
@@ -1544,6 +1886,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -1595,6 +1944,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -1646,6 +2007,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -1685,6 +2058,13 @@
                 }
             ],
             "imagePrefix": "8",
+            "imgSource": {
+                "black": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.4,
             "sale": 15
@@ -1736,6 +2116,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -1787,6 +2179,18 @@
                 }
             ],
             "imagePrefix": "10",
+            "imgSource": {
+                "midnight": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-3.jpg?alt=media"
+                ],
+                "beach": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.6,
             "sale": 20
@@ -1838,6 +2242,18 @@
                 }
             ],
             "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.9,
             "sale": 0
@@ -1877,6 +2293,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -1928,6 +2351,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -1979,6 +2414,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -2030,6 +2477,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -2081,6 +2540,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10
@@ -2132,6 +2603,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -2183,6 +2666,18 @@
                 }
             ],
             "imagePrefix": "10",
+            "imgSource": {
+                "midnight": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-3.jpg?alt=media"
+                ],
+                "beach": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.6,
             "sale": 20
@@ -2234,6 +2729,18 @@
                 }
             ],
             "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.9,
             "sale": 0
@@ -2273,6 +2780,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -2324,6 +2838,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -2375,6 +2901,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -2426,6 +2964,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -2477,6 +3027,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10
@@ -2528,6 +3090,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -2579,6 +3153,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -2630,6 +3216,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10
@@ -2669,6 +3267,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -2720,6 +3325,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -2771,6 +3388,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -2810,6 +3439,13 @@
                 }
             ],
             "imagePrefix": "8",
+            "imgSource": {
+                "black": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F8%2F8-black-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.4,
             "sale": 15
@@ -2861,6 +3497,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -2912,6 +3560,18 @@
                 }
             ],
             "imagePrefix": "10",
+            "imgSource": {
+                "midnight": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-midnight-3.jpg?alt=media"
+                ],
+                "beach": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F10%2F10-beach-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.6,
             "sale": 20
@@ -2963,6 +3623,18 @@
                 }
             ],
             "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.9,
             "sale": 0
@@ -3002,6 +3674,13 @@
                 }
             ],
             "imagePrefix": "5",
+            "imgSource": {
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F5%2F5-terracotta-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 3.9,
             "sale": 50
@@ -3053,6 +3732,18 @@
                 }
             ],
             "imagePrefix": "6",
+            "imgSource": {
+                "washed+indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-washed%2Bindigo-3.jpg?alt=media"
+                ],
+                "indigo": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F6%2F6-indigo-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.4,
             "sale": 10
@@ -3104,6 +3795,18 @@
                 }
             ],
             "imagePrefix": "7",
+            "imgSource": {
+                "canvas": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-canvas-3.jpg?alt=media"
+                ],
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F7%2F7-navy-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.2,
             "sale": 20
@@ -3155,6 +3858,18 @@
                 }
             ],
             "imagePrefix": "9",
+            "imgSource": {
+                "charcoal": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-charcoal-3.jpg?alt=media"
+                ],
+                "khaki": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F9%2F9-khaki-3.jpg?alt=media"
+                ]
+            },
             "category": "shirt",
             "rating": 4.8,
             "sale": 30
@@ -3206,6 +3921,18 @@
                 }
             ],
             "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
             "category": "pant",
             "rating": 4.1,
             "sale": 10

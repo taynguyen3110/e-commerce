@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 import { formatTitle } from '../utils/formatTitle'
 import { QuantityButton } from './QuantityButton'
-import { ProductDetails } from '../services/productServices'
+import { Product } from '../services/productServices'
 import { CartItem, useShoppingCart } from '../shared/context/ShoppingCartContext'
+import { calSalePrice } from '../utils/calSalePrice'
 
 interface CartItemCompProps {
-    product: ProductDetails,
+    product: Product,
     cartItem: CartItem,
 }
 
@@ -27,7 +28,7 @@ export const CartItemComp = ({ product, cartItem }: CartItemCompProps) => {
                 <p className='opacity-100 text-xs'>Size: <span className='opacity-60'>{cartItem.size}</span></p>
                 <p className='opacity-100 text-xs'>Color: <span className='opacity-60'>{formatTitle(cartItem.color)}</span></p>
                 <div className='flex items-center justify-between'>
-                    <p className='opacity-100 text-xl font-bold'>${product.salePrice}</p>
+                    <p className='opacity-100 text-xl font-bold'>${calSalePrice(product)}</p>
                     <QuantityButton key={cartItem.id} height={3} quantity={cartItem.quantity} handleAdd={() => increaseCartQuantity(cartItem.id, cartItem.size, cartItem.color, 1)} handleDecrease={() => decreaseCartQuantity(cartItem.id, cartItem.size, cartItem.color)} />
                 </div>
             </div>

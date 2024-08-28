@@ -14,7 +14,7 @@ import { Suggestion } from '../components/Suggestion';
 import { CarouselSection } from '../components/CarouselSection';
 import { useNavigate } from 'react-router-dom';
 import useDocumentTitle from '../shared/hooks/useDocumentTitle';
-import { getProductImgRef } from '../services/productServices';
+import { getProductById } from '../services/productServices';
 
 
 const Homepage = () => {
@@ -31,8 +31,14 @@ const Homepage = () => {
             <h1 className='lg:text-6xl md:text-5xl text-4xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
             <p className=' md:text-base text-sm'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
             <button className='md:mt-2 md:px-20 px-[calc(50%-37px)] py-[15px] bg-black text-white rounded-full' onClick={
+
               () => navigate('/category/All items')
-              // ()=>{console.log(getProductImgRef('22'))}
+
+              // async () => {
+              //   const test = await getProductById(1)
+              //   console.log("test: ", test);
+              // }
+
             }>Shop Now</button>
             <div className='flex flex-wrap min-[414px]:justify-between min-[414px]:flex-nowrap justify-center w-full md:mt-10 mt-1'>
               <div>
