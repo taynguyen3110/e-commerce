@@ -24,6 +24,10 @@ const CategoryPage = () => {
     fetchTotalProductCount()
   }, [])
 
+  useEffect(() => {
+    
+  }, [])
+
   async function fetchTotalProductCount() {
     const count = await getProductsCount()
     setProductCount(count)

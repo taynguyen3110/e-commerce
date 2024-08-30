@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ItemCard } from './ItemCard'
-import { getRandomProducts, ProductDetails } from '../services/productServices';
+import { getRandomProducts, Product } from '../services/productServices';
 import useMediaQuery from '../shared/hooks/useMediaQuery';
+import { toTitleCase } from '../utils/toTitleCase';
 
 interface Props {
     title: string,
@@ -10,7 +11,7 @@ interface Props {
 }
 
 export const Suggestion: React.FC<Props> = ({ viewButton = true, title }: Props) => {
-    const [productsData, setProductsData] = useState<ProductDetails[]>([])
+    const [productsData, setProductsData] = useState<Product[]>([])
     const [itemCount, setItemCount] = useState<number>(0)
 
     const navigate = useNavigate()
@@ -27,24 +28,8 @@ export const Suggestion: React.FC<Props> = ({ viewButton = true, title }: Props)
     }, [xsScreen, smScreen])
 
     async function fetchSuggestion() {
-        try {
-            const response = await fetch('https://run.mocky.io/v3/fb1354ef-22e7-46b5-bb8f-de3bcf9504e5');
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`)
-            }
-            const responseData = await response.json()
-            setProductsData(responseData)
-        } catch (error) {
-            console.error(error)
-        }
-    }
-
-    function toTitleCase(str: string) {
-        return str
-            .toLowerCase()
-            .split(' ')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
+        const productData = await getRandomProducts(4)
+        setProductsData(productData)
     }
 
     return (
@@ -53,6 +38,7 @@ export const Suggestion: React.FC<Props> = ({ viewButton = true, title }: Props)
             <div className='flex md:flex-nowrap flex-wrap md:justify-stretch justify-evenly gap-3'>
                 {
                     productsData.slice(0, itemCount).map((p) => {
+
                         return (
                             <ItemCard product={p} itemEachRows={itemCount} />
                         )

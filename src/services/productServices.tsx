@@ -76,16 +76,14 @@ export async function getProductsRange(start: number, end: number) {
     return products
 }
 
-export function getRandomProducts(count: number) {
+export async function getRandomProducts(count: number) {
     const products: Array<Product> = [];
-    async () => {
-        while (products.length < count) {
-            let count = await getProductsCount()
-            const randomId = (Math.floor(Math.random() * count))
-            let randomProduct = await getProductById(randomId)
-            if (randomProduct && !products.includes(randomProduct)) {
-                products.push(randomProduct)
-            }
+    let totalCount = await getProductsCount()
+    while (products.length < count) {
+        const randomId = (Math.floor(Math.random() * totalCount))
+        let randomProduct = await getProductById(randomId)
+        if (randomProduct && !products.includes(randomProduct)) {
+            products.push(randomProduct)
         }
     }
     return products

@@ -10,6 +10,7 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ShoppingCartProvider } from "./shared/context/ShoppingCartContext";
+import { UserAuthContextProvider } from "./shared/context/UserAuthContext";
 
 function App() {
 
@@ -30,15 +31,17 @@ function App() {
     {
       path: "/cart",
       element: <Cart />,
-    },
+    }
   ]);
 
   return (
     <>
       <ShoppingCartProvider>
-        <Header />
-        <RouterProvider router={router} />
-        <Footer />
+        <UserAuthContextProvider>
+          <Header />
+          <RouterProvider router={router} />
+          <Footer />
+        </UserAuthContextProvider>
       </ShoppingCartProvider>
     </>
   )
