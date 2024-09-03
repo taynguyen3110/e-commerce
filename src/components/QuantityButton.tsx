@@ -32,10 +32,10 @@ export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecr
     function fastChange(action: string) {
         if (!intervalId.current) {
             if (action === "increase") {
-                intervalId.current = setInterval(handleAdd, 150)
+                intervalId.current = setInterval(handleAdd, 150) as any
             }
             if (action === "decrease") {
-                intervalId.current = setInterval(decreaseTillOne, 150)
+                intervalId.current = setInterval(decreaseTillOne, 150) as any
             }
         }
     }
@@ -52,7 +52,7 @@ export const QuantityButton = ({ height = 8, quantity = 1, handleAdd, handleDecr
     }
 
     function holdFast(action: string) {
-        timeOutId.current = setTimeout(() => fastChange(action), 500)
+        timeOutId.current = setTimeout(() => fastChange(action), 500) as any
     }
 
     function clear() {

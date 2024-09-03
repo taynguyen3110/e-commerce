@@ -1,0 +1,256 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Basic Crew T-shirt",
+            "description": "The GAZMAN basic crew T-shirt is a wardrobe must have. We have refined the wash to perfection, creating one of the most comfortable and long lasting men's T-shirts available. All you have to do is enjoy wearing it. A classic, versatile tee - a great layering piece in winter or on its own paired with shorts in summer.",
+            "price": 39,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 15
+                        },
+                        {
+                            "color": "gray",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 0
+                        },
+                        {
+                            "color": "gray",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "black",
+                            "stock": 0
+                        },
+                        {
+                            "color": "gray",
+                            "stock": 4
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "1",
+            "imgSource": {
+                "black": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-black-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-black-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-black-3.jpg?alt=media"
+                ],
+                "gray": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-gray-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-gray-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F1%2F1-gray-3.jpg?alt=media"
+                ]
+            },
+            "category": "shirt",
+            "rating": 4.4,
+            "sale": 15
+        },
+        {
+            "id": "2",
+            "name": "Stretch Bedford Cord Pants",
+            "description": "A classic 5 pocket, jean styled pant, the Stretch Bedford Cord Pants come with added stretch for comfortable, everyday wear. In a mid-weight fabric, these casual men's trousers will take you from Friday's in the office straight into the weekend. Available moccha, black, bison, navy, putty, jeep, french navy, indigo.",
+            "price": 109,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 20
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 0
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 18
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "navy",
+                            "stock": 0
+                        },
+                        {
+                            "color": "bison",
+                            "stock": 12
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "2",
+            "imgSource": {
+                "navy": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-navy-3.jpg?alt=media"
+                ],
+                "bison": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fpant%2F2%2F2-bison-3.jpg?alt=media"
+                ]
+            },
+            "category": "pant",
+            "rating": 4.1,
+            "sale": 0
+        },
+        {
+            "id": "3",
+            "name": "Tailored Non-Iron Dobby Long Sleeve Shirt",
+            "description": "Perfect for the modern professional, the men's Tailored Non-Iron Dobby Long Sleeve Shirt is made from high-quality dobby fabric with a unique geometric pattern. Thanks to our advanced non-iron technology, it stays crisp and wrinkle-free all day. Ideal for both work and special occasions, it combines style and practicality effortlessly.",
+            "price": 119.00,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "sky+blue",
+                            "stock": 25
+                        },
+                        {
+                            "color": "white",
+                            "stock": 18
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "sky+blue",
+                            "stock": 20
+                        },
+                        {
+                            "color": "white",
+                            "stock": 15
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "sky+blue",
+                            "stock": 22
+                        },
+                        {
+                            "color": "white",
+                            "stock": 17
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "3",
+            "imgSource": {
+                "sky+blue": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-sky%2Bblue-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-sky%2Bblue-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-sky%2Bblue-3.jpg?alt=media"
+                ],
+                "white": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-white-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-white-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F3%2F3-white-3.jpg?alt=media"
+                ]
+            },
+            "category": "shirt",
+            "rating": 4.6,
+            "sale": 25
+        },
+        {
+            "id": "4",
+            "name": "Waffle Half Zip Knit",
+            "description": "The Waffle Half Zip Knit was a best seller last winter and will be sure to sell out again.  Crafted to perfection and in a regular fit this men's knit offers a casual style that can be either dressed up for more sophisticated winter events layered with a sports coat or casually over a t-shirt and jeans for when you want to go and watch sports or run your weekend errands in comfort. Available in four colours.",
+            "price": 89,
+            "sizesColors": [
+                {
+                    "size": "S",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 12
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 8
+                        }
+                    ]
+                },
+                {
+                    "size": "M",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 10
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 6
+                        }
+                    ]
+                },
+                {
+                    "size": "L",
+                    "colors": [
+                        {
+                            "color": "forest",
+                            "stock": 15
+                        },
+                        {
+                            "color": "terracotta",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ],
+            "imagePrefix": "4",
+            "imgSource": {
+                "forest": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-forest-3.jpg?alt=media"
+                ],
+                "terracotta": [
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-1.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-2.jpg?alt=media",
+                    "https://firebasestorage.googleapis.com/v0/b/e-commerce-e6f2f.appspot.com/o/assets%2Fproduct-images%2Fshirt%2F4%2F4-terracotta-3.jpg?alt=media"
+                ]
+            },
+            "category": "shirt",
+            "rating": 4.9,
+            "sale": 0
+        }
+    ]
+}

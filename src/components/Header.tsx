@@ -5,20 +5,71 @@ import { PromotionBar } from './PromotionBar'
 import { Dropdown } from './Dropdown'
 import { MobileMenu } from './MobileMenu'
 import { SearchInput } from './SearchInput'
+import { useShoppingCart } from '../shared/context/ShoppingCartContext'
+import Login from './Login'
+import { useUserAuth } from '../shared/context/UserAuthContext'
+import { clearCart } from '../services/cartServices'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
+  const [showCreateAcc, setShowCreateAcc] = useState(false)
+  // const [showUserPanel, setShowUserPanel] = useState(false)
+
+  const { cartItems } = useShoppingCart()
+  const { user, signOut } = useUserAuth()
+
+  let scrollPosition = 0;
+
+  function disableScroll() {
+    scrollPosition = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+  }
+
+  function enableScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollPosition);
+  }
+
+  const displayMenu = () => {
+    setShowMenu(true)
+    disableScroll()
+  }
+
   const closeMenu = () => {
     setShowMenu(false)
+    enableScroll()
+  }
+
+  const displayLogin = () => {
+    setShowLogin(true)
+    setShowCreateAcc(false)
+    disableScroll()
+  }
+
+  const displayCreateAcc = () => {
+    setShowLogin(true)
+    setShowCreateAcc(true)
+    disableScroll()
+  }
+
+  const hideLogin = () => {
+    setShowLogin(false)
+    enableScroll()
   }
 
   return (
     <div className='mx-auto'>
-      <MobileMenu showMenu={showMenu} closeMenu={closeMenu} />
+      {showLogin && <Login hideLogin={hideLogin} createAcc={showCreateAcc} />}
+      <MobileMenu showMenu={showMenu} closeMenu={closeMenu} displayLogin={displayLogin} displayCreateAcc={displayCreateAcc} />
       <PromotionBar />
       <div className='container md:mx-auto md:px-0 px-4 nav-bar flex md:gap-10 justify-between text-center my-4'>
         <div className='flex lg:gap-10 md:gap-6 items-center md:w-2/3'>
-          <img className='md:hidden cursor-pointer' src={menuIcon} onClick={() => setShowMenu(true)} alt="" />
+          <img className='md:hidden cursor-pointer' src={menuIcon} onClick={() => displayMenu()} alt="" />
           <div className='nav-logo relative'>
             <p className='relative md:-top-1 md:text-[32px] -top-[2px] text-2xl md:ml-0 ml-4'><a href='/'>Shop.co</a></p>
           </div>
@@ -45,10 +96,35 @@ const Header = () => {
             <SearchInput />
           </div>
           <div className='nav-btns flex items-center justify-between gap-3'>
-            <a className='' href='/cart'>
-              <i className='bx bx-cart text-2xl font-bold'></i>
-            </a>
-            <i className='bx bx-user-circle text-2xl font-bold cursor-pointer'></i>
+            <div className='relative'>
+              <a className='cursor-pointer' href='/cart'>
+                <i className='bx bx-cart text-2xl font-bold z-20'></i>
+                <span className='absolute bottom-0 left-4 rounded-full text-white text-[10px] bg-red-600 z-30 w-[18px] h-[18px] pt-[2px]'>{cartItems.length}</span>
+              </a>
+            </div>
+            {!user ?
+              <i className='bx bx-user-circle text-2xl font-bold cursor-pointer'
+                onClick={() => {
+                  displayLogin()
+                }}></i>
+              :
+              <Dropdown trigger={user.photoURL ? <img className='rounded-full w-9' src={user.photoURL} alt='profile picture' /> : <i className='bx bx-user-circle text-2xl font-bold cursor-pointer'></i>} align='right'>
+                <div className='mix-w-52 p-4'>
+                  <h3>PROFILE</h3>
+                  <hr className='my-3' />
+                  <div className='flex flex-col items-start text-nowrap text-sm gap-1'>
+                    <span>Email: <p className='inline'>{user.email}</p></span>
+                    <span>Joined at: <p className='inline'>{user.metadata.creationTime}</p></span>
+                    <span>Last Login: <p className='inline'>{user.metadata.lastSignInTime}</p></span>
+                  </div>
+                  <hr className='my-3' />
+                  <button className='py-2 md:py-3 mt-2 w-4/5 sm:py-4 bg-black text-sm sm:text-base text-white rounded-full' onClick={() => {
+                    clearCart()
+                    signOut()
+                  }
+                  }>Log Out</button>
+                </div>
+              </Dropdown>}
           </div>
         </div>
       </div>

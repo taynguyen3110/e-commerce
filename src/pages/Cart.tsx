@@ -3,39 +3,39 @@ import React, { useEffect, useState } from 'react'
 import { Breadcrumb } from '../components/Breadcrumb'
 import useDocumentTitle from '../shared/hooks/useDocumentTitle'
 import { useNavigate } from 'react-router-dom'
-import { getProductbyId } from '../services/productServices'
+import { getProductArr, getProductById, Product } from '../services/productServices'
 import classNames from 'classnames'
 import { CartItemComp } from '../components/CartItemComp'
 import { useShoppingCart } from '../shared/context/ShoppingCartContext'
+import { calSalePrice } from '../utils/calSalePrice'
 
 const Cart = () => {
-
-  useDocumentTitle('Cart');
-  const navigate = useNavigate()
+  const [products, setProducts] = useState<Product[] | null[]>([])
   const { logCart, cartItems, fillCart } = useShoppingCart()
 
-  // console.log(cart)
-  // console.log(cart.length)
+  useEffect(() => {
+    fetchProducts()
+  }, [cartItems])
 
-  // async function fetchCart() {
-  //   try {
-  //     const response = await fetch('https://run.mocky.io/v3/f6c22a01-1580-449a-a67e-12646462e5bb');
-  //     if (!response.ok) {
-  //       throw new Error(`Response status: ${response.status}`)
-  //     }
-  //     const responseData = await response.json()
-  //     setCart(responseData)
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
+  useDocumentTitle('Cart');
 
-  const totalPrice = cartItems.reduce((price, item) => {
-    const product = getProductbyId(item.id);
-    return product != undefined ? product.salePrice * item.quantity + price : price;
-  }, 0);
+  const navigate = useNavigate()
+
+  function calTotal() {
+    return cartItems.reduce((total, cartItem) => {
+      const product = products.find(i => i!.id === cartItem.id)
+      return product ? calSalePrice(product!) * cartItem.quantity + total : total
+    }, 0)
+  }
+
+  async function fetchProducts() {
+    const idArr = cartItems.map(i => i.id)
+    const productsArr = await getProductArr(idArr)
+    setProducts(productsArr)
+  }
 
   const DISCOUNT = 20
+  const total = products ? calTotal() : 0
 
   return (
     <div>
@@ -45,25 +45,24 @@ const Cart = () => {
         <div className='lg:flex lg:items-start lg:gap-4'>
           <div className='lg:w-7/12 border rounded-2xl p-3 pb-0 flex flex-col gap-3'>
             {cartItems && cartItems.length > 0 ? cartItems.map(i => {
-              const product = getProductbyId(i.id)
+              const product = products.find(y => y?.id === i.id)
               if (product) {
                 return (
                   <CartItemComp product={product} cartItem={i} />
                 )
               }
-            }
-            ) : <p>There are no item in your Shopping Cart!</p>}
+            }) : <p>There are no item in your Shopping Cart!</p>}
           </div>
           <div className='lg:w-5/12 mt-3 lg:mt-0 p-4 border rounded-2xl'>
             <div className='flex flex-col gap-3'>
               <h4 className='text-xl font-bold'>Order Summary</h4>
               <div className='flex justify-between'>
                 <p className={classNames('opacity-[99]')}>Subtotal</p>
-                <span className='font-bold'>${totalPrice}</span>
+                <span className='font-bold'>${total}</span>
               </div>
               <div className='flex justify-between'>
                 <p className=''>Discount (-{DISCOUNT}%)</p>
-                <span className='font-bold text-red-500'>-${Math.round(totalPrice * DISCOUNT / 100)}</span>
+                <span className='font-bold text-red-500'>-${Math.round(total * DISCOUNT / 100)}</span>
               </div>
               <div className='flex justify-between'>
                 <p className=''>Delivery Fee</p>
@@ -74,7 +73,7 @@ const Cart = () => {
             <div className='flex flex-col gap-5'>
               <div className='flex justify-between'>
                 <p className='opacity-100'>Total</p>
-                <span className='font-bold text-xl'>${Math.round(totalPrice * (100 - DISCOUNT) / 100)}</span>
+                <span className='font-bold text-xl'>${Math.round(total * (100 - DISCOUNT) / 100)}</span>
               </div>
               <div className='flex w-full gap-4'>
                 <div className='relative w-8/12'>
@@ -83,14 +82,6 @@ const Cart = () => {
                 </div>
                 <button className='bg-black text-white rounded-full w-1/3 text-sm'>Apply</button>
               </div>
-
-
-
-              {/* <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={logCart}>Log Cart</button>
-              <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={fillCart}>Fill Cart</button> */}
-
-
-
               <button className='bg-black text-white rounded-full w-full text-sm py-4'>Go to Checkout</button>
             </div>
           </div>

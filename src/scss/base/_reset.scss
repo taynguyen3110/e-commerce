@@ -9,6 +9,17 @@
     padding: 0;
 }
 
+/* Hide scroll bar for WebKit browsers */
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+body::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
 // Reset list styles
 ul,
 ol {

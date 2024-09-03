@@ -14,6 +14,7 @@ import { Suggestion } from '../components/Suggestion';
 import { CarouselSection } from '../components/CarouselSection';
 import { useNavigate } from 'react-router-dom';
 import useDocumentTitle from '../shared/hooks/useDocumentTitle';
+import { getProductById } from '../services/productServices';
 
 
 const Homepage = () => {
@@ -29,7 +30,16 @@ const Homepage = () => {
           <div className='md:w-1/2 flex flex-col md:gap-5 md:mt-0 gap-4 items-start justify-center mt-8'>
             <h1 className='lg:text-6xl md:text-5xl text-4xl'>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
             <p className=' md:text-base text-sm'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style</p>
-            <button className='md:mt-2 md:px-20 px-[calc(50%-37px)] py-[15px] bg-black text-white rounded-full' onClick={() => navigate('/category/All items')}>Shop Now</button>
+            <button className='md:mt-2 md:px-20 px-[calc(50%-37px)] py-[15px] bg-black text-white rounded-full' onClick={
+
+              () => navigate('/category/All items')
+
+              // async () => {
+              //   const test = await getProductById(1)
+              //   console.log("test: ", test);
+              // }
+
+            }>Shop Now</button>
             <div className='flex flex-wrap min-[414px]:justify-between min-[414px]:flex-nowrap justify-center w-full md:mt-10 mt-1'>
               <div>
                 <p className='lg:text-[40px] text-2xl opacity-100 font-bold'>200+</p>
@@ -70,7 +80,7 @@ const Homepage = () => {
       <div>
         <div className='container px-4 sm:px-0'>
           <Suggestion title="NEW ARRIVALS" />
-          <hr/>
+          <hr />
         </div>
       </div>
 
@@ -87,21 +97,21 @@ const Homepage = () => {
           <h1 className='md:text-5xl text-3xl md:pt-20 md:pb-16 pt-10 pb-7 md:px-0 px-5 text-center'>BROWSE BY DRESS STYLE</h1>
           <div className='lg:mx-16 mx-6 md:mb-16 pb-7 flex flex-col md:gap-5 gap-4'>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
-              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category/Casual')}}>
+              <div className='relative grow cursor-pointer' onClick={() => { navigate('/category/Casual') }}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Casual</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={casualImg} alt="" />
               </div>
-              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category/Formal')}}>
+              <div className='relative grow cursor-pointer' onClick={() => { navigate('/category/Formal') }}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Formal</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={formalImg} alt="" />
               </div>
             </div>
             <div className='flex md:flex-row flex-col md:gap-5 gap-4 justify-stretch'>
-              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category/Party')}}>
+              <div className='relative grow cursor-pointer' onClick={() => { navigate('/category/Party') }}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Party</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={partyImg} alt="" />
               </div>
-              <div className='relative grow cursor-pointer' onClick={()=>{navigate('/category/Gym')}}>
+              <div className='relative grow cursor-pointer' onClick={() => { navigate('/category/Gym') }}>
                 <p className='absolute md:top-8 md:left-10 top-4 left-7 md:text-3xl text-2xl font-bold'>Gym</p>
                 <img className='rounded-3xl object-cover object-top md:h-60 lg:h-[289px] h-[190px] w-full' src={gymImg} alt="" />
               </div>

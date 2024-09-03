@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { AccordionItem } from './AccordionItem'
 import { ItemCard } from './ItemCard'
 import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
-import { getProductColors, Colors } from '../services/productServices';
+import { getProductsColors, Colors } from '../services/productServices';
 import filerIcon from '../assets/icons/filter.png'
 import { formatTitle } from '../utils/formatTitle';
 import { ListItem } from './ListItem';
@@ -21,8 +21,13 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
     const [sizeInput, setSizeInput] = useState('')
 
     useEffect(() => {
-        setColors(getProductColors());
+        fetchProductsColors()
     }, [])
+
+    async function fetchProductsColors() {
+        const colors = await getProductsColors()
+        setColors(colors)
+    }
 
     return (
         <>
@@ -98,7 +103,7 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                                     {
                                         Object.entries(colors).map(([key, value]) => (
                                             <button
-                                                className='p-5 rounded-full border'
+                                                className='p-5 rounded-full border hover:border-black'
                                                 title={formatTitle(key)}
                                                 style={{ backgroundColor: value, outline: key === colorInput ? '2px solid black' : '2px solid white' }}
                                                 onClick={() => { setColorInput(key) }}
@@ -115,17 +120,17 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                                     <button
                                         className='px-5 py-2 bg-background rounded-full'
                                         onClick={() => { setSizeInput('S') }}
-                                        style={ sizeInput === 'S' ? {backgroundColor: 'black', color: 'white'} : {}}
+                                        style={sizeInput === 'S' ? { backgroundColor: 'black', color: 'white' } : {}}
                                     >Small</button>
                                     <button
                                         className='px-5 py-2 bg-background rounded-full'
                                         onClick={() => { setSizeInput('M') }}
-                                        style={ sizeInput === 'M' ? {backgroundColor: 'black', color: 'white'} : {}}
+                                        style={sizeInput === 'M' ? { backgroundColor: 'black', color: 'white' } : {}}
                                     >Medium</button>
                                     <button
                                         className='px-5 py-2 bg-background rounded-full'
                                         onClick={() => { setSizeInput('L') }}
-                                        style={ sizeInput === 'L' ? {backgroundColor: 'black', color: 'white'} : {}}
+                                        style={sizeInput === 'L' ? { backgroundColor: 'black', color: 'white' } : {}}
                                     >Large</button>
                                 </div>
                             </AccordionItem>

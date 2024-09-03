@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Breadcrumb } from '../components/Breadcrumb'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
-import { Colors, getProductbyId, getProductColor, getProductSizesColors, ProductDetails } from '../services/productServices'
+import { Colors, getProductById, getProductColor, getProductsCount, getProductsRange, imgSrc, Product } from '../services/productServices'
 import { Rating } from '../components/Rating'
 import filerIcon from '../assets/icons/filter.png'
 import classNames from 'classnames'
@@ -14,9 +14,14 @@ import { QuantityButton } from '../components/QuantityButton'
 import { AccordionItem } from '../components/AccordionItem'
 import useDocumentTitle from '../shared/hooks/useDocumentTitle'
 import { useShoppingCart } from '../shared/context/ShoppingCartContext'
+import { getDownloadURL, ref, listAll, StorageReference } from 'firebase/storage'
+import { storage, db } from '../firebase'
+import { DocumentData } from 'firebase/firestore'
+import { notify } from '../utils/notify'
 
 const ProductInfo = () => {
-  const [product, setProduct] = useState<ProductDetails | undefined>()
+  const [product, setProduct] = useState<Product | null>()
+  const [productColors, setProductColors] = useState<Colors>({})
   const [currentImg, setCurrentImg] = useState<string>('')
   const [selectedTab, setSelectedTab] = useState<string>('review')
   const [reviews, setReviews] = useState<Review[]>([])
@@ -27,7 +32,9 @@ const ProductInfo = () => {
   const [sizeInput, setSizeInput] = useState<string>('S')
   const [quantity, setQuantity] = useState<number>(1)
 
-  const { id } = useParams()
+
+  const params = useParams()
+  const id = Number(params.id)
   const navigate = useNavigate()
   const lgScreen = useMediaQuery('(min-width: 1028px)')
   const reviewCount = lgScreen ? 6 : 3
@@ -35,23 +42,20 @@ const ProductInfo = () => {
   const { increaseCartQuantity, decreaseCartQuantity, removeFromCart, logCart } = useShoppingCart()
 
   useEffect(() => {
-    if (id) {
-      setProduct(getProductbyId(id.toString()))
-    }
-  }, [])
+    fetchProduct(id)
+  }, [id])
 
   useEffect(() => {
     if (product) {
       setReviews(getRandomReview(reviewCount))
-      setColorInput(Object.keys(getProductColor(product))[0])
+      fetchProductColors(product)
     }
   }, [product, reviewCount])
 
   useEffect(() => {
     if (product) {
-      setCurrentImg(product.imageSrc[colorInput][0])
+      setCurrentImg(product.imgSource[colorInput][0])
     }
-
     setSizeInput(prevS => {
       if (stockOutBySize(prevS)) {
         let sizes = ['S', 'M', 'L'];
@@ -68,32 +72,48 @@ const ProductInfo = () => {
     setQuantity(1)
   }, [colorInput, sizeInput])
 
-
   useDocumentTitle(`${product?.name}`);
 
-  const colors = product ? getProductColor(product) : null
+  const fetchProduct = async (id: number) => {
+    try {
+      const productData = await getProductById(id)
+      setProduct(productData)
+    } catch (error) {
+      console.error("Error fetching document:", error);
+    }
+  }
 
-  var sizesColors = {} as { size: string; colors: { color: string; stock: number; }[]; }[];
-
-  if (id) {
-    sizesColors = getProductSizesColors(id)
+  const fetchProductColors = async (product: Product) => {
+    try {
+      const colorsData = await getProductColor(product)
+      setProductColors(colorsData)
+      setColorInput(Object.keys(colorsData)[0])
+    } catch (error) {
+      console.error("Error fetching document:", error);
+    }
   }
 
   function getQuantity(color: string, size: string): number {
-    let corArr = sizesColors.find(sc => sc.size === size)?.colors;
-    return corArr?.find(c => c.color === color)?.stock || 0;
+    if (product) {
+      let corArr = product.sizesColors.find(sc => sc.size === size)?.colors;
+      return corArr?.find(c => c.color === color)?.stock || 0;
+    } else return 0
   }
 
   function getStockByColor(color: string) {
-    return sizesColors?.reduce((stock, sc) => {
-      const colorData = sc.colors.find(c => c.color === color);
-      return colorData ? colorData.stock + stock : stock;
-    }, 0);
+    if (product) {
+      return product.sizesColors?.reduce((stock, sc) => {
+        const colorData = sc.colors.find(c => c.color === color);
+        return colorData ? colorData.stock + stock : stock;
+      }, 0);
+    }
   }
 
   function getStockBySize(size: string) {
-    let corArr = sizesColors?.find(sc => sc.size === size)?.colors;
-    return corArr?.reduce((stock, c) => c.stock + stock, 0);
+    if (product) {
+      let corArr = product.sizesColors?.find(sc => sc.size === size)?.colors;
+      return corArr?.reduce((stock, c) => c.stock + stock, 0);
+    }
   }
 
   function stockOutByColor(color: string): boolean {
@@ -119,7 +139,10 @@ const ProductInfo = () => {
   }
 
   function handleAddToCart(): void {
-    if (id) increaseCartQuantity(id, sizeInput, colorInput, quantity)
+    if (id) {
+      increaseCartQuantity(id, sizeInput, colorInput, quantity)
+      notify('success', 'Item added to Cart.')
+    }
   }
 
   return (
@@ -131,19 +154,21 @@ const ProductInfo = () => {
           <div className='lg:flex lg:gap-8 lg:h-auto mb-10 lg:mb-14'>
             <div className='flex flex-col lg:flex-row lg:w-1/2 gap-3 mb-5 lg:mb-0'>
               <div className='lg:hidden'>
-                {product.imageSrc && <img className='rounded-3xl md:w-full' src={`/${currentImg}`} alt="" />}
+                {product && <img className='rounded-3xl md:w-full' src={currentImg} alt="" />}
               </div>
               <div className='flex gap-3 lg:w-[calc(24.6%-6px)] lg:flex-col'>
                 {
-                  product.imageSrc && colorInput ? product.imageSrc[colorInput].map((src) => (
-                    <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImg === src })}>
-                      <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImg(src)} onMouseEnter={() => setCurrentImg(src)} src={`/${src}`} alt="" />
-                    </div>
-                  )) : null
+                  colorInput ? product.imgSource[colorInput].map((src) => {
+                    return (
+                      <div className={classNames('w-[calc(33.33%-8px)] lg:w-full lg:rounded-2xl flex items-center justify-center cursor-pointer rounded-3xl border', { 'border-black': currentImg === src })}>
+                        <img className='rounded-3xl lg:rounded-2xl' onClick={() => setCurrentImg(src)} onMouseEnter={() => setCurrentImg(src)} src={src} alt="" />
+                      </div>
+                    )
+                  }) : null
                 }
               </div>
               <div className='lg:block lg:w-[calc(75.4%-6px)] hidden'>
-                {product.imageSrc && <img className='rounded-3xl lg:rounded-2xl md:w-full' src={`/${currentImg}`} alt="" />}
+                {product.imgSource && <img className='rounded-3xl lg:rounded-2xl md:w-full' src={currentImg} alt="" />}
               </div>
             </div>
             <div className='lg:w-1/2 lg:flex lg:flex-col lg:justify-between lg:'>
@@ -155,7 +180,7 @@ const ProductInfo = () => {
                 </div>
                 <div>
                   <div className='flex items-center gap-[10px] lg:text-2xl text-2xl font-bold'>
-                    <div>${product.salePrice}</div>
+                    <div>${Math.round(product.price * (1 - product.sale / 100))}</div>
                     {product.sale !== 0 ?
                       <>
                         <div className='opacity-40 text-2xl line-through'>{product.price}</div>
@@ -174,17 +199,20 @@ const ProductInfo = () => {
                 <p>Select Color</p>
                 <div className='flex'>
                   <div className='flex flex-wrap gap-4 mt-2'>
-                    {colors && Object.entries(colors).map(([key, value]) => (
-                      <button
+                    {Object.entries(productColors).map(([key, value]) => {
+                      console.log(key, ": ", value);
+                      console.log(productColors);
+
+
+                      return (<button
                         className={classNames('p-5 rounded-full border hover:border-black', { 'opacity-20 hover:border-white': stockOutByColor(key) })}
                         title={formatTitle(key)}
                         style={{ backgroundColor: value, outline: key === colorInput ? '2px solid black' : '2px solid white' }}
                         key={key}
                         onClick={() => { setColorInput(key) }}
                         disabled={stockOutByColor(key)}
-                      ></button>
-                    ))
-                    }
+                      ></button>)
+                    })}
                   </div>
                 </div>
               </div>
@@ -219,7 +247,10 @@ const ProductInfo = () => {
               <hr className='my-5 lg:my-0' />
               <div className='flex items-center justify-around gap-3'>
                 <QuantityButton handleAdd={increaseQuantity} handleDecrease={decreaseQuantity} setQuantity={setQuantity} quantity={quantity} />
-                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3' disabled={quantity === 0} onClick={handleAddToCart} style={{ opacity: quantity === 0 ? "30%" : "100%" }}>Add to Cart</button>
+                <button className='bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3'
+                  disabled={quantity === 0}
+                  onClick={handleAddToCart}
+                  style={{ opacity: quantity === 0 ? "30%" : "100%" }}>Add to Cart</button>
               </div>
             </div>
           </div>
@@ -237,8 +268,8 @@ const ProductInfo = () => {
               <p><span className='font-bold'>Product Name: </span>{product.name}</p>
               <p className='hidden sm:block'><span className='font-bold'>Description: </span>{product.description}</p>
               <p><span className='font-bold'>Sizes Available: </span>Small (S), Medium (M), Large (L)</p>
-              <p><span className='font-bold'>Colors Available: </span>{colors ?
-                Object.entries(colors).map(([key, value]) => (
+              <p><span className='font-bold'>Colors Available: </span>{productColors ?
+                Object.entries(productColors).map(([key, value]) => (
                   <span>{formatTitle(key)} </span>
                 ))
                 : null}</p>
@@ -310,7 +341,19 @@ const ProductInfo = () => {
                     <h4 className='inline font-bold text-lg mr-1'>All Reviews</h4><p className='text-sm inline'>(483)</p>
                   </div>
                   <img src={filerIcon} className='h-11' alt="Filter Icon" />
-                  <button className='bg-black text-white rounded-full py-3 px-4 text-xs lg:text-sm font-extralight'>Write a Review</button>
+                  <button className='bg-black text-white rounded-full py-3 px-4 text-xs lg:text-sm font-extralight'
+
+
+                    onClick={async () => {
+                      if (id) {
+                        const productData = await getProductById(id)
+                        console.log(productData);
+
+                      }
+                    }}
+
+
+                  >Write a Review</button>
                 </div>
                 <div className='flex flex-col gap-3 mt-5 lg:flex-none lg:grid lg:grid-cols-2 lg:gap-4'>
                   {reviews && reviews.map(r =>
