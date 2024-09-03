@@ -17,6 +17,7 @@ import { useShoppingCart } from '../shared/context/ShoppingCartContext'
 import { getDownloadURL, ref, listAll, StorageReference } from 'firebase/storage'
 import { storage, db } from '../firebase'
 import { DocumentData } from 'firebase/firestore'
+import { notify } from '../utils/notify'
 
 const ProductInfo = () => {
   const [product, setProduct] = useState<Product | null>()
@@ -99,11 +100,6 @@ const ProductInfo = () => {
     } else return 0
   }
 
-  // function getCategory(id: string): string {
-  //   const product = await getProductById(id)
-  //   return getProductById(id)!.category
-  // }
-
   function getStockByColor(color: string) {
     if (product) {
       return product.sizesColors?.reduce((stock, sc) => {
@@ -143,24 +139,11 @@ const ProductInfo = () => {
   }
 
   function handleAddToCart(): void {
-    if (id) increaseCartQuantity(id, sizeInput, colorInput, quantity)
+    if (id) {
+      increaseCartQuantity(id, sizeInput, colorInput, quantity)
+      notify('success', 'Item added to Cart.')
+    }
   }
-
-  // function fetchImgSrcs(urls: StorageReference[]) {
-  //   const urlsObj: imgSrc = {}
-  //   urls.map((itemRef) => {
-  //     const path = itemRef.fullPath
-  //     const fileName = path.split('/')[-1]
-  //     const fileColor = fileName.split('-')[1]
-  //     if (!urlsObj[fileColor]) {
-  //       urlsObj[fileColor] = []
-  //     }
-  //     urlsObj.fileColor.push(getDownloadURL(itemRef))
-  //   });
-  //   return urlsObj
-  // }
-
-  // urlsObj.fileColor.push(`https://firebasestorage.googleapis.com/v0/b/${ref(storage).bucket}/o/${encodeURIComponent(i)}?alt=media`)
 
   return (
     <div>

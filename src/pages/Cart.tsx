@@ -10,48 +10,22 @@ import { useShoppingCart } from '../shared/context/ShoppingCartContext'
 import { calSalePrice } from '../utils/calSalePrice'
 
 const Cart = () => {
-  const [total, setTotal] = useState<number>(0)
   const [products, setProducts] = useState<Product[] | null[]>([])
+  const { logCart, cartItems, fillCart } = useShoppingCart()
 
   useEffect(() => {
     fetchProducts()
-    fetchTotalPrice()
-  }, [])
-  
+  }, [cartItems])
 
   useDocumentTitle('Cart');
 
   const navigate = useNavigate()
-  const { logCart, cartItems, fillCart } = useShoppingCart()
 
-  // console.log(cart)
-  // console.log(cart.length)
-
-  // async function fetchCart() {
-  //   try {
-  //     const response = await fetch('https://run.mocky.io/v3/f6c22a01-1580-449a-a67e-12646462e5bb');
-  //     if (!response.ok) {
-  //       throw new Error(`Response status: ${response.status}`)
-  //     }
-  //     const responseData = await response.json()
-  //     setCart(responseData)
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
-
-  async function fetchTotalPrice() {
-    // const total = await Promise.all(
-    //   cartItems.map(async (i) => {
-    //     const product = await getProductById(i.id)
-    //     return product != undefined ? calSalePrice(product) * i.quantity : 0
-    //   })
-    // ).then(prices => prices.reduce((totalPrice, price) => totalPrice + price, 0));
-    // setTotal(total);
-
-    products.reduce((total, product) => {
-      return product ? calSalePrice(product) + total : total
-  }, 0)
+  function calTotal() {
+    return cartItems.reduce((total, cartItem) => {
+      const product = products.find(i => i!.id === cartItem.id)
+      return product ? calSalePrice(product!) * cartItem.quantity + total : total
+    }, 0)
   }
 
   async function fetchProducts() {
@@ -61,6 +35,7 @@ const Cart = () => {
   }
 
   const DISCOUNT = 20
+  const total = products ? calTotal() : 0
 
   return (
     <div>
@@ -70,14 +45,13 @@ const Cart = () => {
         <div className='lg:flex lg:items-start lg:gap-4'>
           <div className='lg:w-7/12 border rounded-2xl p-3 pb-0 flex flex-col gap-3'>
             {cartItems && cartItems.length > 0 ? cartItems.map(i => {
-              const product = getProductById(i.id)
+              const product = products.find(y => y?.id === i.id)
               if (product) {
                 return (
                   <CartItemComp product={product} cartItem={i} />
                 )
               }
-            }
-            ) : <p>There are no item in your Shopping Cart!</p>}
+            }) : <p>There are no item in your Shopping Cart!</p>}
           </div>
           <div className='lg:w-5/12 mt-3 lg:mt-0 p-4 border rounded-2xl'>
             <div className='flex flex-col gap-3'>
@@ -108,14 +82,6 @@ const Cart = () => {
                 </div>
                 <button className='bg-black text-white rounded-full w-1/3 text-sm'>Apply</button>
               </div>
-
-
-
-              {/* <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={logCart}>Log Cart</button>
-              <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={fillCart}>Fill Cart</button> */}
-
-
-
               <button className='bg-black text-white rounded-full w-full text-sm py-4'>Go to Checkout</button>
             </div>
           </div>

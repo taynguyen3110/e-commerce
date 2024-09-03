@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type ShoppingCartProviderProps = {
@@ -13,6 +13,8 @@ type ShoppingCartContext = {
     cartItems: CartItem[]
     cartQuantity: number
     fillCart: () => void
+    setCartItems: Dispatch<SetStateAction<CartItem[]>>,
+    clearCart: () => void
 }
 
 export type CartItem = {
@@ -71,6 +73,10 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         setCartItems([{ "id": 2, "size": "S", "color": "navy", "quantity": 5 }, { "id": 2, "size": "M", "color": "navy", "quantity": 14 }, { "id": 2, "size": "L", "color": "navy", "quantity": 21 }, { "id": 2, "size": "L", "color": "bison", "quantity": 14 }, { "id": 2, "size": "M", "color": "bison", "quantity": 14 }, { "id": 2, "size": "S", "color": "bison", "quantity": 14 }])
     }
 
+    function clearCart() {
+        setCartItems([])
+    }
+
     function removeFromCart(id: number, size: string, color: string) {
         setCartItems(
             currCart => {
@@ -86,7 +92,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
     const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
 
-    return <ShoppingCartContext.Provider value={{ fillCart, cartQuantity, logCart, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartItems }}>
+    return <ShoppingCartContext.Provider value={{ fillCart, cartQuantity, logCart, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartItems, setCartItems, clearCart }}>
         {children}
     </ShoppingCartContext.Provider>
 }

@@ -12,6 +12,10 @@ import Footer from "./components/Footer";
 import { ShoppingCartProvider } from "./shared/context/ShoppingCartContext";
 import { UserAuthContextProvider } from "./shared/context/UserAuthContext";
 
+// React Toastify
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 
   const router = createBrowserRouter([
@@ -43,6 +47,18 @@ function App() {
           <Footer />
         </UserAuthContextProvider>
       </ShoppingCartProvider>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+        pauseOnHover
+        theme="dark"
+      />
     </>
   )
 }

@@ -41,7 +41,7 @@ export const SearchInput = () => {
                         {...getRootProps({}, { suppressRefError: true })}
                     >
                         <div className='w-full flex justify-end relative'>
-                            <img className='absolute top-1/2 translate-y-[-50%] left-4 opacity-40' src={searchIcon} alt="" />
+                            <img className='absolute top-1/2 translate-y-[-50%] left-4 opacity-40 z-30' src={searchIcon} alt="" />
                             <input className='bg-background py-2 pl-[52px] w-full rounded-full md:placeholder:text-base truncate placeholder:text-sm' placeholder='Search for products' {...getInputProps()} />
                         </div>
                     </div>

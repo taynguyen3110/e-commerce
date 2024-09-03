@@ -19,7 +19,7 @@ export const CartItemComp = ({ product, cartItem }: CartItemCompProps) => {
 
     return (
         <div className={classNames('cart-item flex gap-4 border-b pb-3')}>
-            <img className='h-24 rounded-lg cursor-pointer' src={`src/assets/images/products/${cartItem.id}-${cartItem.color}-1.jpg`} onClick={() => { navigate(`/product/${cartItem.id}`) }} alt="Cart Item Image" />
+            <img className='h-24 rounded-lg cursor-pointer' src={product.imgSource[cartItem.color][0]} onClick={() => { navigate(`/product/${cartItem.id}`) }} alt="Cart Item Image" />
             <div className='w-full h-24'>
                 <div className='flex justify-between items-center'>
                     <h4 className='font-bold w-4/5 truncate cursor-pointer' onClick={() => { navigate(`/product/${cartItem.id}`) }}>{product.name}</h4>
