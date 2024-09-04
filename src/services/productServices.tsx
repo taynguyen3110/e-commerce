@@ -32,24 +32,6 @@ export interface Colors {
     [key: string]: string
 }
 
-// export const colorCodeBase: Colors = {
-//     'black': '#000000',
-//     'gray': '#808080',
-//     'navy': '#000080',
-//     'bison': '#7B3F00',
-//     'sky+blue': '#87CEEB',
-//     'white': '#FFFFFF',
-//     'forest': '#228B22',
-//     'terracotta': '#E2725B',
-//     'washed+indigo': '#446d92',
-//     'indigo': '#071f35',
-//     'canvas': '#F0E68C',
-//     'charcoal': '#36454F',
-//     'khaki': '#F0E68C',
-//     'midnight': '#191970',
-//     'beach': '#FFE4C4'
-// };
-
 export async function getProductColor(product: Product) {
     const colorsMapping = await getProductsColors()
     let productColorsMapping: Colors = {}
@@ -89,12 +71,6 @@ export async function getRandomProducts(count: number) {
     return products
 }
 
-// export function getProductImgRef(id: number) {
-//     const category = data.products.find(p => p.id === id)?.category
-//     // return storageRef
-//     return `${storageRef}assets/product-images/${category}/${id}/`
-// }
-
 export async function getProductById(id: number) {
     const docRef = doc(collProductRef, id.toString());
     const docSnap = await getDoc(docRef);
@@ -117,42 +93,12 @@ export async function getProductArr(idArr: number[]) {
     return productArr as Product[] | null[]
 }
 
-
-
-// export function getProductSizesColors(id: number) {
-//     return data.products.find(p => p.id === id)!.sizesColors;
-// }
-
-// export function getProductDetails(products: Array<Product>) {
-//     return products.map((p) => {
-//         const urls: imgSrc = {};
-//         for (let j = 0; j < p.sizesColors[0].colors.length; j++) {
-//             let colorArray = [];
-//             for (let index = 0; index < 3; index++) {
-//                 if (p.sizesColors[0].colors[j]) {
-//                     colorArray[index] = `${getProductImgRef(p.id)}${p.imagePrefix}-${p.sizesColors[0].colors[j].color}-${index + 1}.jpg`
-//                 }
-//             }
-//             urls[p.sizesColors[0].colors[j].color] = colorArray
-//         }
-
-//         const productDetails: ProductDetails = {
-//             id: p.id,
-//             name: p.name,
-//             description: p.description,
-//             imageSrc: urls,
-//             thumbnailImg: `${IMG_PATH}${p.imagePrefix}-${p.sizesColors[0].colors[0].color}-1.jpg`,
-//             rating: p.rating,
-//             colors: p.sizesColors,
-//             price: p.price,
-//             sale: p.sale,
-//             salePrice: Math.round(p.price * (100 - p.sale) / 100),
-//             category: p.category
-//         };
-
-//         return productDetails
-//     })
-// }
+export async function getAllProductNames() {
+    const docSnap = await getDocs(collProductRef)
+    return docSnap.docs.map(i => {
+        return { id: Number(i.id), name: i.data().name }
+    })
+}
 
 export async function getProductsCount() {
     const count = await getCountFromServer(collProductRef)

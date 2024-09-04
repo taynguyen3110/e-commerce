@@ -14,10 +14,12 @@ import { QuantityButton } from '../components/QuantityButton'
 import { AccordionItem } from '../components/AccordionItem'
 import useDocumentTitle from '../shared/hooks/useDocumentTitle'
 import { useShoppingCart } from '../shared/context/ShoppingCartContext'
-import { getDownloadURL, ref, listAll, StorageReference } from 'firebase/storage'
-import { storage, db } from '../firebase'
-import { DocumentData } from 'firebase/firestore'
 import { notify } from '../utils/notify'
+import { useUserAuth } from '../shared/context/UserAuthContext'
+import { syncCartToDB } from '../services/userServices'
+import { motion } from 'framer-motion'
+import ContentLoader from 'react-content-loader'
+import { ratio } from '../components/ItemCard'
 
 const ProductInfo = () => {
   const [product, setProduct] = useState<Product | null>()
@@ -32,8 +34,9 @@ const ProductInfo = () => {
   const [sizeInput, setSizeInput] = useState<string>('S')
   const [quantity, setQuantity] = useState<number>(1)
 
-
   const params = useParams()
+  const { cartItems } = useShoppingCart()
+  const { user, displayLogin } = useUserAuth()
   const id = Number(params.id)
   const navigate = useNavigate()
   const lgScreen = useMediaQuery('(min-width: 1028px)')
@@ -44,6 +47,15 @@ const ProductInfo = () => {
   useEffect(() => {
     fetchProduct(id)
   }, [id])
+
+  useEffect(() => {
+    if (user) {
+      const saveCart = setTimeout(() => {
+        syncCartToDB(user, cartItems);
+      }, 1000);
+      return () => clearTimeout(saveCart);
+    }
+  }, [cartItems])
 
   useEffect(() => {
     if (product) {
@@ -200,10 +212,6 @@ const ProductInfo = () => {
                 <div className='flex'>
                   <div className='flex flex-wrap gap-4 mt-2'>
                     {Object.entries(productColors).map(([key, value]) => {
-                      console.log(key, ": ", value);
-                      console.log(productColors);
-
-
                       return (<button
                         className={classNames('p-5 rounded-full border hover:border-black', { 'opacity-20 hover:border-white': stockOutByColor(key) })}
                         title={formatTitle(key)}
@@ -264,7 +272,7 @@ const ProductInfo = () => {
           </div>
 
           {selectedTab === 'detail' && product ?
-            <div className='flex flex-col gap-2 lg:gap-3 pt-2 lg:text-lg lg:pt-10'>
+            <motion.div style={{ x: -50 }} animate={{ x: 0 }} className='flex flex-col gap-2 lg:gap-3 pt-2 lg:text-lg lg:pt-10'>
               <p><span className='font-bold'>Product Name: </span>{product.name}</p>
               <p className='hidden sm:block'><span className='font-bold'>Description: </span>{product.description}</p>
               <p><span className='font-bold'>Sizes Available: </span>Small (S), Medium (M), Large (L)</p>
@@ -303,9 +311,9 @@ const ProductInfo = () => {
                   <p><span className='font-bold'>Breathable Fabric:</span>The natural cotton material offers excellent breathability, keeping you cool and comfortable throughout the day.</p>
                 </li>
               </ol>
-            </div>
+            </motion.div>
             : selectedTab === 'faq' ?
-              <div className='h-full flex lg:flex-row-reverse lg:items-center lg:gap-3 flex-col justify-evenly'>
+              <motion.div style={{ x: 50 }} animate={{ x: 0 }} className='h-full flex lg:flex-row-reverse lg:items-center lg:gap-3 flex-col justify-evenly'>
                 <div className='flex flex-col justify-center h-4/6 lg:h-full lg:w-1/2'>
                   <AccordionItem title='What is your return and exchange policy?' faq={faq} expand={faq === 1} setFaq={setFaq} bullet={1}>
                     <p>We offer a 30-day return and exchange policy. Items must be in their original condition, unworn, and with all tags attached.</p>
@@ -333,9 +341,9 @@ const ProductInfo = () => {
                   <p className='hidden lg:block'>Let us hear your question!</p>
                   <button className='bg-black text-white rounded-full py-3 px-10'>Contact Us</button>
                 </div>
-              </div>
+              </motion.div>
               :
-              <div>
+              <motion.div style={{ x: -50 }} animate={{ x: 0 }}>
                 <div className='flex justify-end gap-3 items-center'>
                   <div className='mr-auto'>
                     <h4 className='inline font-bold text-lg mr-1'>All Reviews</h4><p className='text-sm inline'>(483)</p>
@@ -363,7 +371,7 @@ const ProductInfo = () => {
                 <div className='flex justify-center mt-5 lg:mt-7 lg:text-base text-sm'>
                   <button className='border py-3 px-10 rounded-full' onClick={() => { setReviews(getRandomReview(reviewCount)) }}>Load More Reviews</button>
                 </div>
-              </div>
+              </motion.div>
           }
 
         </div>

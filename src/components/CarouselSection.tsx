@@ -24,17 +24,20 @@ export const CarouselSection = () => {
         fetchReview()
     }, [])
 
-    async function fetchReview() {
-        try {
-            const response = await fetch('https://run.mocky.io/v3/4b2a40e2-6ab6-41e3-999f-0fd70ea1f319');
-            if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`)
-            }
-            const responseData = await response.json()
-            setReviews(responseData)
-        } catch (error) {
-            console.error(error)
-        }
+    // async function fetchReview() {
+    //     try {
+    //         const response = await fetch('https://run.mocky.io/v3/4b2a40e2-6ab6-41e3-999f-0fd70ea1f319');
+    //         if (!response.ok) {
+    //             throw new Error(`Response status: ${response.status}`)
+    //         }
+    //         const responseData = await response.json()
+    //         setReviews(responseData)
+    //     } catch (error) {
+    //         console.error(error)
+    //     }
+    // }
+    function fetchReview() {
+        setReviews(getRandomReview(10))
     }
 
     const responsive = {

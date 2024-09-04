@@ -8,14 +8,28 @@ import classNames from 'classnames'
 import { CartItemComp } from '../components/CartItemComp'
 import { useShoppingCart } from '../shared/context/ShoppingCartContext'
 import { calSalePrice } from '../utils/calSalePrice'
+import { syncCartToDB } from '../services/userServices'
+import { useUserAuth } from '../shared/context/UserAuthContext'
+import { notify } from '../utils/notify'
 
 const Cart = () => {
   const [products, setProducts] = useState<Product[] | null[]>([])
-  const { logCart, cartItems, fillCart } = useShoppingCart()
+  const { cartItems } = useShoppingCart()
+  const { user, displayLogin } = useUserAuth()
 
   useEffect(() => {
     fetchProducts()
   }, [cartItems])
+
+  useEffect(() => {
+    if (user) {
+      const saveCart = setTimeout(() => {
+        syncCartToDB(user, cartItems);
+      }, 1000);
+      return () => clearTimeout(saveCart);
+    }
+  }, [cartItems])
+
 
   useDocumentTitle('Cart');
 
@@ -82,12 +96,19 @@ const Cart = () => {
                 </div>
                 <button className='bg-black text-white rounded-full w-1/3 text-sm'>Apply</button>
               </div>
-              <button className='bg-black text-white rounded-full w-full text-sm py-4'>Go to Checkout</button>
+              <button className='bg-black text-white rounded-full w-full text-sm py-4' onClick={() => {
+                if (user)
+                  syncCartToDB(user, cartItems)
+                else {
+                  notify("warn", "Please Login to checkout.");
+                  displayLogin()
+                }
+              }}>Go to Checkout</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import useMediaQuery from '../shared/hooks/useMediaQuery'
 import { useUserAuth } from '../shared/context/UserAuthContext';
-import { clearCart } from '../services/cartServices';
+import { useShoppingCart } from '../shared/context/ShoppingCartContext';
+import { motion } from 'framer-motion';
 
 interface MobileMenuProps {
     showMenu: Boolean,
@@ -13,11 +14,12 @@ interface MobileMenuProps {
 export const MobileMenu = ({ showMenu, closeMenu, displayLogin, displayCreateAcc }: MobileMenuProps) => {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { user, signOut } = useUserAuth()
+    const { clearCart } = useShoppingCart()
 
     if (showMenu && isMobile) {
         return (
             <div className='fixed w-screen h-screen bg-black bg-opacity-20 z-40'>
-                <div className='bg-white shadow-2xl fixed flex flex-col top-0 left-0 w-3/5 h-full rounded-tr-2xl rounded-br-2xl'>
+                <motion.div style={{ x: -20 }} animate={{ x: 0 }} className='bg-white shadow-2xl fixed flex flex-col top-0 left-0 w-3/5 h-full rounded-tr-2xl rounded-br-2xl'>
                     <div className='h-20 bg-background rounded-tr-2xl flex items-center justify-between w-full px-6 border-b-2 mb-8'>
                         <span className='flex items-center gap-2 text-sm sm:text-base'>
                             {user?.photoURL ? <img className='rounded-full w-9 ' src={user.photoURL} alt='profile picture' /> : <i className='bx bx-user-circle text-4xl' ></i>}{user ? user.email : 'Guest'}
@@ -57,7 +59,7 @@ export const MobileMenu = ({ showMenu, closeMenu, displayLogin, displayCreateAcc
                             }>Log Out</button>
                         }
                     </div>
-                </div >
+                </motion.div >
             </div>
         )
     }

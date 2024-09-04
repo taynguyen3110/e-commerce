@@ -1,27 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Downshift from 'downshift'
 import searchIcon from '../assets/icons/search.png'
+import { getAllProductNames } from '../services/productServices'
 
+type Item = {
+    id: number,
+    name: string
+}
 
 export const SearchInput = () => {
-    const items = [
-        { value: 'apple' },
-        { value: 'pear' },
-        { value: 'orange' },
-        { value: 'orange2' },
-        { value: 'orange3' },
-        { value: 'grape' },
-        { value: 'banana' },
-        { value: 'banana2' },
-        { value: 'banana3' },
-        { value: 'banana4' },
-    ]
+    const [items, setItems] = useState<Item[]>([])
+
+    useEffect(() => {
+        fetchProduct()
+    }, [])
+
+    const fetchProduct = async () => {
+        const data = await getAllProductNames()
+        setItems(
+            data as Item[]
+        )
+    }
+
     return (
         <Downshift
-            onChange={selection =>
-                alert(selection ? `You selected ${selection.value}` : 'Selection Cleared')
+            onChange={selection => {
+                // if (selection) {
+                // }
             }
-            itemToString={item => (item ? item.value : '')}
+            }
+            itemToString={item => (item ? item.name : '')}
         >
             {({
                 getInputProps,
@@ -47,26 +55,29 @@ export const SearchInput = () => {
                     </div>
                     {isOpen
                         ? (
-                            <ul className='absolute block top-12 w-full bg-white py-2 border rounded z-10' {...getMenuProps()}>
+                            <ul className='absolute block top-12 w-full h-60 overflow-y-scroll bg-white py-2 border rounded z-10' {...getMenuProps()}>
                                 {isOpen
                                     ? items
-                                        .filter(item => !inputValue || item.value.includes(inputValue))
+                                        .filter(item => inputValue && item.name.includes(inputValue))
                                         .map((item, index) => (
-                                            <li className='cursor-pointer py-1 rounded'
-                                                {...getItemProps({
-                                                    key: item.value,
-                                                    index,
-                                                    item,
-                                                    style: {
-                                                        backgroundColor:
-                                                            highlightedIndex === index ? '#C8C6BE' : 'white',
-                                                        fontWeight: selectedItem === item ? 'bold' : 'normal',
-                                                        color: highlightedIndex === index ? '#F4F2EA' : 'black'
-                                                    },
-                                                })}
-                                            >
-                                                {item.value}
-                                            </li>
+                                            <a href={`/product/${item.id}`}>
+                                                <li className='cursor-pointer p-2 rounded text-left'
+                                                    {...getItemProps({
+                                                        key: item.name,
+                                                        index,
+                                                        item,
+                                                        style: {
+                                                            backgroundColor:
+                                                                highlightedIndex === index ? '#C8C6BE' : 'white',
+                                                            fontWeight: selectedItem === item ? 'bold' : 'normal',
+                                                            color: highlightedIndex === index ? '#F4F2EA' : 'black'
+                                                        },
+                                                    })}
+                                                >
+                                                    {item.name}
+                                                </li>
+                                            </a>
+
                                         ))
                                     : null}
                             </ul>

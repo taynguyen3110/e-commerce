@@ -16,6 +16,8 @@ import { UserAuthContextProvider } from "./shared/context/UserAuthContext";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { motion } from "framer-motion"
+
 function App() {
 
   const router = createBrowserRouter([
@@ -40,13 +42,15 @@ function App() {
 
   return (
     <>
-      <ShoppingCartProvider>
-        <UserAuthContextProvider>
-          <Header />
-          <RouterProvider router={router} />
-          <Footer />
-        </UserAuthContextProvider>
-      </ShoppingCartProvider>
+      <div>
+        <ShoppingCartProvider>
+          <UserAuthContextProvider>
+            <Header />
+            <RouterProvider router={router} />
+            <Footer />
+          </UserAuthContextProvider>
+        </ShoppingCartProvider>
+      </div>
       <ToastContainer
         position="top-right"
         autoClose={5000}

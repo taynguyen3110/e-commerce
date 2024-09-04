@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames';
 import { Rating } from './Rating';
 import { Product } from '../services/productServices';
 import { calSalePrice } from '../utils/calSalePrice';
 import { getFirstImage } from '../utils/getFirstImage';
+import ContentLoader from "react-content-loader"
 
 interface ItemCardProps {
     product: Product,
     itemEachRows: number
 }
+export const ratio = 255 / 306
 
 export const ItemCard = ({ product, itemEachRows }: ItemCardProps) => {
+    const [loaded, setLoaded] = useState(false)
 
     const widthClass = `calc((100% - ${12 * (itemEachRows - 1)}px) / ${itemEachRows})`;
 
@@ -18,7 +21,28 @@ export const ItemCard = ({ product, itemEachRows }: ItemCardProps) => {
         return (
             <div className='flex flex-col gap-[6px] md:mb-0 mb-5' style={{ width: `${widthClass}` }}>
                 <div className='mb-2'>
-                    <a href={`/product/${product.id}`}><img className='md:rounded-2xl rounded-xl max-h-96 2xl:max-h-none' src={getFirstImage(product)} alt="" /></a>
+                    <a href={`/product/${product.id}`}>
+                        <img
+                            className='md:rounded-2xl rounded-xl max-h-96 2xl:max-h-none'
+                            src={getFirstImage(product)} alt={product.name}
+                            style={{
+                                display: loaded ? 'block' : 'none',
+                                width: '100%',
+                                height: 'auto',
+                            }}
+                            onLoad={() => setLoaded(true)}
+                        />
+                        {!loaded &&
+                            <ContentLoader
+                                speed={2}
+                                style={{ width: '100%', aspectRatio: ratio, borderRadius: '12px' }}
+                                viewBox={`0 0 255 306`}
+                                backgroundColor="#f3f3f3"
+                                foregroundColor="#ecebeb"
+                            >
+                                <rect x="0" y="0" rx="0" ry="0" width='100%' height='100%' />
+                            </ContentLoader>}
+                    </a>
                 </div>
                 <div>
                     <a href={`/product/${product.id}`}><p className='lg:text-xl text-base font-bold cursor-pointer truncate'>{product.name}</p></a>
