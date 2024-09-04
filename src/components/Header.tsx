@@ -8,32 +8,14 @@ import { SearchInput } from './SearchInput'
 import { useShoppingCart } from '../shared/context/ShoppingCartContext'
 import Login from './Login'
 import { useUserAuth } from '../shared/context/UserAuthContext'
-import { clearCart } from '../services/cartServices'
+import { disableScroll, enableScroll } from '../utils/toogleScroll'
+import { motion } from 'framer-motion'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
-  const [showLogin, setShowLogin] = useState(false)
-  const [showCreateAcc, setShowCreateAcc] = useState(false)
-  // const [showUserPanel, setShowUserPanel] = useState(false)
 
-  const { cartItems } = useShoppingCart()
-  const { user, signOut } = useUserAuth()
-
-  let scrollPosition = 0;
-
-  function disableScroll() {
-    scrollPosition = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
-  }
-
-  function enableScroll() {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, scrollPosition);
-  }
+  const { cartItems, clearCart } = useShoppingCart()
+  const { user, signOut, showLogin, showCreateAcc, displayLogin, displayCreateAcc, hideLogin } = useUserAuth()
 
   const displayMenu = () => {
     setShowMenu(true)
@@ -42,23 +24,6 @@ const Header = () => {
 
   const closeMenu = () => {
     setShowMenu(false)
-    enableScroll()
-  }
-
-  const displayLogin = () => {
-    setShowLogin(true)
-    setShowCreateAcc(false)
-    disableScroll()
-  }
-
-  const displayCreateAcc = () => {
-    setShowLogin(true)
-    setShowCreateAcc(true)
-    disableScroll()
-  }
-
-  const hideLogin = () => {
-    setShowLogin(false)
     enableScroll()
   }
 
@@ -109,7 +74,7 @@ const Header = () => {
                 }}></i>
               :
               <Dropdown trigger={user.photoURL ? <img className='rounded-full w-9' src={user.photoURL} alt='profile picture' /> : <i className='bx bx-user-circle text-2xl font-bold cursor-pointer'></i>} align='right'>
-                <div className='mix-w-52 p-4'>
+                <motion.div style={{ x: 20 }} animate={{ x: 0 }} className='mix-w-52 p-4'>
                   <h3>PROFILE</h3>
                   <hr className='my-3' />
                   <div className='flex flex-col items-start text-nowrap text-sm gap-1'>
@@ -123,7 +88,7 @@ const Header = () => {
                     signOut()
                   }
                   }>Log Out</button>
-                </div>
+                </motion.div>
               </Dropdown>}
           </div>
         </div>

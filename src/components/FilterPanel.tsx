@@ -6,6 +6,7 @@ import { getProductsColors, Colors } from '../services/productServices';
 import filerIcon from '../assets/icons/filter.png'
 import { formatTitle } from '../utils/formatTitle';
 import { ListItem } from './ListItem';
+import { motion } from 'framer-motion';
 
 
 interface FilterPanelProps {
@@ -31,9 +32,13 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
 
     return (
         <>
-            <div className='fixed lg:hidden top-0 left-0 bg-black opacity-20 h-full w-screen z-20'></div>
-            <div className='sm:sticky lg:static lg:h-auto top-0 left-0 h-0 lg:w-[25%] sm:w-0 w-full z-30'>
-                <div className='relative lg:w-full sm:w-96 sm:h-auto bg-white border border-opacity-20 z-40 rounded-2xl w-[calc(100%+32px)] sm:left-0 -left-4'>
+            <div className='fixed lg:hidden top-0 left-0 bg-black opacity-20 h-full w-screen z-10'></div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className='sm:sticky lg:static lg:h-auto top-0 left-0 h-0 lg:w-[25%] sm:w-0 w-full z-40'>
+                <div className='relative lg:w-full sm:w-96 sm:h-auto bg-white border border-opacity-20 z-50 rounded-2xl w-[calc(100%+32px)] sm:left-0 -left-4'>
                     <div className='filter-container container px-4 py-3 lg:h-auto sm:h-screen h-auto sm:overflow-y-scroll sm:overflow-x-hidden'>
                         <div className='flex justify-between relative items-center'>
                             <h4 className='font-bold text-xl'>Filters</h4>
@@ -173,7 +178,7 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
