@@ -5,6 +5,9 @@
         },
         {
             "fetchReview": "https://run.mocky.io/v3/4b2a40e2-6ab6-41e3-999f-0fd70ea1f319"
+        },
+        {
+            "fetchSuggestion": "https://run.mocky.io/v3/fb1354ef-22e7-46b5-bb8f-de3bcf9504e5"
         }
     ]
 }

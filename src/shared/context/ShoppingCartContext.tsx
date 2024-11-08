@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type ShoppingCartProviderProps = {
@@ -6,17 +6,19 @@ type ShoppingCartProviderProps = {
 }
 
 type ShoppingCartContext = {
-    increaseCartQuantity: (id: string, size: string, color: string, quantity?: number) => void
-    decreaseCartQuantity: (id: string, size: string, color: string) => void
-    removeFromCart: (id: string, size: string, color: string) => void
+    increaseCartQuantity: (id: number, size: string, color: string, quantity?: number) => void
+    decreaseCartQuantity: (id: number, size: string, color: string) => void
+    removeFromCart: (id: number, size: string, color: string) => void
     logCart: () => CartItem[]
     cartItems: CartItem[]
     cartQuantity: number
     fillCart: () => void
+    setCartItems: Dispatch<SetStateAction<CartItem[]>>,
+    clearCart: () => void
 }
 
 export type CartItem = {
-    id: string,
+    id: number,
     color: string,
     size: string
     quantity: number,
@@ -31,7 +33,7 @@ export function useShoppingCart() {
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('shopping-cart', [])
 
-    function increaseCartQuantity(id: string, size: string, color: string, quantity = 1) {
+    function increaseCartQuantity(id: number, size: string, color: string, quantity = 1) {
         setCartItems(
             currCart => {
                 if (currCart.find(i => i.id === id && i.size === size && i.color === color) == null) {
@@ -49,7 +51,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         )
     }
 
-    function decreaseCartQuantity(id: string, size: string, color: string) {
+    function decreaseCartQuantity(id: number, size: string, color: string) {
         setCartItems(
             currCart => {
                 if (currCart.find(i => i.id === id && i.size === size && i.color === color)?.quantity === 1) {
@@ -68,10 +70,14 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     }
 
     function fillCart() {
-        setCartItems([{ "id": "2", "size": "S", "color": "navy", "quantity": 5 }, { "id": "2", "size": "M", "color": "navy", "quantity": 14 }, { "id": "2", "size": "L", "color": "navy", "quantity": 21 }, { "id": "2", "size": "L", "color": "bison", "quantity": 14 }, { "id": "2", "size": "M", "color": "bison", "quantity": 14 }, { "id": "2", "size": "S", "color": "bison", "quantity": 14 }])
+        setCartItems([{ "id": 2, "size": "S", "color": "navy", "quantity": 5 }, { "id": 2, "size": "M", "color": "navy", "quantity": 14 }, { "id": 2, "size": "L", "color": "navy", "quantity": 21 }, { "id": 2, "size": "L", "color": "bison", "quantity": 14 }, { "id": 2, "size": "M", "color": "bison", "quantity": 14 }, { "id": 2, "size": "S", "color": "bison", "quantity": 14 }])
     }
 
-    function removeFromCart(id: string, size: string, color: string) {
+    function clearCart() {
+        setCartItems([])
+    }
+
+    function removeFromCart(id: number, size: string, color: string) {
         setCartItems(
             currCart => {
                 return currCart.filter(i => i.id !== id || i.size !== size || i.color !== color)
@@ -86,7 +92,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
     const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
 
-    return <ShoppingCartContext.Provider value={{ fillCart, cartQuantity, logCart, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartItems }}>
+    return <ShoppingCartContext.Provider value={{ fillCart, cartQuantity, logCart, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartItems, setCartItems, clearCart }}>
         {children}
     </ShoppingCartContext.Provider>
 }

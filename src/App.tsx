@@ -10,6 +10,13 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ShoppingCartProvider } from "./shared/context/ShoppingCartContext";
+import { UserAuthContextProvider } from "./shared/context/UserAuthContext";
+
+// React Toastify
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { motion } from "framer-motion"
 
 function App() {
 
@@ -30,16 +37,32 @@ function App() {
     {
       path: "/cart",
       element: <Cart />,
-    },
+    }
   ]);
 
   return (
     <>
-      <ShoppingCartProvider>
-        <Header />
-        <RouterProvider router={router} />
-        <Footer />
-      </ShoppingCartProvider>
+      <div>
+        <ShoppingCartProvider>
+          <UserAuthContextProvider>
+            <Header />
+            <RouterProvider router={router} />
+            <Footer />
+          </UserAuthContextProvider>
+        </ShoppingCartProvider>
+      </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+        pauseOnHover
+        theme="dark"
+      />
     </>
   )
 }

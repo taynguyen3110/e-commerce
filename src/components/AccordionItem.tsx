@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
+import { motion } from 'framer-motion';
 
 interface AccordionItemProps {
     title: string,
@@ -38,7 +39,12 @@ export const AccordionItem = ({ title, heading = false, children, expand = false
                 <p className={classNames('', { 'font-bold text-xl opacity-100': heading, 'text-lg lg:text-xl font-bold': bullet })}>{title}</p>
                 <i className={classNames('bx bx-chevron-right relative text-2xl -right-1 transition-all', { 'rotate-90': showData, 'opacity-100': heading, 'opacity-50': !heading, '': bullet })} ></i>
             </div>
-            {showData && <div className={classNames('', { 'mt-5 flex flex-col gap-3 lg:text-lg': bullet })}>{children}</div>}
+            {showData && <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+                className={classNames('', { 'mt-5 flex flex-col gap-3 lg:text-lg': bullet })}
+            >{children}</motion.div>}
         </div>
     )
 }
