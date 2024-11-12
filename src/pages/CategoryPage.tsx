@@ -8,7 +8,7 @@ import {
   getProductsCount,
   Product,
 } from "../services/productServices";
-import { FilterPanel } from "../components/FilterPanel";
+import { FilterPanel } from "../components/filter-panel/FilterPanel";
 import { Dropdown } from "../components/Dropdown";
 import useMediaQuery from "../shared/hooks/useMediaQuery";
 import { useParams } from "react-router-dom";

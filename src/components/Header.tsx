@@ -6,10 +6,11 @@ import { Dropdown } from "./Dropdown";
 import { MobileMenu } from "./MobileMenu";
 import { SearchInput } from "./SearchInput";
 import { useShoppingCart } from "../shared/context/ShoppingCartContext";
-import Login from "./Login";
+import Login from "./authentication/Login";
 import { useUserAuth } from "../shared/context/UserAuthContext";
 import { disableScroll, enableScroll } from "../utils/toogleScroll";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -158,15 +159,15 @@ const Header = () => {
                     </span>
                   </div>
                   <hr className="my-3" />
-                  <button
-                    className="py-2 md:py-3 mt-2 w-4/5 sm:py-4 bg-black text-sm sm:text-base text-white rounded-full"
+                  <Button
+                    className="mt-2 w-4/5"
                     onClick={() => {
                       clearCart();
                       signOut();
                     }}
                   >
                     Log Out
-                  </button>
+                  </Button>
                 </motion.div>
               </Dropdown>
             )}

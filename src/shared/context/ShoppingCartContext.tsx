@@ -70,7 +70,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     }
 
     function fillCart() {
-        setCartItems([{ "id": 2, "size": "S", "color": "navy", "quantity": 5 }, { "id": 2, "size": "M", "color": "navy", "quantity": 14 }, { "id": 2, "size": "L", "color": "navy", "quantity": 21 }, { "id": 2, "size": "L", "color": "bison", "quantity": 14 }, { "id": 2, "size": "M", "color": "bison", "quantity": 14 }, { "id": 2, "size": "S", "color": "bison", "quantity": 14 }])
+        setCartItems([{ "id": 2, "size": "S", "color": "navy", "quantity": 5 }, { "id": 2, "size": "M", "color": "navy", "quantity": 14 }, { "id": 2, "size": "L", "color": "bison", "quantity": 9 }, { "id": 2, "size": "M", "color": "bison", "quantity": 8 }])
     }
 
     function clearCart() {

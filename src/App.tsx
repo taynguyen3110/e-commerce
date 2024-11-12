@@ -1,7 +1,7 @@
 import Homepage from "./pages/Homepage";
 import ProductInfo from "./pages/ProductInfo";
 import CategoryPage from "./pages/CategoryPage";
-import Cart from "./pages/Cart";
+import Cart from "./pages/Cart/Cart";
 import {
   createBrowserRouter,
   RouterProvider,

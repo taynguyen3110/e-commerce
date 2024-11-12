@@ -29,18 +29,6 @@ export const CarouselSection = () => {
     fetchReview();
   }, []);
 
-  // async function fetchReview() {
-  //     try {
-  //         const response = await fetch('https://run.mocky.io/v3/4b2a40e2-6ab6-41e3-999f-0fd70ea1f319');
-  //         if (!response.ok) {
-  //             throw new Error(`Response status: ${response.status}`)
-  //         }
-  //         const responseData = await response.json()
-  //         setReviews(responseData)
-  //     } catch (error) {
-  //         console.error(error)
-  //     }
-  // }
   function fetchReview() {
     setReviews(getRandomReview(10));
   }
@@ -49,7 +37,6 @@ export const CarouselSection = () => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      // partialVisibilityGutter: 40
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -74,7 +61,6 @@ export const CarouselSection = () => {
       transitionDuration={500}
       containerClass="container-padding-top"
       itemClass="w-full"
-      // className='lg:w-parent-plus-100 relative md:right-[50px] md:mb-0'
       className="md:mb-0"
     >
       {reviews.map((r, index) => (

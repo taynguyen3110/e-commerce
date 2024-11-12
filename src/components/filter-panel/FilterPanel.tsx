@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { AccordionItem } from "./AccordionItem";
-import { ItemCard } from "./ItemCard";
-import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
-import { getProductsColors, Colors } from "../services/productServices";
-import filerIcon from "../assets/icons/filter.png";
-import { formatTitle } from "../utils/formatTitle";
-import { ListItem } from "./ListItem";
+import { AccordionItem } from "../AccordionItem";
+import { ItemCard } from "../ItemCard";
+import { getProductsColors, Colors } from "../../services/productServices";
+import filerIcon from "../../assets/icons/filter.png";
+import { formatTitle } from "../../utils/formatTitle";
+import { ListItem } from "../ListItem";
 import { motion } from "framer-motion";
+import Button from "../Button";
+import PriceRange from "./PriceRange";
+import ColorsPicker from "./ColorsPicker";
+import SizePicker from "./SizePicker";
 
 interface FilterPanelProps {
   closeFilter: () => void;
 }
 
 export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
-  const [minValue, setMinValue] = useState(50);
-  const [maxValue, setMaxValue] = useState(200);
   const [colors, setColors] = useState<Colors>({});
-  const [colorInput, setColorInput] = useState("");
-  const [sizeInput, setSizeInput] = useState("");
 
   useEffect(() => {
     fetchProductsColors();
@@ -87,96 +86,11 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
               </AccordionItem>
             </div>
             <hr className="my-2" />
-            <div>
-              <AccordionItem title="Price" heading={true} expand={true}>
-                <div className="range-input">
-                  <MultiRangeSlider
-                    id="multi-range-slider-css"
-                    min={0}
-                    max={250}
-                    step={50}
-                    minValue={minValue}
-                    maxValue={maxValue}
-                    ruler={false}
-                    label={false}
-                    onInput={(e: ChangeResult) => {
-                      setMinValue(e.minValue);
-                      setMaxValue(e.maxValue);
-                    }}
-                  ></MultiRangeSlider>
-                </div>
-              </AccordionItem>
-            </div>
+            <PriceRange />
             <hr className="my-2" />
-            <div>
-              <AccordionItem title="Colors" heading={true} expand={true}>
-                <div className="flex flex-wrap gap-3 mt-4">
-                  {Object.entries(colors).map(([key, value]) => (
-                    <button
-                      key={key}
-                      className="p-5 rounded-full border hover:border-black"
-                      title={formatTitle(key)}
-                      style={{
-                        backgroundColor: value,
-                        outline:
-                          key === colorInput
-                            ? "2px solid black"
-                            : "2px solid white",
-                      }}
-                      onClick={() => {
-                        setColorInput(key);
-                      }}
-                    ></button>
-                  ))}
-                </div>
-              </AccordionItem>
-            </div>
+            <ColorsPicker colors={colors} />
             <hr className="my-2" />
-            <div>
-              <AccordionItem title="Size" heading={true} expand={true}>
-                <div className="mt-3 flex flex-wrap gap-3">
-                  <button
-                    className="px-5 py-2 bg-background rounded-full"
-                    onClick={() => {
-                      setSizeInput("S");
-                    }}
-                    style={
-                      sizeInput === "S"
-                        ? { backgroundColor: "black", color: "white" }
-                        : {}
-                    }
-                  >
-                    Small
-                  </button>
-                  <button
-                    className="px-5 py-2 bg-background rounded-full"
-                    onClick={() => {
-                      setSizeInput("M");
-                    }}
-                    style={
-                      sizeInput === "M"
-                        ? { backgroundColor: "black", color: "white" }
-                        : {}
-                    }
-                  >
-                    Medium
-                  </button>
-                  <button
-                    className="px-5 py-2 bg-background rounded-full"
-                    onClick={() => {
-                      setSizeInput("L");
-                    }}
-                    style={
-                      sizeInput === "L"
-                        ? { backgroundColor: "black", color: "white" }
-                        : {}
-                    }
-                  >
-                    Large
-                  </button>
-                </div>
-              </AccordionItem>
-            </div>
+            <SizePicker />
             <hr className="my-2" />
             <div>
               <AccordionItem title="Dress Style" heading={true} expand={true}>
@@ -211,9 +125,7 @@ export const FilterPanel = ({ closeFilter }: FilterPanelProps) => {
               </AccordionItem>
             </div>
             <div className="flex items-center justify-center mt-3">
-              <button className="bg-black text-white w-full py-3 rounded-full text-sm">
-                Apply Filter
-              </button>
+              <Button className="w-full">Apply Filter</Button>
             </div>
           </div>
         </div>

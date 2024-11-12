@@ -15,7 +15,7 @@ export const Breadcrumb = ({category = false, cart = false, product = false} : B
                 <Link to="/" className=" cursor-pointer">
                     Home
                 </Link>
-                <img src={navigationIcon} className="w-5 h-5 " alt="" />
+                <img src={navigationIcon} className="w-5 h-5" alt="" />
                 { category && <Link to="/category" className=" cursor-pointer">
                     Category
                 </Link>}

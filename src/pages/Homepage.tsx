@@ -15,6 +15,7 @@ import { CarouselSection } from "../components/CarouselSection";
 import { useNavigate } from "react-router-dom";
 import useDocumentTitle from "../shared/hooks/useDocumentTitle";
 import { getProductById } from "../services/productServices";
+import Button from "../components/Button";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -34,12 +35,13 @@ const Homepage = () => {
               designed to bring out your individuality and cater to your sense
               of style
             </p>
-            <button
-              className="md:mt-2 md:px-20 px-[calc(50%-37px)] py-[15px] bg-black text-white rounded-full"
+            <Button
+              className="md:mt-2 md:px-20 md:w-auto w-full"
               onClick={() => navigate("/category/All items")}
+              purpose="primary"
             >
               Shop Now
-            </button>
+            </Button>
             <div className="flex flex-wrap min-[414px]:justify-between min-[414px]:flex-nowrap justify-center w-full md:mt-10 mt-1">
               <div>
                 <p className="lg:text-[40px] text-2xl opacity-100 font-bold">
