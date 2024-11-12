@@ -4,6 +4,7 @@ import { ItemCard } from "./ItemCard";
 import { getRandomProducts, Product } from "../services/productServices";
 import useMediaQuery from "../shared/hooks/useMediaQuery";
 import { toTitleCase } from "../utils/toTitleCase";
+import Button from "./Button";
 
 interface Props {
   title: string;
@@ -47,14 +48,15 @@ export const Suggestion: React.FC<Props> = ({
       </div>
       {viewButton && (
         <div className="flex justify-center">
-          <button
-            className="md:mt-10 lg:mb-16 mt-2 mb-10 md:py-[14px] md:px-20 py-3 px-[39%] md:text-base text-sm border-black border border-opacity-10 rounded-full"
+          <Button
+            purpose="secondary"
+            className="md:mt-10 lg:mb-16 mt-2 mb-10 sm:px-20 w-full sm:w-auto border-black border border-opacity-10"
             onClick={() => {
               navigate(`/category/${toTitleCase(title)}`);
             }}
           >
             View All
-          </button>
+          </Button>
         </div>
       )}
     </div>

@@ -28,6 +28,7 @@ import { syncCartToDB } from "../services/userServices";
 import { motion } from "framer-motion";
 import ContentLoader from "react-content-loader";
 import { ratio } from "../components/ItemCard";
+import Button from "../components/Button";
 
 const ProductInfo = () => {
   const [product, setProduct] = useState<Product | null>();
@@ -41,6 +42,7 @@ const ProductInfo = () => {
   );
   const [sizeInput, setSizeInput] = useState<string>("S");
   const [quantity, setQuantity] = useState<number>(1);
+  const [inStock, setInStock] = useState<number>(0);
 
   const params = useParams();
   const { cartItems } = useShoppingCart();
@@ -96,6 +98,7 @@ const ProductInfo = () => {
 
   useEffect(() => {
     setQuantity(1);
+    setInStock(getQuantity(colorInput, sizeInput));
   }, [colorInput, sizeInput]);
 
   useDocumentTitle(product?.name || "Product Info");
@@ -151,13 +154,11 @@ const ProductInfo = () => {
   }
 
   function increaseQuantity() {
-    if (getQuantity(colorInput, sizeInput) != undefined) {
       setQuantity((prevQuantity) => {
-        if (prevQuantity < getQuantity(colorInput, sizeInput)) {
+        if (prevQuantity < inStock) {
           return ++prevQuantity;
         } else return prevQuantity;
       });
-    }
   }
 
   function decreaseQuantity() {
@@ -351,7 +352,7 @@ const ProductInfo = () => {
               <div className="flex items-center">
                 <p>
                   Quantity:{" "}
-                  <span className="">{getQuantity(colorInput, sizeInput)}</span>
+                  <span className="">{inStock}</span>
                 </p>
               </div>
               <hr className="my-5 lg:my-0" />
@@ -361,15 +362,15 @@ const ProductInfo = () => {
                   handleDecrease={decreaseQuantity}
                   setQuantity={setQuantity}
                   quantity={quantity}
+                  maxQuantity={inStock}
                 />
-                <button
-                  className="bg-black w-[calc(70%)] text-white text-sm lg:text-base font-light rounded-full py-[14px] lg:py-3"
+                <Button
+                  className="w-[calc(70%)] py-[14px] lg:py-3"
                   disabled={quantity === 0}
                   onClick={handleAddToCart}
-                  style={{ opacity: quantity === 0 ? "30%" : "100%" }}
                 >
                   Add to Cart
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -593,9 +594,7 @@ const ProductInfo = () => {
               <div className="flex flex-col items-center lg:items-start lg:w-1/2 lg:gap-8 lg:pl-20">
                 <h4 className="hidden lg:block text-4xl font-bold">FAQs</h4>
                 <p className="hidden lg:block">Let us hear your question!</p>
-                <button className="bg-black text-white rounded-full py-3 px-10">
-                  Contact Us
-                </button>
+                <Button className="px-10">Contact Us</Button>
               </div>
             </motion.div>
           ) : (
@@ -606,8 +605,8 @@ const ProductInfo = () => {
                   <p className="text-sm inline">(483)</p>
                 </div>
                 <img src={filerIcon} className="h-11" alt="Filter Icon" />
-                <button
-                  className="bg-black text-white rounded-full py-3 px-4 text-xs lg:text-sm font-extralight"
+                <Button
+                  className="px-4 !py-3"
                   onClick={async () => {
                     if (id) {
                       const productData = await getProductById(id);
@@ -616,7 +615,7 @@ const ProductInfo = () => {
                   }}
                 >
                   Write a Review
-                </button>
+                </Button>
               </div>
               <div className="flex flex-col gap-3 mt-5 lg:flex-none lg:grid lg:grid-cols-2 lg:gap-4">
                 {reviews &&
@@ -625,14 +624,15 @@ const ProductInfo = () => {
                   ))}
               </div>
               <div className="flex justify-center mt-5 lg:mt-7 lg:text-base text-sm">
-                <button
-                  className="border py-3 px-10 rounded-full"
+                <Button
+                  purpose="secondary"
+                  className="border px-10"
                   onClick={() => {
                     setReviews(getRandomReview(reviewCount));
                   }}
                 >
                   Load More Reviews
-                </button>
+                </Button>
               </div>
             </motion.div>
           )}
