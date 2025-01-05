@@ -56,9 +56,10 @@ The purpose of this project is to develop a responsive, user-friendly, and visua
 
 Feel free to open issues or submit pull requests. Contributions are welcome for bug fixes, new features, or improvements.
 
-## License
+## Design Credit
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is based on a free design from the Figma Community.
+Design by hamzanaeem778@gmail.com — [Link to Figma Design](https://www.figma.com/community/file/1273571982885059508).
 
 ---
 
