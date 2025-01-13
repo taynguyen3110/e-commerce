@@ -49,11 +49,6 @@ The purpose of this project is to develop a responsive, user-friendly, and visua
 - **Product Listings**: Dynamically fetched from Firestore, users can browse and filter products.
 - **Shopping Cart**: Users can add products to the cart and view the total price.
 
-## Performance Optimizations
-
-- **Lazy Loading**: Images and components are lazily loaded to improve initial load time.
-- **Code Splitting**: React Router and other large components are split into smaller chunks for faster loading.
-
 ## Contributing
 
 Feel free to open issues or submit pull requests. Contributions are welcome for bug fixes, new features, or improvements.
