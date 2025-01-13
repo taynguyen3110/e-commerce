@@ -2,6 +2,8 @@
 
 This is the implementation of an e-commerce website based on a sample Figma design. The project uses **Tailwind CSS** for styling and **Firebase** services for backend functionality such as authentication, database management, and storage.
 
+![Alt text](screenshots/image-1.png)
+
 ## Project Overview
 
 The purpose of this project is to develop a responsive, user-friendly, and visually appealing e-commerce website. The UI closely follows a **Figma design** template to ensure a consistent and high-quality user experience.
