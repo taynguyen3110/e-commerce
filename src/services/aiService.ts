@@ -18,7 +18,7 @@ export interface AIResponse {
 
 const MAX_TOKENS = 110;
 const TEMPERATURE = 0.7;
-const MODEL = "ft:gpt-4o-mini-2024-07-18:ecommerce::BBx6qOpd";
+const MODEL = "ft:gpt-4o-mini-2024-07-18:ecommerce::BC3QFqu7";
 
 export const aiService = {
   async getProductRecommendations(

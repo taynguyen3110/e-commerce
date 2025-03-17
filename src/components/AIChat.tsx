@@ -65,7 +65,7 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
         >
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b bg-white">
-            <h3 className="font-semibold text-gray-800">AI Assistant</h3>
+            <h3 className="font-semibold text-gray-800">Shop Assistant</h3>
             <button
               onClick={() => setIsOpen(false)}
               className="text-gray-500 hover:text-gray-700 p-2"
@@ -124,7 +124,6 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Ask me anything about our products..."
                 className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
-                  /* Mobile optimization */
                   text-base md:text-sm"
                 disabled={isLoading}
               />
@@ -133,7 +132,6 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
                 disabled={isLoading}
                 className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
                   disabled:bg-blue-300 transition-colors whitespace-nowrap
-                  /* Mobile optimization */
                   text-base md:text-sm"
               >
                 Send

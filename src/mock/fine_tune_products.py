@@ -65,7 +65,6 @@ def save_training_data(training_data, output_file='training_data.jsonl'):
 # Fine-tune the model
 def fine_tune_model(training_file_path):
     client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
-    
     try:
         # Upload the training file
         with open(training_file_path, 'rb') as file:
@@ -91,21 +90,21 @@ def fine_tune_model(training_file_path):
 
 def main():
     # Ensure OPENAI_API_KEY is set
-    if not os.environ.get('OPENAI_API_KEY'):
-        print("Please set your OPENAI_API_KEY environment variable")
-        return
+    # if not os.environ.get('OPENAI_API_KEY'):
+    #     print("Please set your OPENAI_API_KEY environment variable")
+    #     return
     
-    print("Loading products data...")
-    products = load_products()
-    print(f"Loaded {len(products)} products")
+    # print("Loading products data...")
+    # products = load_products()
+    # print(f"Loaded {len(products)} products")
     
-    print("Preparing training data...")
-    training_data = prepare_training_data(products)
-    print(f"Created {len(training_data)} training examples")
+    # print("Preparing training data...")
+    # training_data = prepare_training_data(products)
+    # print(f"Created {len(training_data)} training examples")
     
     training_file = 'training_data.jsonl'
-    print(f"Saving training data to {training_file}...")
-    save_training_data(training_data, training_file)
+    # print(f"Saving training data to {training_file}...")
+    # save_training_data(training_data, training_file)
     
     print("Starting fine-tuning process...")
     job_id = fine_tune_model(training_file)
