@@ -2,6 +2,8 @@
 
 This is the implementation of an e-commerce website based on a sample Figma design. The project uses **Tailwind CSS** for styling and **Firebase** services for backend functionality such as authentication, database management, and storage.
 
+![Alt text](screenshots/image-1.png)
+
 ## Project Overview
 
 The purpose of this project is to develop a responsive, user-friendly, and visually appealing e-commerce website. The UI closely follows a **Figma design** template to ensure a consistent and high-quality user experience.
@@ -46,11 +48,6 @@ The purpose of this project is to develop a responsive, user-friendly, and visua
 - **User Authentication**: Sign up, log in, and log out with Firebase Authentication.
 - **Product Listings**: Dynamically fetched from Firestore, users can browse and filter products.
 - **Shopping Cart**: Users can add products to the cart and view the total price.
-
-## Performance Optimizations
-
-- **Lazy Loading**: Images and components are lazily loaded to improve initial load time.
-- **Code Splitting**: React Router and other large components are split into smaller chunks for faster loading.
 
 ## Contributing
 
