@@ -86,7 +86,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-
       {/* BREAK SECTION */}
       <div className="bg-black py-11 md:px-0 px-4">
         <div className="container flex md:flex-nowrap flex-wrap md:justify-between gap-4 justify-evenly items-center">

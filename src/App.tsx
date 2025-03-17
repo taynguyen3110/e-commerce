@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { motion } from "framer-motion"
+import { AIChat } from "./components/AIChat";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
           <UserAuthContextProvider>
             <Header />
             <RouterProvider router={router} />
+            <AIChat />
             <Footer />
           </UserAuthContextProvider>
         </ShoppingCartProvider>
