@@ -24,11 +24,11 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       className={classNames(
-        "rounded-full py-3 md:py-4 md:text-base text-sm",
+        "rounded-full py-3 md:py-4 md:text-base text-sm transition-colors",
         {
-          "opacity-50 bg-slate-500": disabled,
-          "text-white bg-black": purpose === "primary",
-          "bg-white text-black": purpose === "secondary",
+          "opacity-50 bg-gray-500": disabled,
+          "text-white bg-black hover:bg-gray-700": purpose === "primary",
+          "bg-white text-black hover:bg-gray-100": purpose === "secondary",
         },
         className
       )}

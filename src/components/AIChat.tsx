@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { aiService } from '../services/aiService';
-import { ChatBubbleLeftRightIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import React, { useState } from "react";
+import { aiService } from "../services/aiService";
+import {
+  ChatBubbleLeftRightIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
 interface AIChatProps {
   context?: string;
@@ -9,9 +12,11 @@ interface AIChatProps {
 
 export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [chatHistory, setChatHistory] = useState<Array<{ role: 'user' | 'assistant', content: string }>>([]);
+  const [chatHistory, setChatHistory] = useState<
+    Array<{ role: "user" | "assistant"; content: string }>
+  >([]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,8 +24,8 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
 
     setIsLoading(true);
     const userMessage = message;
-    setMessage('');
-    setChatHistory(prev => [...prev, { role: 'user', content: userMessage }]);
+    setMessage("");
+    setChatHistory((prev) => [...prev, { role: "user", content: userMessage }]);
 
     try {
       let response;
@@ -30,12 +35,19 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
         response = await aiService.getProductRecommendations(userMessage);
       }
 
-      setChatHistory(prev => [...prev, { role: 'assistant', content: response.message }]);
+      setChatHistory((prev) => [
+        ...prev,
+        { role: "assistant", content: response.message },
+      ]);
       onResponse?.(response.message);
     } catch (error) {
-      console.error('Error in AI chat:', error);
-      const errorMessage = "I'm having trouble processing your request right now. Please try again later.";
-      setChatHistory(prev => [...prev, { role: 'assistant', content: errorMessage }]);
+      console.error("Error in AI chat:", error);
+      const errorMessage =
+        "I'm having trouble processing your request right now. Please try again later.";
+      setChatHistory((prev) => [
+        ...prev,
+        { role: "assistant", content: errorMessage },
+      ]);
     } finally {
       setIsLoading(false);
     }
@@ -47,7 +59,7 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 m-4 shadow-lg transition-all duration-200 hover:scale-110"
+          className="bg-black hover:bg-gray-700 text-white rounded-full p-3 m-4 shadow-lg transition-all duration-200 hover:scale-110"
         >
           <ChatBubbleLeftRightIcon className="h-6 w-6" />
         </button>
@@ -55,7 +67,8 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="bg-white shadow-xl flex flex-col
+        <div
+          className="bg-white shadow-xl flex flex-col rounded-lg
           /* Mobile: Full screen */
           fixed inset-0
           /* Tablet and up: Fixed size window */
@@ -64,7 +77,7 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
           md:rounded-lg md:mb-4"
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b bg-white">
+          <div className="flex items-center justify-between p-4 border-b bg-white rounded-t-lg">
             <h3 className="font-semibold text-gray-800">Shop Assistant</h3>
             <button
               onClick={() => setIsOpen(false)}
@@ -80,22 +93,24 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
             {chatHistory.length === 0 && (
               <div className="text-center text-gray-500 py-8">
                 <p>👋 Hi! How can I help you today?</p>
-                <p className="text-sm mt-2">Ask me anything about our products!</p>
+                <p className="text-sm mt-2">
+                  Ask me anything about our products!
+                </p>
               </div>
             )}
-            
+
             {chatHistory.map((chat, index) => (
               <div
                 key={index}
                 className={`flex ${
-                  chat.role === 'user' ? 'justify-end' : 'justify-start'
+                  chat.role === "user" ? "justify-end" : "justify-start"
                 }`}
               >
                 <div
                   className={`max-w-[80%] rounded-lg p-3 ${
-                    chat.role === 'user'
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-100 text-gray-800'
+                    chat.role === "user"
+                      ? "bg-black text-white"
+                      : "bg-gray-100 text-gray-800"
                   } break-words`}
                 >
                   {chat.content}
@@ -116,22 +131,22 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
           </div>
 
           {/* Input Form */}
-          <div className="p-4 border-t bg-white">
+          <div className="p-4 border-t bg-white rounded-b-lg">
             <form onSubmit={handleSubmit} className="flex gap-2">
               <input
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Ask me anything about our products..."
-                className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+                className="flex-1 p-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-black
                   text-base md:text-sm"
                 disabled={isLoading}
               />
               <button
                 type="submit"
                 disabled={isLoading}
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
-                  disabled:bg-blue-300 transition-colors whitespace-nowrap
+                className="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-600 
+                  disabled:bg-gray-300 transition-colors whitespace-nowrap
                   text-base md:text-sm"
               >
                 Send
@@ -142,4 +157,4 @@ export const AIChat: React.FC<AIChatProps> = ({ context, onResponse }) => {
       )}
     </div>
   );
-}; 
+};
