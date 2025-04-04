@@ -14,7 +14,7 @@ The purpose of this project is to develop a responsive, user-friendly, and visua
 - **Firebase Authentication**: Enables secure user authentication with email/password and social media login.
 - **Firebase Firestore**: Real-time database for storing and retrieving product data.
 - **Firebase Storage**: Used for hosting product images and other media assets.
-- **Product Listings**: Dynamic display of products.
+- **AI Chat bot**: Used fine tuned openai model for chat bot assistant.
 - **Shopping Cart**: Allows users to add, update, and remove products in their cart.
 
 ## Technologies Used:
@@ -25,6 +25,7 @@ The purpose of this project is to develop a responsive, user-friendly, and visua
   - **Firebase**:
     - **Authentication**: Handles user login and sign-up.
     - **Firestore**: A real-time database for storing product data.
+    - **OpenAI**: fine tuned AI model for chat bot feature.
     - **Storage**: Manages product images and other media.
     - **Hosting**: Netlify hosting with CI/CD for easy deployment and fast content delivery.
 
