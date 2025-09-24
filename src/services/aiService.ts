@@ -1,52 +1,38 @@
-import OpenAI from "openai";
-
-// OpenAI client
-const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true,
-});
-
-export interface ProductRecommendation {
-  productId: string;
-  reason: string;
-}
-
 export interface AIResponse {
   message: string;
-  recommendations?: ProductRecommendation[];
+  product?: any;
 }
 
 const MAX_TOKENS = 110;
 const TEMPERATURE = 0.7;
 const MODEL = "ft:gpt-4o-mini-2024-07-18:ecommerce::BC3QFqu7";
+const URL = import.meta.env.VITE_BACKEND_URL;
+
+export type SSEHandlers = {
+  onFirstToken?: () => void;
+  onToken?: (text: string) => void;
+  onProduct?: (product: any) => void;
+  onError?: (message: string) => void;
+  onComplete?: () => void;
+};
 
 export const aiService = {
   async getProductRecommendations(
-    userPreferences: string
+    query: string,
+    userId: string
   ): Promise<AIResponse> {
     try {
-      const completion = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a helpful e-commerce AI assistant. Provide product recommendations based on user preferences.",
-          },
-          {
-            role: "user",
-            content: userPreferences,
-          },
-        ],
-        temperature: TEMPERATURE,
-        max_tokens: MAX_TOKENS,
+      const response = await fetch(`${URL}/chat`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query,
+          userId,
+        }),
       });
-
-      return {
-        message:
-          completion.choices[0].message.content ||
-          "I couldn't generate recommendations at this time.",
-      };
+      return await response.json();
     } catch (error) {
       console.error("Error getting product recommendations:", error);
       return {
@@ -55,73 +41,67 @@ export const aiService = {
       };
     }
   },
+  async getProductRecommendationsStream(
+    query: string,
+    userId: string,
+    handlers: SSEHandlers
+  ): Promise<void> {
+    const response = await fetch(`${URL}/chat/stream`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query, userId }),
+    });
 
-  async answerProductQuestion(
-    question: string,
-    productContext: string
-  ): Promise<AIResponse> {
-    try {
-      const completion = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a helpful e-commerce AI assistant. Answer questions about products based on the provided context.",
-          },
-          {
-            role: "user",
-            content: `Context: ${productContext}\nQuestion: ${question}`,
-          },
-        ],
-        temperature: TEMPERATURE,
-        max_tokens: MAX_TOKENS,
-      });
-
-      return {
-        message:
-          completion.choices[0].message.content ||
-          "I couldn't answer your question at this time.",
-      };
-    } catch (error) {
-      console.error("Error answering product question:", error);
-      return {
-        message:
-          "I'm having trouble answering your question right now. Please try again later.",
-      };
+    if (!response.body) {
+      handlers.onError?.("No response body");
+      return;
     }
-  },
 
-  async enhanceSearchQuery(query: string): Promise<AIResponse> {
-    try {
-      const completion = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [
-          {
-            role: "system",
-            content:
-              "You are a helpful e-commerce AI assistant. Enhance search queries to improve search results.",
-          },
-          {
-            role: "user",
-            content: query,
-          },
-        ],
-        temperature: TEMPERATURE,
-        max_tokens: MAX_TOKENS,
-      });
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let productBuffer: any = null;
+    let firstTokenReceived = false;
 
-      return {
-        message:
-          completion.choices[0].message.content ||
-          "I couldn't enhance your search query at this time.",
-      };
-    } catch (error) {
-      console.error("Error enhancing search query:", error);
-      return {
-        message:
-          "I'm having trouble enhancing your search query right now. Please try again later.",
-      };
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split("\n");
+
+      for (const line of lines) {
+        if (line.startsWith("event:")) {
+          continue;
+        }
+
+        if (line.startsWith("data:")) {
+          try {
+            const data = JSON.parse(line.replace("data: ", "").trim());
+
+            if (chunk.includes("event: token")) {
+              if (!firstTokenReceived) {
+                firstTokenReceived = true;
+                handlers.onFirstToken?.(); // ✅ fire once only
+              }
+              handlers.onToken?.(data.text.delta);
+            }
+            if (chunk.includes("event: product")) {
+              productBuffer = data.product;
+            }
+            if (chunk.includes("event: error")) {
+              handlers.onError?.(data.message);
+            }
+          } catch (err) {
+            handlers.onError?.("Parse error: " + (err as Error).message);
+          }
+        }
+      }
     }
+    if (productBuffer) {
+      handlers.onProduct?.(productBuffer);
+    }
+    handlers.onComplete?.();
   },
 };

@@ -2,9 +2,10 @@ import React from "react";
 
 interface RatingProps {
   rating: number;
+  classNames?: string;
 }
 
-export const Rating = ({ rating }: RatingProps) => {
+export const Rating = ({ rating, classNames }: RatingProps) => {
   let star = [];
   let processedRating = Math.round(rating * 2) / 2;
 
@@ -15,11 +16,11 @@ export const Rating = ({ rating }: RatingProps) => {
     star.push(
       <span
         key={processedRating}
-        className="relative top-0 inline-block h-4 w-2 overflow-hidden"
+        className={`relative top-0 inline-block h-4 w-2 overflow-hidden`}
       >
         <i className="bx bxs-star relative -top-[2px] text-yellow-400"></i>
       </span>
     );
   }
-  return <span className="relative mr-3">{star}</span>;
+  return <span className={`${classNames} relative mr-3`}>{star}</span>;
 };
