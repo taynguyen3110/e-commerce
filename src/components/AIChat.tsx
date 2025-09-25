@@ -26,10 +26,12 @@ export const AIChat: React.FC<AIChatProps> = ({ onResponse }) => {
   const [isThinking, setIsThinking] = useState(false);
   const [chatHistory, setChatHistory] = useState<
     Array<{ role: "user" | "assistant"; content: string; product?: Product }>
-  >([initialMessage]);
+  >([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [typingBuffer, setTypingBuffer] = useState("");
+  const [typingBuffer, setTypingBuffer] = useState(
+    "👋 Hi! How can I help you today?"
+  );
 
   // Auto-scroll to bottom on new message or loading state change
   useEffect(() => {
@@ -149,12 +151,10 @@ export const AIChat: React.FC<AIChatProps> = ({ onResponse }) => {
       console.error("Error in AI chat:", error);
       const errorMessage =
         "I'm having trouble processing your request right now. Please try again later.";
-      setChatHistory((prev) => [
-        ...prev,
-        { role: "assistant", content: errorMessage },
-      ]);
+      setTypingBuffer(errorMessage);
     } finally {
       setIsLoading(false);
+      setIsThinking(false);
     }
   };
 
